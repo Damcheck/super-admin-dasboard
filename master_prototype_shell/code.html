@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noble Funded | Aetheric Command Shell</title>
+<script type='text/javascript' nonce='YhDnTdsKHRJTpzn/RQ4WQA==' src='https://contribution.usercontent.google.com/6Iqj_85biiD0vZPAfqjwDG5OB_PnGj908sdpJk3P2l4l6eCFgahI6DtNeCEmDcNhKO4hXT5wl88cDRSDpWpYzFZFwAvwAHENbWJ5NCIIoIpOwOjZt4_3g2uhb4b6L1yLWr9BJNDiodIG_RrKpkIbWcBH8d1USXGWm4ZzZumdrux-YkDcT4sh8ZiXLYqa8-4mZaNKxR_oQB3F_IbpXSnB1rOsToHTiNPrML8iQgOmBFYMiYw7iDposqSPoP4UWXP5qJFFm0mn9xabwvIoBHEfefN3j3AsJ7Gkm301gmdMpKh5foirv9I_zkG699mp_54FL6u7bPVdb-4Ij_hCw1ptXiCdcvm3yPiYRSp41_jkDygyQ8GqcrRR2FKod0jHU1Y5imu785DvL0FVnynvs79QQpelCeG3CWJhjzGJfAEsxlP_ByiYH-nuyRdN1eUarI9AzWKU5ufQoP165hJgPkKjRzVRDXAigGtROi4yLCjQdGxKnTenJRvahw4_nhBIBdzmwatW2Fm71G86ewkwP5KyJqnGv22SpHvXO6v2dxvaVXdOA-UR9nMH98Bw7FUDbOYRAu-sIC3c_75bSk5SBv1hoObl2nE6LDc9QQBi0uQ2vkU-p0ALzTx6h6mdTbobFHEPRlfFH5dRLZIHERpTKRP9Fyu02H0IJR5YFpMBbZbxtTgHaYkPshImmBC1yikDfwp4f6je0U68C1vxB6_a58IRlomxPsYHaabG8UJL-DiZYEB3-uEre4jH5yikdlQupGCIkThRcmECkKRb9g_gdjjZPprslqesJSjclLJhteyL'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed-variant": "#2b4c4a",
+                        "on-secondary-container": "#9cbfbc",
+                        "on-surface-variant": "#b9cbc2",
+                        "on-primary": "#00382b",
+                        "surface-container-highest": "#283836",
+                        "inverse-on-surface": "#243332",
+                        "surface-bright": "#2d3c3a",
+                        "inverse-surface": "#d5e6e3",
+                        "surface-variant": "#283836",
+                        "outline": "#83958d",
+                        "tertiary-fixed": "#ffdea9",
+                        "tertiary": "#fffeff",
+                        "tertiary-fixed-dim": "#ffba26",
+                        "primary-container": "#00ffcc",
+                        "tertiary-container": "#ffdda6",
+                        "on-tertiary-fixed": "#271900",
+                        "secondary": "#aacdca",
+                        "inverse-primary": "#006b54",
+                        "surface-container": "#132221",
+                        "surface-tint": "#00e0b3",
+                        "primary-fixed": "#24ffcd",
+                        "on-tertiary-fixed-variant": "#5e4100",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#3a4a44",
+                        "primary": "#fdfffc",
+                        "background": "#071615",
+                        "on-tertiary-container": "#845d00",
+                        "secondary-container": "#2e4f4c",
+                        "surface": "#071615",
+                        "on-primary-fixed": "#002118",
+                        "surface-container-low": "#0f1e1d",
+                        "surface-container-high": "#1e2d2b",
+                        "on-primary-fixed-variant": "#00513f",
+                        "on-surface": "#d5e6e3",
+                        "on-tertiary": "#422d00",
+                        "on-primary-container": "#00725a",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#03110f",
+                        "on-secondary": "#133634",
+                        "on-background": "#d5e6e3",
+                        "on-secondary-fixed": "#00201e",
+                        "surface-dim": "#071615",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#aacdca",
+                        "secondary-fixed": "#c6eae6",
+                        "primary-fixed-dim": "#00e0b3"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .cyber-glass-border {
+            border: 1px solid transparent;
+            border-image: linear-gradient(to bottom right, rgba(0, 255, 204, 0.3), transparent) 1;
+        }
+        .liquid-bg {
+            background: radial-gradient(circle at 50% 50%, #0a2e2c 0%, #071615 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen overflow-hidden">
+<!-- Simulation Bar -->
+<header class="h-10 w-full bg-primary-container text-on-primary-container flex items-center justify-between px-6 z-50 relative shadow-lg">
+<div class="flex items-center gap-4 text-xs font-bold tracking-widest uppercase font-headline">
+<span class="material-symbols-outlined text-sm">visibility</span>
+            Simulate View As:
+            <div class="relative group cursor-pointer flex items-center gap-2 bg-on-primary-container/10 px-3 py-1 rounded-sm border border-on-primary-container/20">
+<span>Super Admin</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+<!-- Dropdown simulated -->
+<div class="absolute top-full left-0 mt-1 w-48 bg-surface-container-highest border border-outline-variant hidden group-hover:block z-50 p-2 shadow-2xl">
+<div class="p-2 hover:bg-primary-container hover:text-on-primary-container transition-colors rounded-sm">Compliance</div>
+<div class="p-2 hover:bg-primary-container hover:text-on-primary-container transition-colors rounded-sm">Support</div>
+<div class="p-2 hover:bg-primary-container hover:text-on-primary-container transition-colors rounded-sm">Marketing</div>
+<div class="p-2 hover:bg-primary-container hover:text-on-primary-container transition-colors rounded-sm">Developer</div>
+</div>
+</div>
+</div>
+<div class="text-[10px] font-mono opacity-80 uppercase tracking-tighter">
+            System Status: Nominal // Latency: 12ms
+        </div>
+</header>
+<div class="flex h-[calc(100vh-2.5rem)] relative">
+<!-- SideNavBar (Shared Component Logic) -->
+<aside class="fixed left-0 top-10 flex flex-col h-full py-8 px-4 bg-[#071615]/60 backdrop-blur-[40px] h-screen w-72 border-r border-[#00ffcc]/30 shadow-[4px_0_24px_rgba(0,32,30,0.8)] z-40 transition-all duration-500 font-[&#39;Space_Grotesk&#39;] tracking-tight">
+<!-- Brand Header -->
+<div class="mb-10 px-4">
+<div class="text-2xl font-bold tracking-tighter text-[#00ffcc] drop-shadow-[0_0_8px_rgba(0,255,204,0.4)]">Noble Funded</div>
+<div class="text-[10px] text-on-surface-variant uppercase tracking-[0.2em] mt-1 font-medium">Super Admin</div>
+</div>
+<!-- Navigation Items -->
+<nav class="flex-1 space-y-1 overflow-y-auto no-scrollbar">
+<!-- Overview: Active State -->
+<a class="flex items-center gap-3 px-4 py-3 bg-[#00ffcc]/10 text-[#00ffcc] border-l-4 border-[#00ffcc] font-bold transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span class="text-sm">Overview</span>
+</a>
+<!-- Users -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1e2d2b]/50 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl">group</span>
+<span class="text-sm">Users</span>
+</a>
+<!-- Challenges -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1e2d2b]/50 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl">emoji_events</span>
+<span class="text-sm">Challenges</span>
+</a>
+<!-- Payouts -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1e2d2b]/50 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl">payments</span>
+<span class="text-sm">Payouts</span>
+</a>
+<!-- Revenue -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1e2d2b]/50 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl">payments</span>
+<span class="text-sm">Revenue</span>
+</a>
+<!-- Team -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1e2d2b]/50 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl">groups</span>
+<span class="text-sm">Team</span>
+</a>
+<!-- Settings -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1e2d2b]/50 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="text-sm">Settings</span>
+</a>
+<!-- Activity Logs -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1e2d2b]/50 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-xl">history</span>
+<span class="text-sm">Activity Logs</span>
+</a>
+</nav>
+<!-- Bottom Profile -->
+<div class="mt-auto pt-6 border-t border-outline-variant/20 flex items-center gap-3 px-2">
+<img alt="Admin Avatar" class="w-10 h-10 rounded-full border border-primary-container/40 p-0.5" data-alt="close up headshot portrait of a professional technology executive in a dark techwear outfit high-end studio lighting cyberpunk aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdKG1zpI6Ao_uZBI1BKk4cbrVlv74zVDEFpCe_ruptmbQIVLi9NlkyEYfSbXE6DcsxEXQHEffRySFId9M1SnIolSnJctsyFfA273-xT71DDSYkHICrNIrPKcqHM1rjPpUxkP_oOEnkRah6ZV2sN3gSwJaQ8nbSp1O5HWCOK1h4l1IS7UAjWCj4HMx1twz4zBMLwr_vu_aA1baEYF2I22uLXgCKpXha-OWVsrDopsv7dAYDgJcH-axzXGd8xaugl31eQ2hGUH30Njh3"/>
+<div class="overflow-hidden">
+<div class="text-sm font-bold text-primary truncate">Alex Sterling</div>
+<div class="text-[10px] text-on-surface-variant truncate uppercase">noble_admin_01</div>
+</div>
+</div>
+</aside>
+<!-- Main Workspace -->
+<main class="flex-1 ml-72 flex flex-col relative overflow-hidden liquid-bg">
+<!-- TopNavBar (Shared Component Logic) -->
+<header class="flex justify-between items-center w-full h-20 pl-8 pr-8 z-30 font-[&#39;Space_Grotesk&#39;]">
+<div class="flex flex-col">
+<h1 class="text-2xl font-bold text-primary tracking-tighter">Command Control</h1>
+<span class="text-[10px] uppercase text-on-surface-variant tracking-[0.3em]">Fleet Deployment Active</span>
+</div>
+<div class="flex items-center gap-6">
+<!-- Search Bar -->
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary-container transition-colors">search</span>
+<input class="bg-surface-container-lowest/50 border border-outline-variant rounded-sm pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary-container/50 focus:border-primary-container transition-all w-64 placeholder:text-on-surface-variant/50" placeholder="Omni Search..." type="text"/>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:text-primary-container transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary-container rounded-full border-2 border-background"></span>
+</button>
+<button class="hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="flex-1 px-8 pb-8 flex gap-6 overflow-hidden">
+<!-- Main View Area (Bento Layout) -->
+<div class="flex-1 overflow-y-auto no-scrollbar space-y-6">
+<!-- Stats Grid -->
+<div class="grid grid-cols-4 gap-6">
+<div class="bg-surface-container-high/40 backdrop-blur-[40px] cyber-glass-border p-6 rounded-sm">
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Active Capital</div>
+<div class="text-3xl font-headline font-bold text-primary-fixed">$14.2M</div>
+<div class="mt-2 flex items-center gap-1 text-[10px] text-primary-container">
+<span class="material-symbols-outlined text-xs">trending_up</span> +2.4% vs last period
+                            </div>
+</div>
+<div class="bg-surface-container-high/40 backdrop-blur-[40px] cyber-glass-border p-6 rounded-sm">
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Funded Traders</div>
+<div class="text-3xl font-headline font-bold text-primary">2,842</div>
+<div class="mt-2 flex items-center gap-1 text-[10px] text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-xs">sync</span> 14 processing
+                            </div>
+</div>
+<div class="bg-surface-container-high/40 backdrop-blur-[40px] cyber-glass-border p-6 rounded-sm">
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Challenge Pass Rate</div>
+<div class="text-3xl font-headline font-bold text-primary">8.2%</div>
+<div class="mt-2 flex items-center gap-1 text-[10px] text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">history</span> Stable trajectory
+                            </div>
+</div>
+<div class="bg-surface-container-high/40 backdrop-blur-[40px] cyber-glass-border p-6 rounded-sm">
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">System Health</div>
+<div class="text-3xl font-headline font-bold text-primary-container">99.9%</div>
+<div class="mt-2 flex items-center gap-1 text-[10px] text-primary-container">
+<span class="material-symbols-outlined text-xs">check_circle</span> All nodes green
+                            </div>
+</div>
+</div>
+<!-- Visual Section -->
+<div class="grid grid-cols-3 gap-6">
+<div class="col-span-2 bg-surface-container-lowest/40 backdrop-blur-[40px] cyber-glass-border rounded-sm h-[400px] overflow-hidden group relative">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="abstract neural network visualization with cyan glowing lines and dark deep teal background liquid organic flow digital topology" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXn1Srri2rJlUYqaQJYbdh3kgckze3W5hF8xX0KQr-vkF3lVLA6sPq7xKzNX1QMH5TawwjkT3oFXvSsz8HaR4Gs8RIj0Kp2DilRYbqtbY76TuCvmeTpeHVOqiCyAdrXmVT9qwWvkq6Du3F8Nou85qpt_BwaqT9te__1pKrPZIdKjgqDu6R3IbF5SfQ-0vuBPZ5Cz_GI_BvMy5-HZbEGph9EvU4dDTFuoDdZAxjdn5kuu6Mm-YDRzAH9gAixxngvjzQxyzunNo1MQXM"/>
+<div class="absolute inset-0 p-8 flex flex-col">
+<h3 class="text-xl font-headline font-bold text-primary mb-1">Global Trade Network</h3>
+<p class="text-sm text-on-surface-variant max-w-md">Real-time latency monitoring across institutional bridges and retail liquid gateways.</p>
+<div class="mt-auto flex gap-4">
+<button class="bg-primary-container/80 hover:bg-primary-container text-on-primary-fixed px-6 py-2 text-xs font-bold uppercase tracking-widest transition-all rounded-sm flex items-center gap-2">
+                                        Monitor Nodes <span class="material-symbols-outlined text-sm">rocket_launch</span>
+</button>
+<button class="border border-outline-variant hover:border-primary-container/50 text-primary px-6 py-2 text-xs font-bold uppercase tracking-widest transition-all rounded-sm">
+                                        View Map
+                                    </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high/40 backdrop-blur-[40px] cyber-glass-border rounded-sm p-6">
+<h3 class="text-sm font-headline font-bold text-primary mb-6 flex items-center justify-between">
+                                Priority Alerts
+                                <span class="material-symbols-outlined text-tertiary-fixed-dim">warning</span>
+</h3>
+<div class="space-y-4">
+<div class="p-3 bg-surface-container-lowest/60 border-l-2 border-tertiary-fixed-dim">
+<div class="text-xs font-bold text-tertiary-fixed-dim uppercase mb-1">High Risk Detected</div>
+<div class="text-[10px] text-on-surface-variant leading-relaxed">Trader #4922 exhibiting HFT patterns inconsistent with challenge terms.</div>
+</div>
+<div class="p-3 bg-surface-container-lowest/60 border-l-2 border-primary-container">
+<div class="text-xs font-bold text-primary-container uppercase mb-1">System Update</div>
+<div class="text-[10px] text-on-surface-variant leading-relaxed">Bridge latency optimization scheduled for 02:00 UTC.</div>
+</div>
+<div class="p-3 bg-surface-container-lowest/60 border-l-2 border-outline">
+<div class="text-xs font-bold text-on-surface-variant uppercase mb-1">KYC Queue</div>
+<div class="text-[10px] text-on-surface-variant leading-relaxed">142 pending verifications requiring manual oversight.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Developer Context Panel -->
+<aside class="w-80 flex flex-col gap-6">
+<div class="bg-surface-container-high/40 backdrop-blur-[40px] border border-outline-variant/30 rounded-sm p-6 flex-1 flex flex-col">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary-container text-sm">terminal</span>
+<h3 class="text-xs font-bold uppercase tracking-widest text-primary">Developer Context</h3>
+</div>
+<div class="flex-1 font-mono text-[11px] space-y-3 overflow-y-auto no-scrollbar">
+<div class="text-on-surface-variant">
+<span class="text-primary-container">root</span>/
+                                <div class="pl-4 mt-2">
+<div class="flex items-center gap-2 py-1 opacity-60">
+<span class="material-symbols-outlined text-xs">folder</span> components/
+                                    </div>
+<div class="pl-4 space-y-1">
+<div class="flex items-center gap-2 text-primary-fixed border-l border-primary-container/20 pl-2">
+<span class="material-symbols-outlined text-[10px]">description</span> SideNavBar.jsx
+                                        </div>
+<div class="flex items-center gap-2 py-1 opacity-60 pl-2">
+<span class="material-symbols-outlined text-[10px]">description</span> TopNavBar.jsx
+                                        </div>
+</div>
+<div class="flex items-center gap-2 py-1 opacity-60 mt-2">
+<span class="material-symbols-outlined text-xs">folder</span> layouts/
+                                    </div>
+<div class="pl-4">
+<div class="flex items-center gap-2 py-1 text-primary-fixed font-bold border-l border-primary-container/20 pl-2 bg-primary-container/5">
+<span class="material-symbols-outlined text-[10px]">view_quilt</span> MainLayout.tsx
+                                        </div>
+</div>
+<div class="flex items-center gap-2 py-1 opacity-60 mt-2">
+<span class="material-symbols-outlined text-xs">folder</span> pages/
+                                    </div>
+<div class="pl-4 space-y-1">
+<div class="flex items-center gap-2 py-1 opacity-100 border-l border-primary-container/20 pl-2 text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[10px]">data_object</span> Dashboard.jsx
+                                        </div>
+<div class="flex items-center gap-2 py-1 opacity-40 border-l border-primary-container/20 pl-2">
+<span class="material-symbols-outlined text-[10px]">data_object</span> Analytics.jsx
+                                        </div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/20">
+<div class="text-[10px] text-on-surface-variant mb-2">Active Route:</div>
+<code class="block bg-surface-container-lowest p-2 text-primary-container rounded-sm border border-primary-container/20 text-[10px]">/admin/overview/central-command</code>
+</div>
+</div>
+<div class="bg-primary-container p-6 rounded-sm shadow-[0_0_20px_rgba(0,255,204,0.2)]">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold text-on-primary-container uppercase tracking-widest">Global Ops FAB</span>
+</div>
+<p class="text-[11px] text-on-primary-container leading-tight mb-4 font-medium">Initialize system-wide protocol update for all active funded accounts.</p>
+<button class="w-full bg-on-primary-container text-primary-container py-2 text-xs font-bold uppercase tracking-tighter hover:brightness-125 transition-all">
+                            Execute Protocol
+                        </button>
+</div>
+</aside>
+</div>
+</main>
+</div>
+</body></html>

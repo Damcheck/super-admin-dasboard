@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noble Terminal | Compliance Dashboard</title>
+<script type='text/javascript' nonce='PFbo21eNvuT8kcI4UCLqpA==' src='https://contribution.usercontent.google.com/ilxPP3e9ii-RpJ5bUmKEgfpjxoBKwVg_PDA-jF0V_01W10euUdhMQqvYJdq2-Ui0nv7Jd9Tvx3CwAZaRfYgpyAr0fGP_V9fbgbeVqJltushpGPAboNM4vMNGAlmmU3ciZSBvFFIx0kZhImtTabkQCHSzaE0wzY2tjnB2x5vx5SyCM3l_p-VDC0TSJIR_WnG2kLMEK0HGCZasM-CO8ZBT3GuAJeY6u3mEInxUZiWR5RhObW_9vmy3PuemF12N5wllTWEog80dBvFOZxmSQtJomf0wgzdr1gbVUaSHsYIbN97AG8kBdlNI3lpP65y0PUkt7WivRa2HrP9A-BU2BiT4k9bDYCh3WufRjAFhNMJvEbT6eTunJfvmhNFp-XCaYVVqquR_NykwpUXGJJ2KDV--XSfCsya7a6807ci48-U1yvMtqqEYh_-gmuENOdwpbDTzG8kI5Grkxh3SD0F6KQnNdNiUzUnCFarK5N6Wlz_dIBi8GXuKMWMnAWO1Cxm3H2z4gJSLoXglqOkqKyDUOe_LnuOryW4kgal6UsDSB_FBTEEoG284lKs3DrRZyitUoMc2VTtBCfPSDzhVxW9HnBDRK1yfAON2hRETtYPh0SmRyeYJM20TLo4uQVvuPPqa9-bnRFTwSi8frExD8u40rc0NIBHGdohEYRkx4zvsC5xeZDFLThFIjGmMl510qFJBCpnFvaQvZUyInxE3xx113DsdQNfs2nSSFhUn3qClkAQLz3lGcehPgkhWNvR6crmVDH_UF26Y6_mYA2w0QqqGhd3xw8143vAq5wPGuXpyfXzt'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#00e0b3",
+                        "on-surface": "#c6eae6",
+                        "error-container": "#93000a",
+                        "outline": "#83958d",
+                        "on-primary": "#00382b",
+                        "inverse-on-surface": "#133634",
+                        "secondary-fixed": "#ffdcbf",
+                        "primary-container": "#00ffcc",
+                        "on-secondary-fixed-variant": "#6a3b00",
+                        "primary-fixed": "#24ffcd",
+                        "tertiary-fixed": "#c6eae6",
+                        "on-primary-container": "#00725a",
+                        "inverse-primary": "#006b54",
+                        "surface-container-highest": "#183a38",
+                        "tertiary-container": "#c5e9e5",
+                        "surface-bright": "#1d3f3c",
+                        "inverse-surface": "#c6eae6",
+                        "on-tertiary-fixed": "#00201e",
+                        "tertiary-fixed-dim": "#aacdca",
+                        "secondary": "#ffbc7c",
+                        "secondary-container": "#fe9400",
+                        "on-background": "#c6eae6",
+                        "tertiary": "#fcfffe",
+                        "primary": "#fdfffc",
+                        "on-tertiary": "#133634",
+                        "on-secondary": "#4b2800",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#2b4c4a",
+                        "on-secondary-container": "#633700",
+                        "on-primary-fixed": "#002118",
+                        "surface-container-high": "#0b2f2d",
+                        "surface-container": "#002423",
+                        "on-surface-variant": "#b9cbc2",
+                        "surface-tint": "#00e0b3",
+                        "on-secondary-fixed": "#2d1600",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#ffb874",
+                        "outline-variant": "#3a4a44",
+                        "on-tertiary-container": "#496a67",
+                        "surface-variant": "#183a38",
+                        "surface-container-lowest": "#001110",
+                        "surface-container-low": "#00201e",
+                        "surface-dim": "#001716",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#00513f",
+                        "background": "#001716",
+                        "surface": "#001716"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(11, 47, 45, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 204, 0.1);
+        }
+        .hud-text {
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+        }
+        body {
+            background-color: #001716;
+            color: #c6eae6;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#001716]/80 backdrop-blur-xl border-b border-[#00ffcc]/20 shadow-[0_20px_40px_rgba(0,255,204,0.04)] font-[&#39;Space_Grotesk&#39;] tracking-tight">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-[#00ffcc] uppercase">NOBLE FUNDED</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors" href="#">Dashboard</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors" href="#">Analytics</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors" href="#">Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-highest border-none focus:ring-1 focus:ring-primary-container/50 text-sm py-1.5 px-4 rounded-xl w-64 text-on-surface" placeholder="Search accounts..." type="text"/>
+</div>
+<button class="p-2 hover:bg-[#1d3f3c]/50 transition-all duration-300 rounded-full text-[#b9cbc2] hover:text-[#00ffcc]">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 hover:bg-[#1d3f3c]/50 transition-all duration-300 rounded-full text-[#b9cbc2] hover:text-[#00ffcc]">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-[#00201e] border-r border-[#00ffcc]/10 flex flex-col pt-20 pb-6 z-40">
+<div class="px-6 mb-8">
+<h2 class="text-[#00ffcc] font-headline font-bold text-xs uppercase tracking-[0.2em] opacity-60">Noble Terminal</h2>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-widest mt-1">Elite Institutional Access</p>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<!-- Active Tab: Compliance -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#0b2f2d]/60 text-[#00ffcc] border-r-4 border-[#00ffcc] shadow-[inset_-10px_0_20px_rgba(0,255,204,0.05)] transition-transform active:translate-x-1" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span class="font-[&#39;Inter&#39;] text-sm font-medium">Compliance</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all" href="#">
+<span class="material-symbols-outlined">campaign</span>
+<span class="font-[&#39;Inter&#39;] text-sm font-medium">Marketing</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all" href="#">
+<span class="material-symbols-outlined">terminal</span>
+<span class="font-[&#39;Inter&#39;] text-sm font-medium">Developer</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all" href="#">
+<span class="material-symbols-outlined">admin_panel_settings</span>
+<span class="font-[&#39;Inter&#39;] text-sm font-medium">Admin</span>
+</a>
+</nav>
+<div class="px-4 mt-auto space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all" href="#">
+<span class="material-symbols-outlined text-sm">history</span>
+<span class="font-[&#39;Inter&#39;] text-xs font-medium uppercase tracking-wider">Logs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all" href="#">
+<span class="material-symbols-outlined text-sm">settings</span>
+<span class="font-[&#39;Inter&#39;] text-xs font-medium uppercase tracking-wider">Settings</span>
+</a>
+<div class="mt-6 flex items-center gap-3 px-4">
+<div class="w-8 h-8 rounded bg-primary-container/20 border border-primary-container/30 flex items-center justify-center text-primary-container text-xs font-bold">NS</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Admin_01</p>
+<p class="text-[10px] text-on-surface-variant">System Security</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-64 pt-24 px-8 pb-12">
+<!-- Header HUD -->
+<header class="mb-10 flex justify-between items-end">
+<div>
+<h1 class="font-headline text-4xl font-bold tracking-tight text-primary">Compliance <span class="text-primary-container">Violations</span></h1>
+<p class="text-on-surface-variant mt-2 font-body max-w-xl">Real-time surveillance of algorithmic trading behaviors and draw-down thresholds across the institutional pool.</p>
+</div>
+<div class="flex gap-12 text-right">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Active Alerts</p>
+<p class="font-headline text-3xl font-bold text-secondary hud-text">14</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Risk Level</p>
+<p class="font-headline text-3xl font-bold text-primary-fixed-dim hud-text">MODERATE</p>
+</div>
+</div>
+</header>
+<!-- Filters HUD -->
+<div class="flex gap-4 mb-8 overflow-x-auto pb-2">
+<button class="px-4 py-2 bg-primary-container text-on-primary font-label text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                All Violations
+            </button>
+<button class="px-4 py-2 glass-card text-on-surface-variant hover:text-primary-container font-label text-xs font-bold uppercase tracking-widest transition-colors">
+                Max Daily Loss
+            </button>
+<button class="px-4 py-2 glass-card text-on-surface-variant hover:text-primary-container font-label text-xs font-bold uppercase tracking-widest transition-colors">
+                Max Drawdown
+            </button>
+<button class="px-4 py-2 glass-card text-on-surface-variant hover:text-primary-container font-label text-xs font-bold uppercase tracking-widest transition-colors">
+                HFT Detection
+            </button>
+<div class="ml-auto flex items-center text-[10px] text-on-surface-variant uppercase tracking-widest font-bold border-l border-outline-variant/30 pl-6">
+<span class="w-2 h-2 rounded-full bg-primary-container mr-2 animate-pulse"></span>
+                Live Stream Active
+            </div>
+</div>
+<!-- Bento Grid for Violations -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: HFT Detection (High Severity) -->
+<div class="glass-card relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-error-container/10 blur-[60px]"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-error/10 border border-error/30 px-2 py-0.5 rounded text-[10px] font-bold text-error uppercase tracking-tighter">CRITICAL SEVERITY</div>
+<span class="text-on-surface-variant font-mono text-[10px]">#VO-8829-11</span>
+</div>
+<div class="mb-6">
+<h3 class="text-primary font-headline text-xl font-bold">HFT Detection</h3>
+<p class="text-on-surface-variant text-xs mt-1">Algorithmic high-frequency patterns detected in USD/JPY scalping.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Trader</p>
+<p class="text-sm font-medium">Alex Chen (A-402)</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Account</p>
+<p class="text-sm font-medium">$250k Funded</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Orders/Sec</p>
+<p class="text-sm font-bold text-error">42.8</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Timestamp</p>
+<p class="text-sm font-medium">14:02:11 UTC</p>
+</div>
+</div>
+<button class="w-full py-3 bg-error text-on-error font-bold text-xs uppercase tracking-[0.2em] transition-all hover:brightness-110 active:scale-95">
+                        Review Case
+                    </button>
+</div>
+</div>
+<!-- Card 2: Max Daily Loss (Medium Severity) -->
+<div class="glass-card relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/10 blur-[60px]"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-secondary/10 border border-secondary/30 px-2 py-0.5 rounded text-[10px] font-bold text-secondary uppercase tracking-tighter">WARNING</div>
+<span class="text-on-surface-variant font-mono text-[10px]">#VO-8829-09</span>
+</div>
+<div class="mb-6">
+<h3 class="text-primary font-headline text-xl font-bold">Max Daily Loss</h3>
+<p class="text-on-surface-variant text-xs mt-1">Threshold exceeded during London session open volatility.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Trader</p>
+<p class="text-sm font-medium">S. Kowalski (B-119)</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Account</p>
+<p class="text-sm font-medium">$100k Pro</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Loss Amt</p>
+<p class="text-sm font-bold text-secondary">-$5,240.00</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Cap %</p>
+<p class="text-sm font-medium">5.24% / 5.0%</p>
+</div>
+</div>
+<button class="w-full py-3 bg-secondary text-on-secondary font-bold text-xs uppercase tracking-[0.2em] transition-all hover:brightness-110 active:scale-95">
+                        Review Case
+                    </button>
+</div>
+</div>
+<!-- Card 3: Max Overall Drawdown (Medium Severity) -->
+<div class="glass-card relative overflow-hidden group">
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-secondary/10 border border-secondary/30 px-2 py-0.5 rounded text-[10px] font-bold text-secondary uppercase tracking-tighter">WARNING</div>
+<span class="text-on-surface-variant font-mono text-[10px]">#VO-8828-55</span>
+</div>
+<div class="mb-6">
+<h3 class="text-primary font-headline text-xl font-bold">Overall Drawdown</h3>
+<p class="text-on-surface-variant text-xs mt-1">Trailing drawdown touched breach levels on equity curve.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Trader</p>
+<p class="text-sm font-medium">Maria V. (A-004)</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Account</p>
+<p class="text-sm font-medium">$500k Whale</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Drawdown</p>
+<p class="text-sm font-bold text-secondary">-$50,001.20</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Max Allowed</p>
+<p class="text-sm font-medium">-$50,000.00</p>
+</div>
+</div>
+<button class="w-full py-3 bg-secondary text-on-secondary font-bold text-xs uppercase tracking-[0.2em] transition-all hover:brightness-110 active:scale-95">
+                        Review Case
+                    </button>
+</div>
+</div>
+<!-- Card 4: News Trading (Low Severity) -->
+<div class="glass-card relative overflow-hidden group">
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-primary-container/10 border border-primary-container/30 px-2 py-0.5 rounded text-[10px] font-bold text-primary-container uppercase tracking-tighter">RESTRICTED PERIOD</div>
+<span class="text-on-surface-variant font-mono text-[10px]">#VO-8828-42</span>
+</div>
+<div class="mb-6">
+<h3 class="text-primary font-headline text-xl font-bold">News Violation</h3>
+<p class="text-on-surface-variant text-xs mt-1">Trade executed during FOMC blackout window (±2 mins).</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Trader</p>
+<p class="text-sm font-medium">Jordan L.</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Asset</p>
+<p class="text-sm font-medium">XAU/USD</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">News Event</p>
+<p class="text-sm font-medium">Fed Rate Dec.</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Deviation</p>
+<p class="text-sm font-medium">-45 Seconds</p>
+</div>
+</div>
+<button class="w-full py-3 bg-primary-container text-on-primary font-bold text-xs uppercase tracking-[0.2em] transition-all hover:brightness-110 active:scale-95">
+                        Review Case
+                    </button>
+</div>
+</div>
+<!-- Card 5: Hedging Violation (High Severity) -->
+<div class="glass-card relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-error-container/10 blur-[60px]"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-error/10 border border-error/30 px-2 py-0.5 rounded text-[10px] font-bold text-error uppercase tracking-tighter">POLICY BREACH</div>
+<span class="text-on-surface-variant font-mono text-[10px]">#VO-8827-18</span>
+</div>
+<div class="mb-6">
+<h3 class="text-primary font-headline text-xl font-bold">Forbidden Hedging</h3>
+<p class="text-on-surface-variant text-xs mt-1">Simultaneous long/short positions across linked sub-accounts.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Accounts</p>
+<p class="text-sm font-medium">#102, #109</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Lot Size</p>
+<p class="text-sm font-medium">25.0 Std</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Detected By</p>
+<p class="text-sm font-medium">IP Cluster Sync</p>
+</div>
+<div>
+<p class="text-[10px] uppercase text-on-surface-variant tracking-widest">Action</p>
+<p class="text-sm font-bold text-error">Auto-Freeze</p>
+</div>
+</div>
+<button class="w-full py-3 bg-error text-on-error font-bold text-xs uppercase tracking-[0.2em] transition-all hover:brightness-110 active:scale-95">
+                        Review Case
+                    </button>
+</div>
+</div>
+<!-- Visual Insight Card -->
+<div class="glass-card border-dashed border-primary-container/30 flex flex-col items-center justify-center p-8 text-center bg-gradient-to-b from-transparent to-primary-container/5">
+<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary-container text-3xl">insights</span>
+</div>
+<h3 class="font-headline text-lg font-bold text-primary mb-2">Trend Analysis</h3>
+<p class="text-xs text-on-surface-variant mb-6">Violations are up 12% compared to last week. Most frequent breach: Daily Loss Limit (45%).</p>
+<button class="text-[10px] font-bold uppercase tracking-widest text-primary-container hover:underline underline-offset-4">
+                    View Compliance Report
+                </button>
+</div>
+</div>
+<!-- Asymmetric Detail Section -->
+<section class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left: Real-time Terminal Stream -->
+<div class="lg:col-span-2 glass-card p-6 min-h-[400px]">
+<div class="flex items-center justify-between mb-6 border-b border-outline-variant/20 pb-4">
+<h4 class="font-headline text-sm font-bold uppercase tracking-widest text-primary">Live Violation Stream</h4>
+<span class="text-[10px] font-mono text-on-surface-variant">NODE_ADMIN_SEC_09</span>
+</div>
+<div class="space-y-4 font-mono text-xs">
+<div class="flex gap-4 items-start">
+<span class="text-on-surface-variant/50">[14:22:01]</span>
+<span class="text-primary-container">ALERT:</span>
+<span class="text-on-surface">Account A-402 initiated 10 consecutive trades &lt; 1s apart. Flags: HFT_PROHIBITED.</span>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-on-surface-variant/50">[14:18:45]</span>
+<span class="text-secondary">WARN:</span>
+<span class="text-on-surface">Trader B-119 daily loss at 4.91%. Nearing soft-breach limit.</span>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-on-surface-variant/50">[14:15:22]</span>
+<span class="text-error">CRIT:</span>
+<span class="text-on-surface">System-wide equity check completed. 3 hard breaches confirmed. Accounts disabled.</span>
+</div>
+<div class="flex gap-4 items-start">
+<span class="text-on-surface-variant/50">[14:12:10]</span>
+<span class="text-primary-container">INFO:</span>
+<span class="text-on-surface">IP Match detected between User Maria V. and User Alex Chen. Internal investigation opened.</span>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/10 animate-pulse text-primary-container/60">
+                        &gt; Waiting for incoming socket data...
+                    </div>
+</div>
+</div>
+<!-- Right: Account Integrity Map (Mockup Image) -->
+<div class="glass-card overflow-hidden flex flex-col">
+<div class="p-6">
+<h4 class="font-headline text-sm font-bold uppercase tracking-widest text-primary mb-4">Risk Distribution</h4>
+</div>
+<div class="flex-1 relative min-h-[250px] bg-surface-container-highest/50">
+<img alt="Data visualization showing risk distribution" class="w-full h-full object-cover mix-blend-screen opacity-50" data-alt="Abstract data visualization with neon teal and orange glowing lines on a dark background showing network connectivity and risk clusters" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD24aX6jyL4axi_sr8rIZBDlFrc6pFzzxlxZ1tev5vZ3w_DDnQRKb0TTzCG4FSkO0llJ07GwDU76d_T1LYcarZDLEdUJMdUMESph5Gv74xoyfXmlh1X10xDsut97MPcbp4rgGDVQawTrhHqXRdEpqrg4DtwWxF9NZDkka5FhMbHYz0kfz50lMJRgHudluZsw596Ac0oYg_jqARVLaPQUDToNAkoN-wGS_MlO4lycWWzGGdtElg4KAVKS-g_gswptXHl6-723ZptmjQA"/>
+<div class="absolute inset-0 p-6 flex flex-col justify-end">
+<div class="bg-surface/80 backdrop-blur-md p-4 border border-outline-variant/30">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Top Breach Asset</p>
+<p class="text-xl font-headline font-bold text-primary">USD/JPY <span class="text-xs font-normal text-error">(+14% Violation rate)</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action: Alert Logic (Hidden on mobile as per design system) -->
+<div class="fixed bottom-8 right-8 hidden lg:block">
+<button class="flex items-center gap-3 bg-primary-container text-on-primary px-6 py-4 rounded-full shadow-[0_20px_40px_rgba(0,255,204,0.2)] hover:scale-105 transition-transform group">
+<span class="material-symbols-outlined group-hover:rotate-180 transition-transform">refresh</span>
+<span class="font-bold text-sm uppercase tracking-widest">Force Global Sync</span>
+</button>
+</div>
+</body></html>

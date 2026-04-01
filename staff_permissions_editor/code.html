@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noble Funded | Staff Permissions Editor</title>
+<script type='text/javascript' nonce='uO82wpFm4VyXfXIKsyyJig==' src='https://contribution.usercontent.google.com/mP3sHvCYp_nUt2e-gC2QoR60QhM8T01kjrZIkuzQIxfB0HfM3nmkwpfrujEact-61718a_bpYUh-jD323mQXbwiKH0UOaGKOiuTwDmaSnzFYz6UxpNuFpLKqH-UKG3-j1gkpn07BF_Laj1k8M9GqystnmcNk6LoKUy7XKjKZXcrJsAw3hCcsJjGV2v4GfO6sBg9-imOTbIqoj93S0bCmKtXbAqJJc4pgmkGZXAedGXcWb8pDCo9iwQif4G0yTg-1BcuD7nuU7ynQlweY0_vebn9CZYVGhOmWzdE5xfrTyBE6Q2k-puMqpF8EjMjIrYNNEWj9atqfGvcb-Q2NmMJ7sF_ykyqelP8zQOZ7uU-DcZ0FNgBfyS1BMPgAr7WFcEBHJ9wKFguI5HLr7wUUPKihjXoqVVNgJflhkS-W18rxkkScuCYQHd7H2WwfJ7GJZ3dGmPM9GkPGC4FUcOvBiJQFtMXdlKZaiXXRGn0F2TIlJUd6_gSAec6BjS5ObRkHNLs8mjTDW_LxPzb-zf5xGt-r2m3NfZLCAxgoxuNZgyFA93Eo2PnWmAbIWG7kwURZnuir9HcnZrF9y_VJdyXxjUQM18SLRvXGt7fGYcVpiKRpQpbx7hiGgdSzoobZyJJ-JkTDUnorMb-AXXlwUGR2vmR7R6l2W9sCMnzbZb6K_bCn78mq1HtgcNzF7D_MIDs2_fIGbdr8OY41VtCvU4CNKrOH-xAjSHt91vq2fTf2bK8PIkQzw4yG87JkLVLFUVshFEpvJ5_f1O3sWihsK7J-vIgeZl-ecgC46xbgZQ83AvY7'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface-variant": "#b9cbc2",
+                        "surface-container-low": "#00201e",
+                        "on-secondary-fixed-variant": "#6a3b00",
+                        "surface-bright": "#1d3f3c",
+                        "secondary-container": "#fe9400",
+                        "primary-fixed": "#24ffcd",
+                        "inverse-surface": "#c6eae6",
+                        "on-secondary": "#4b2800",
+                        "on-secondary-fixed": "#2d1600",
+                        "surface-container-highest": "#183a38",
+                        "surface": "#001716",
+                        "on-background": "#c6eae6",
+                        "surface-tint": "#00e0b3",
+                        "on-primary": "#00382b",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#00e0b3",
+                        "tertiary": "#fcfffe",
+                        "secondary-fixed": "#ffdcbf",
+                        "surface-dim": "#001716",
+                        "outline-variant": "#3a4a44",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#2b4c4a",
+                        "inverse-on-surface": "#133634",
+                        "outline": "#83958d",
+                        "surface-container-lowest": "#001110",
+                        "secondary-fixed-dim": "#ffb874",
+                        "on-primary-fixed": "#002118",
+                        "background": "#001716",
+                        "tertiary-container": "#c5e9e5",
+                        "on-secondary-container": "#633700",
+                        "surface-container-high": "#0b2f2d",
+                        "on-tertiary-container": "#496a67",
+                        "on-tertiary": "#133634",
+                        "on-primary-container": "#00725a",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#c6eae6",
+                        "on-tertiary-fixed": "#00201e",
+                        "on-surface": "#c6eae6",
+                        "inverse-primary": "#006b54",
+                        "primary": "#fdfffc",
+                        "error-container": "#93000a",
+                        "primary-container": "#00ffcc",
+                        "on-primary-fixed-variant": "#00513f",
+                        "secondary": "#ffbc7c",
+                        "tertiary-fixed-dim": "#aacdca",
+                        "surface-variant": "#183a38",
+                        "surface-container": "#002423"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(10, 46, 44, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 204, 0.1);
+        }
+        .neon-glow:checked + .switch-bg {
+            background-color: #00ffcc;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+        }
+        .neon-glow:checked + .switch-bg .switch-dot {
+            transform: translateX(1.25rem);
+            background-color: #00382b;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container/30 selection:text-primary-container">
+<!-- TopNavBar (Shared Component Execution) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#0a2e2c]/40 backdrop-blur-xl border-b border-[#00ffcc]/20 shadow-[0_20px_40px_rgba(0,255,204,0.04)]">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-[#fdfffc] font-headline">Noble Funded</span>
+<nav class="hidden md:flex gap-6 font-headline text-sm tracking-tight">
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-all duration-300" href="#">Dashboard</a>
+<a class="text-[#00ffcc] border-b-2 border-[#00ffcc] pb-1" href="#">Traders</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-all duration-300" href="#">Audits</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-all duration-300" href="#">Risk</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#b9cbc2] hover:text-[#00ffcc] transition-all" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-[#b9cbc2] hover:text-[#00ffcc] transition-all" data-icon="settings">settings</button>
+<div class="h-8 w-8 rounded-full border border-primary-container/30 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a professional male administrator in a modern office with moody teal lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANlpCwmXnbucv6O6ZL-AVKvuUMtQjKdadjrT_ccaFVCmGLRSGmm--BhWMTsdUB-VGNAXiFx3LiYzyiCcRZZUjxQuFhXs0BzbEfNQEoYSs5ZLii2a5nIyHj0V9bVMFZXux1BqNI7Wfh79pup6zK9YeyRsJHGo-bgzjOXwq2hB_4wQxQG3Wx4_4La8d7vzBG650mV1wKTYyIWwb0EOdkzywjZNHsBc8Xe5vhITx-U3b3rp8KqSO540YHCwwODzOYwiEStIjxe3xjMqOD"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Shared Component Execution) -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-[#00201e] border-r border-[#00ffcc]/10 flex flex-col py-6 z-40 hidden md:flex">
+<div class="px-6 mb-10 mt-16">
+<h2 class="text-[#fdfffc] font-headline font-bold text-lg">Noble Funded</h2>
+<p class="text-[#b9cbc2] text-xs opacity-70">Super Admin Panel</p>
+</div>
+<nav class="flex-1 px-4 space-y-2 font-body font-medium text-sm">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-[#b9cbc2] opacity-70 hover:bg-[#0b2f2d]/60 hover:text-[#fdfffc]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 bg-[#00ffcc]/10 text-[#00ffcc] border-r-4 border-[#00ffcc]" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+                Traders
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-[#b9cbc2] opacity-70 hover:bg-[#0b2f2d]/60 hover:text-[#fdfffc]" href="#">
+<span class="material-symbols-outlined" data-icon="fact_check">fact_check</span>
+                Audits
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-[#b9cbc2] opacity-70 hover:bg-[#0b2f2d]/60 hover:text-[#fdfffc]" href="#">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+                Risk Management
+            </a>
+</nav>
+<div class="px-6 py-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2 text-[#00ffcc] text-xs">
+<span class="w-2 h-2 rounded-full bg-[#00ffcc] animate-pulse"></span>
+                System Status: Active
+            </div>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="md:ml-64 pt-24 pb-12 px-8 min-h-screen">
+<div class="max-w-6xl mx-auto">
+<!-- Breadcrumbs & Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div class="space-y-2">
+<nav class="flex items-center gap-2 text-on-surface-variant text-xs font-label uppercase tracking-widest">
+<span>Team Management</span>
+<span class="material-symbols-outlined text-[10px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary-fixed">Permissions Editor</span>
+</nav>
+<h1 class="text-4xl font-headline font-bold text-primary tracking-tight">Staff Permissions Editor</h1>
+<p class="text-on-surface-variant max-w-lg">Assign granular dashboard access and action-specific protocols for institutional staff accounts.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2 border border-primary-container/40 text-primary-container font-headline text-sm font-bold rounded-lg hover:bg-surface-bright transition-all">
+                        Discard Changes
+                    </button>
+<button class="px-8 py-2 bg-primary-container text-on-primary font-headline text-sm font-bold rounded-lg shadow-[0_0_20px_rgba(0,255,204,0.3)] hover:scale-105 transition-transform active:scale-95">
+                        Save Permissions
+                    </button>
+</div>
+</div>
+<!-- Profile Summary Section (Asymmetric HUD) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
+<div class="lg:col-span-4 glass-panel p-6 rounded-xl flex items-center gap-6">
+<div class="relative">
+<img class="w-20 h-20 rounded-full object-cover border-2 border-primary-container/20 p-1" data-alt="Portrait of a focused male professional in a dark studio setting with teal backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJg9q4j-Pk7PphozLvmgLRi2M4ksKFb5X16s6JAjjMn_wCidvJP_MdPGhGdG3_vJHHyiSl07IF289nD5ToYvWFVI3EvLT9weDFmbqCiotbCR1eGu93P9nk2b1MoP6oZ1JC2gL9sMTrO-fq6F2QpEFNLzvuquHtoTKwPDY_RorJYOcFy9D6l837uovFB7xPAxG2pwxts02GpURj7B51QHkf25BEM_kAVuKZT2tq2boL9jkmoXj4N6b3QmIKmZ5nP5MI2B7DflPRjBx9"/>
+<div class="absolute -bottom-1 -right-1 bg-primary-container p-1 rounded-full text-[10px] text-on-primary font-bold">LV3</div>
+</div>
+<div>
+<h3 class="text-primary font-headline font-bold text-xl">Julian Vandez</h3>
+<p class="text-on-surface-variant text-sm">Senior Risk Analyst</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="text-[10px] bg-primary-container/10 text-primary-container px-2 py-0.5 rounded-full border border-primary-container/20">STAFF_ID: 88219</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 glass-panel p-6 rounded-xl grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="space-y-1">
+<span class="text-on-surface-variant text-[10px] font-label uppercase tracking-widest">Access Level</span>
+<div class="text-2xl font-headline font-bold text-primary-fixed">Proprietary</div>
+</div>
+<div class="space-y-1">
+<span class="text-on-surface-variant text-[10px] font-label uppercase tracking-widest">Active Modules</span>
+<div class="text-2xl font-headline font-bold text-primary">14 / 32</div>
+</div>
+<div class="space-y-1">
+<span class="text-on-surface-variant text-[10px] font-label uppercase tracking-widest">Last Modified</span>
+<div class="text-sm font-headline font-medium text-primary mt-2">Oct 24, 2023</div>
+</div>
+<div class="space-y-1">
+<span class="text-on-surface-variant text-[10px] font-label uppercase tracking-widest">Security Clearance</span>
+<div class="text-sm font-headline font-medium text-secondary mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+                            Tier-2 Authenticated
+                        </div>
+</div>
+</div>
+</div>
+<!-- Detailed Permissions List -->
+<div class="space-y-8">
+<!-- Category: Compliance Dashboard -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-container" data-icon="gavel">gavel</span>
+</div>
+<h2 class="text-xl font-headline font-bold text-primary">Compliance &amp; KYC Dashboard</h2>
+<div class="flex-1 h-px bg-gradient-to-r from-outline-variant/30 to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Permission Card -->
+<div class="glass-panel p-5 rounded-xl flex items-center justify-between hover:bg-surface-bright/20 transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant/50" data-icon="visibility">visibility</span>
+<div>
+<h4 class="text-primary font-medium text-sm">View User Documents</h4>
+<p class="text-on-surface-variant text-xs">Read-only access to KYC identity files.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer neon-glow" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full transition-all switch-bg relative">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-on-surface-variant rounded-full transition-all switch-dot"></div>
+</div>
+</label>
+</div>
+<!-- Permission Card -->
+<div class="glass-panel p-5 rounded-xl flex items-center justify-between hover:bg-surface-bright/20 transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant/50" data-icon="check_circle">check_circle</span>
+<div>
+<h4 class="text-primary font-medium text-sm">Approve Identity Tiers</h4>
+<p class="text-on-surface-variant text-xs">Authority to mark KYC as 'Verified'.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer neon-glow" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full transition-all switch-bg relative">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-on-surface-variant rounded-full transition-all switch-dot"></div>
+</div>
+</label>
+</div>
+<!-- Permission Card -->
+<div class="glass-panel p-5 rounded-xl flex items-center justify-between hover:bg-surface-bright/20 transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant/50" data-icon="edit">edit</span>
+<div>
+<h4 class="text-primary font-medium text-sm">Edit User Meta-Data</h4>
+<p class="text-on-surface-variant text-xs">Modify manual compliance flags.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer neon-glow" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full transition-all switch-bg relative">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-on-surface-variant rounded-full transition-all switch-dot"></div>
+</div>
+</label>
+</div>
+<!-- Permission Card -->
+<div class="glass-panel p-5 rounded-xl flex items-center justify-between hover:bg-surface-bright/20 transition-colors border-error/10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-error/60" data-icon="delete_forever">delete_forever</span>
+<div>
+<h4 class="text-primary font-medium text-sm">Delete KYC History</h4>
+<p class="text-on-surface-variant text-xs">Permanent removal of archive logs.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer neon-glow" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full transition-all switch-bg relative">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-on-surface-variant rounded-full transition-all switch-dot"></div>
+</div>
+</label>
+</div>
+</div>
+</section>
+<!-- Category: Marketing Dashboard (Asymmetric Grid Layout) -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary" data-icon="campaign">campaign</span>
+</div>
+<h2 class="text-xl font-headline font-bold text-primary">Marketing &amp; Affiliates</h2>
+<div class="flex-1 h-px bg-gradient-to-r from-outline-variant/30 to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Tall Card for Primary Intent -->
+<div class="md:col-span-1 glass-panel p-6 rounded-xl flex flex-col justify-between border-primary-container/10">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary-container text-3xl" data-icon="hub">hub</span>
+<h4 class="text-primary font-headline font-bold">Affiliate Network Control</h4>
+<p class="text-on-surface-variant text-sm">Full management of partner commission rates, referral payouts, and landing page overrides.</p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-xs font-label text-primary-fixed uppercase tracking-widest">Global Access</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer neon-glow" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full transition-all switch-bg relative">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-on-surface-variant rounded-full transition-all switch-dot"></div>
+</div>
+</label>
+</div>
+</div>
+<div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="glass-panel p-5 rounded-xl flex items-center justify-between">
+<div>
+<h4 class="text-primary font-medium text-sm">Create Promo Codes</h4>
+<p class="text-on-surface-variant text-xs">Generate new campaign links.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer neon-glow" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full transition-all switch-bg relative">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-on-surface-variant rounded-full transition-all switch-dot"></div>
+</div>
+</label>
+</div>
+<div class="glass-panel p-5 rounded-xl flex items-center justify-between">
+<div>
+<h4 class="text-primary font-medium text-sm">Bulk Email Broadcaster</h4>
+<p class="text-on-surface-variant text-xs">Push notifications to users.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer neon-glow" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full transition-all switch-bg relative">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-on-surface-variant rounded-full transition-all switch-dot"></div>
+</div>
+</label>
+</div>
+<div class="glass-panel p-5 rounded-xl flex items-center justify-between">
+<div>
+<h4 class="text-primary font-medium text-sm">Modify Brand Assets</h4>
+<p class="text-on-surface-variant text-xs">Upload logos and color schemes.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer neon-glow" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full transition-all switch-bg relative">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-on-surface-variant rounded-full transition-all switch-dot"></div>
+</div>
+</label>
+</div>
+<div class="glass-panel p-5 rounded-xl flex items-center justify-between">
+<div>
+<h4 class="text-primary font-medium text-sm">Financial Analytics</h4>
+<p class="text-on-surface-variant text-xs">View ROI on ad spend.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer neon-glow" type="checkbox"/>
+<div class="w-10 h-5 bg-surface-container-highest rounded-full transition-all switch-bg relative">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-on-surface-variant rounded-full transition-all switch-dot"></div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Developer & API (Technical HUD Style) -->
+<section>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="terminal">terminal</span>
+</div>
+<h2 class="text-xl font-headline font-bold text-primary">Developer &amp; API Gateways</h2>
+<div class="flex-1 h-px bg-gradient-to-r from-outline-variant/30 to-transparent"></div>
+</div>
+<div class="bg-surface-container-high/40 backdrop-blur-xl border border-outline-variant/20 rounded-xl overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-highest/50">
+<th class="px-6 py-4 text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Module</th>
+<th class="px-6 py-4 text-[10px] font-label uppercase tracking-widest text-on-surface-variant text-center">View</th>
+<th class="px-6 py-4 text-[10px] font-label uppercase tracking-widest text-on-surface-variant text-center">Edit</th>
+<th class="px-6 py-4 text-[10px] font-label uppercase tracking-widest text-on-surface-variant text-center">Approve</th>
+<th class="px-6 py-4 text-[10px] font-label uppercase tracking-widest text-on-surface-variant text-center">Delete</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="hover:bg-primary-container/5 transition-colors group">
+<td class="px-6 py-4">
+<div class="font-headline font-bold text-primary">Webhooks &amp; Endpoints</div>
+<div class="text-xs text-on-surface-variant">External data stream configuration.</div>
+</td>
+<td class="px-6 py-4 text-center">
+<input checked="" class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+<td class="px-6 py-4 text-center">
+<input class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+<td class="px-6 py-4 text-center">
+<input class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+<td class="px-6 py-4 text-center">
+<input class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-primary-container/5 transition-colors group">
+<td class="px-6 py-4">
+<div class="font-headline font-bold text-primary">Database Queries</div>
+<div class="text-xs text-on-surface-variant">Execute raw SQL within sandbox.</div>
+</td>
+<td class="px-6 py-4 text-center">
+<input checked="" class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+<td class="px-6 py-4 text-center">
+<input checked="" class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+<td class="px-6 py-4 text-center">
+<input class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+<td class="px-6 py-4 text-center">
+<input class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-primary-container/5 transition-colors group">
+<td class="px-6 py-4">
+<div class="font-headline font-bold text-primary">API Key Management</div>
+<div class="text-xs text-on-surface-variant">Rotate and revoke system secrets.</div>
+</td>
+<td class="px-6 py-4 text-center">
+<input checked="" class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+<td class="px-6 py-4 text-center">
+<input checked="" class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+<td class="px-6 py-4 text-center">
+<input checked="" class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+<td class="px-6 py-4 text-center">
+<input class="rounded-sm border-outline-variant bg-surface-container text-primary-container focus:ring-0" type="checkbox"/>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Advanced Confirmation Footer -->
+<div class="glass-panel p-8 rounded-xl border-primary-container/20 mt-12">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="shield_person">shield_person</span>
+</div>
+<div>
+<h3 class="text-primary font-headline font-bold text-lg">Two-Factor Re-Authorization Required</h3>
+<p class="text-on-surface-variant text-sm">Saving these changes will trigger a mobile confirmation for Julian Vandez.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-right hidden md:block">
+<div class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest">Active Sessions</div>
+<div class="text-primary font-mono text-xs">HK_X92, NY_A11</div>
+</div>
+<button class="bg-primary-container text-on-primary px-10 py-3 rounded-lg font-headline font-extrabold uppercase tracking-tighter shadow-[0_0_30px_rgba(0,255,204,0.2)] hover:shadow-[0_0_40px_rgba(0,255,204,0.4)] transition-all">
+                                Commit changes
+                             </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Background Atmospheric Elements -->
+<div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+<div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary-container/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-secondary/5 blur-[100px] rounded-full"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_#1d3f3c_0%,_#001716_100%)] opacity-30"></div>
+</div>
+</body></html>

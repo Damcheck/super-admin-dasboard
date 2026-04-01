@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script type='text/javascript' nonce='3MB+BAqJT4BsWJVuERqNaw==' src='https://contribution.usercontent.google.com/0JAzGwjfJEO7rau2MjqTTCQMCgsdA-RGHn3Y_8PWAE_oP6KcagzHrttvlEiOa67u2AMENXa8vITru4y_6KQd2Y56faPZMGIjSWY1GoH3_sLUOGhKZ-lAJHTMcSj6ExzalWrhFMdVKVRobgkaNJuiXnqiWkTVWfkxXNUG43MMTdaKhiUP8hgnycbpNXJVErDjeKxsVMOXhIgVTNaItM1IY4a0BdfTce_9Vk2bov6EcZMTw1RvPbTjPv1hEuZpcMDo9xsBk21cQGBZYP5DM8yEjDvhoxRsHrifD7YZKD_KVfNkSk8GJIq_kpTG20KKGDDUjbmIHoxSZiwCJFJmBJlvfA7b4FqnaDzajl8SWYkdRZupLFlgBrm_6cPZ8zfoToZJXs5wc6Bl6HzKxNrlGsUAwBFDy7tIjGh9gfxPVmkFEQULQ9SZrY3m3yolFf5kJ-rUs6_j4I2JPm-mwdSUUdNLN65flR-PBSXtyTKDp9b8fP71wwcNQ6A1s0jPVHsTlPvLT7nNgNK4HKAJl1jAOHK8Se4yCutCNsHDfXZZQxjJ7fUfF0k3WDuSHNiIJH21pcqxGLdobiSyhjVAbL0kbl3AlDwZpWzXhQYsN-S8sbnjHmEsYCKaVNiUBgOWGEerfRd6b8bzUX9qRzQxqod9hJap94dsAqipEpWNo0lSSJF194HYaVsSOGzvSktTYxLyehUutQCJxmc9_n4ebCdnUuJX8_Dj12bKXASzbQiDo8dqezMcCF-DbpZO5azJ95N4kZ7lAQNWcj3f_MXe3EhfVFTIPkznjy5MrW3ax835CHkm'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#d5e6e3",
+              "background": "#071615",
+              "surface-container-highest": "#283836",
+              "on-error-container": "#ffdad6",
+              "tertiary": "#fffeff",
+              "error": "#ffb4ab",
+              "surface-container-lowest": "#03110f",
+              "on-primary-fixed-variant": "#00513f",
+              "on-error": "#690005",
+              "primary-container": "#00ffcc",
+              "primary": "#fdfffc",
+              "on-primary-container": "#00725a",
+              "on-surface": "#d5e6e3",
+              "surface-variant": "#283836",
+              "surface-container-low": "#0f1e1d",
+              "secondary-fixed-dim": "#aacdca",
+              "on-background": "#d5e6e3",
+              "tertiary-fixed": "#ffdea9",
+              "inverse-on-surface": "#243332",
+              "surface-container": "#132221",
+              "on-tertiary": "#422d00",
+              "secondary-fixed": "#c6eae6",
+              "surface-container-high": "#1e2d2b",
+              "on-secondary": "#133634",
+              "on-secondary-fixed": "#00201e",
+              "on-tertiary-fixed-variant": "#5e4100",
+              "on-secondary-fixed-variant": "#2b4c4a",
+              "outline": "#83958d",
+              "on-secondary-container": "#9cbfbc",
+              "tertiary-container": "#ffdda6",
+              "surface-bright": "#2d3c3a",
+              "error-container": "#93000a",
+              "inverse-primary": "#006b54",
+              "secondary-container": "#2e4f4c",
+              "primary-fixed": "#24ffcd",
+              "on-surface-variant": "#b9cbc2",
+              "on-tertiary-container": "#845d00",
+              "surface-dim": "#071615",
+              "outline-variant": "#3a4a44",
+              "tertiary-fixed-dim": "#ffba26",
+              "on-primary-fixed": "#002118",
+              "surface-tint": "#00e0b3",
+              "on-primary": "#00382b",
+              "secondary": "#aacdca",
+              "primary-fixed-dim": "#00e0b3",
+              "surface": "#071615",
+              "on-tertiary-fixed": "#271900"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .liquid-glass {
+            background: linear-gradient(135deg, rgba(40, 56, 54, 0.3) 0%, rgba(10, 46, 44, 0.1) 100%);
+            border-top: 1px solid rgba(0, 255, 204, 0.3);
+            border-left: 1px solid rgba(0, 255, 204, 0.1);
+        }
+        .glow-edge {
+            box-shadow: 0 0 15px -3px rgba(0, 255, 204, 0.2);
+        }
+        body {
+            background-color: #071615;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(0, 255, 204, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 186, 38, 0.03) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 flex flex-col h-full py-8 px-4 bg-[#071615]/60 backdrop-blur-[40px] h-screen w-72 border-r border-[#00ffcc]/30 shadow-[4px_0_24px_rgba(0,32,30,0.8)] z-50">
+<div class="flex items-center gap-3 px-2 mb-10">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center glow-edge">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: &#39;FILL&#39; 1;">account_balance</span>
+</div>
+<div>
+<h1 class="text-2xl font-bold tracking-tighter text-[#00ffcc] drop-shadow-[0_0_8px_rgba(0,255,204,0.4)] font-headline">Noble Funded</h1>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">Super Admin</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 text-[#b9cbc2] hover:bg-[#1e2d2b]/50" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-headline tracking-tight">Overview</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 bg-[#00ffcc]/10 text-[#00ffcc] border-l-4 border-[#00ffcc] font-bold" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-headline tracking-tight">Users</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 text-[#b9cbc2] hover:bg-[#1e2d2b]/50" href="#">
+<span class="material-symbols-outlined">emoji_events</span>
+<span class="font-headline tracking-tight">Challenges</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 text-[#b9cbc2] hover:bg-[#1e2d2b]/50" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-headline tracking-tight">Payouts</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 text-[#b9cbc2] hover:bg-[#1e2d2b]/50" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-headline tracking-tight">Revenue</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 text-[#b9cbc2] hover:bg-[#1e2d2b]/50" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-headline tracking-tight">Team</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 text-[#b9cbc2] hover:bg-[#1e2d2b]/50" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-headline tracking-tight">Settings</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 text-[#b9cbc2] hover:bg-[#1e2d2b]/50" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-headline tracking-tight">Activity Logs</span>
+</a>
+</nav>
+<div class="mt-auto px-2">
+<div class="liquid-glass backdrop-blur-[40px] rounded-xl p-4 border border-[#00ffcc]/20">
+<div class="flex items-center gap-3">
+<img alt="Admin Avatar" class="w-10 h-10 rounded-full border-2 border-primary-container/30" data-alt="close-up portrait of a professional male executive with sharp features in a dark high-tech studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRS__ROnQLzKzc3O2F05NnAV4p-Wx2W8VYTb5C02w5-X50JgZgu9pGEvtYJcJVGMc58cyUkIkqwEM9GFrhNOcN6Y5N0gL4szwMYWmsAKbVlUniPIF5qA8TUnhhIUbGq3k8z3pFKx3NjGNx0dsS1-Cwbn1v-t-goWnSpuKqTms9p34tjKM9g3eZQWa9wsgx5zYuq3eAgTA_UlMzW_OsQePpdWltCVvx32wcknLhH2Bi3ACFtK_gXt02UP4US514CUZ7IkHIuXcQeYsL"/>
+<div>
+<p class="text-sm font-bold font-headline text-primary">Alex Thorne</p>
+<p class="text-xs text-on-surface-variant">System Master</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="pl-72 w-full min-h-screen">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full pl-8 pr-8 h-20 bg-transparent z-40 sticky top-0">
+<div class="flex items-center gap-4">
+<h2 class="text-2xl font-headline font-bold text-primary tracking-tight">User Management</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<input class="bg-surface-container-lowest border-none rounded-full py-2 px-10 text-sm w-64 focus:ring-1 focus:ring-[#00ffcc]/50 transition-all font-body text-on-surface placeholder:text-on-surface-variant/50" placeholder="Search Command..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+</div>
+<div class="flex items-center gap-4 text-[#b9cbc2]">
+<button class="hover:text-[#24ffcd] transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<button class="hover:text-[#24ffcd] transition-colors"><span class="material-symbols-outlined">help_outline</span></button>
+<div class="w-px h-6 bg-outline-variant/30"></div>
+<img alt="Super Admin" class="w-8 h-8 rounded-full bg-secondary-container" data-alt="circular minimalist profile avatar icon for a system administrator with geometric cyan highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR6vOLnqILuM1ZN2uSFZEA5kW0caA2fiebPKjRKF6HclohKw3oKpK4JMH25QbrGYH_PtURqvm9iMAzGIpLkjbmXHDTRqmfxZJ63wXwJ_8duCoYWu7_aS9nKUmTbzyj2YdzbAz00AkLx4r9_rd3IPyPfCSxsOT9xwGClDutSP7ZgmdBS2bSKEds2EjYayZJDQq4i4DGCfRXXtRCwU6wHEA3ZvWlaEkTiOpouuPdpQuA2MOcx_3JiDobxaXg_0JgDeoaayHnvwoiXCJN"/>
+</div>
+</div>
+</header>
+<div class="px-8 pb-12">
+<!-- Global Metrics: Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="liquid-glass backdrop-blur-[40px] p-6 rounded-xl border border-primary-container/10 glow-edge relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/5 rounded-full blur-2xl group-hover:bg-primary-container/10 transition-colors"></div>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-2">Total Active Traders</p>
+<h3 class="text-4xl font-headline font-bold text-primary">12,842</h3>
+<div class="flex items-center gap-2 mt-4 text-primary-fixed text-xs font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+14.2% from last cycle</span>
+</div>
+</div>
+<div class="liquid-glass backdrop-blur-[40px] p-6 rounded-xl border border-primary-container/10 glow-edge relative overflow-hidden group">
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-2">Assets Under Command</p>
+<h3 class="text-4xl font-headline font-bold text-primary">$42.8M</h3>
+<div class="flex items-center gap-2 mt-4 text-primary-fixed text-xs font-medium">
+<span class="material-symbols-outlined text-sm">account_balance_wallet</span>
+<span>Locked in Liquidity</span>
+</div>
+</div>
+<div class="liquid-glass backdrop-blur-[40px] p-6 rounded-xl border border-primary-container/10 glow-edge relative overflow-hidden group">
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-2">Avg. Performance</p>
+<h3 class="text-4xl font-headline font-bold text-primary">8.42%</h3>
+<div class="flex items-center gap-2 mt-4 text-tertiary-fixed-dim text-xs font-medium">
+<span class="material-symbols-outlined text-sm">equalizer</span>
+<span>Market Outlier</span>
+</div>
+</div>
+<div class="liquid-glass backdrop-blur-[40px] p-6 rounded-xl border border-primary-container/10 glow-edge relative overflow-hidden group">
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-2">Payout Queue</p>
+<h3 class="text-4xl font-headline font-bold text-primary">$1.2M</h3>
+<div class="flex items-center gap-2 mt-4 text-primary-container text-xs font-medium">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: &#39;FILL&#39; 1;">bolt</span>
+<span>Ready for Execution</span>
+</div>
+</div>
+</div>
+<!-- Trader Command Center Table -->
+<div class="liquid-glass backdrop-blur-[40px] rounded-xl border border-primary-container/10 shadow-2xl overflow-hidden">
+<div class="p-6 border-b border-outline-variant/20 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<h3 class="text-xl font-headline font-bold text-primary">Elite Trader Registry</h3>
+<p class="text-on-surface-variant text-sm">Monitoring Tier-1 active accounts and phase progress</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-[#00ffcc]/10 text-[#00ffcc] border border-[#00ffcc]/30 px-4 py-2 rounded-lg text-sm font-headline font-bold hover:bg-[#00ffcc]/20 transition-all">Export Data</button>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg text-sm font-headline font-bold glow-edge">Add New Vessel</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50 text-on-surface-variant text-[10px] uppercase tracking-widest font-bold">
+<th class="px-6 py-4">Trader Identity</th>
+<th class="px-6 py-4">Current Phase</th>
+<th class="px-6 py-4">Account Balance</th>
+<th class="px-6 py-4">Performance 7D</th>
+<th class="px-6 py-4">Equity Curve</th>
+<th class="px-6 py-4">Status</th>
+<th class="px-6 py-4 text-right">Command</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Trader Row 1 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest border border-primary-container/20 overflow-hidden">
+<img alt="Trader 1" data-alt="Cyberpunk style portrait of a professional female trader with glowing neon accents and high-tech interface reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnL1MvcrY8VALumxYT7A-ySymv9321ghEasHJpvdcIV2iLf58XwDwrjHzvxxXjmyYCVRK1TUi0e-vNR71FX6GSritQ71xbyKRORSbjBksxKhPQ5YxiC_miS-msf_6C75-M5OrR8mghCmWqPcRB8w6i_6ZEQA6T4HRF19otNPswnz94ROlyVoPE31oOhFcGTPIPhvZqYObNm8AoXz97cSCnAIJ0Tpz8ZtroCctu9tkuxzxeQHdXMvcGiuZ41RutPEMf_ddXJXXDZwBx"/>
+</div>
+<div>
+<p class="text-sm font-bold font-headline text-primary">Elena Rodriguez</p>
+<p class="text-[10px] text-on-surface-variant font-mono uppercase">ID: NF-98421</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="px-2 py-1 bg-primary-container/10 border border-primary-container/30 rounded text-[10px] text-primary-container font-bold">PHASE 2</div>
+<div class="w-16 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[65%]"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-bold font-headline text-primary">$100,000.00</td>
+<td class="px-6 py-5 text-sm font-medium text-primary-fixed">+12.4%</td>
+<td class="px-6 py-5">
+<div class="flex items-end gap-1 h-8">
+<div class="w-1 bg-primary-container/20 h-[30%]"></div>
+<div class="w-1 bg-primary-container/40 h-[50%]"></div>
+<div class="w-1 bg-primary-container/30 h-[40%]"></div>
+<div class="w-1 bg-primary-container/60 h-[70%]"></div>
+<div class="w-1 bg-primary-container h-full"></div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter">Active</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 rounded-lg hover:bg-primary-container/10 text-on-surface-variant hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Trader Row 2 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest border border-primary-container/20 overflow-hidden">
+<img alt="Trader 2" data-alt="close up of a digital nomad trader working in a sleek darkened room with multiple monitors displaying stock data charts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH6JfE4mXSqi3_CNfli06FwfSwdhDoZ2Lrm-U9CTsEVZryskmT1CSooQc-Q-UMaBxL-wCt-_m8SycOhy5qh9kghBZjNSz7midot9AiQZR2NCY0SslJdapjPvSeMLHFKhH_PEZcJZMKQxCSm7f3yKOvzmcqsQFPhz9PcUADYifnlMr4-isb2XaSOl_6wJpF6SZ2DBnBJjtMW-MvtOtw8YncpYv6rPPzXl4JlLDu0YHIK2ELtnaf24iaJVQHvAClnLC5tgiyzCcnfnNy"/>
+</div>
+<div>
+<p class="text-sm font-bold font-headline text-primary">Marcus Vane</p>
+<p class="text-[10px] text-on-surface-variant font-mono uppercase">ID: NF-77210</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="px-2 py-1 bg-tertiary-fixed-dim/10 border border-tertiary-fixed-dim/30 rounded text-[10px] text-tertiary-fixed-dim font-bold">FUNDED</div>
+<div class="w-16 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim w-full"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-bold font-headline text-primary">$250,000.00</td>
+<td class="px-6 py-5 text-sm font-medium text-error">-2.1%</td>
+<td class="px-6 py-5">
+<div class="flex items-end gap-1 h-8">
+<div class="w-1 bg-error/20 h-full"></div>
+<div class="w-1 bg-error/40 h-[80%]"></div>
+<div class="w-1 bg-error/30 h-[90%]"></div>
+<div class="w-1 bg-error/60 h-[70%]"></div>
+<div class="w-1 bg-error h-[65%]"></div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-tertiary-fixed-dim shadow-[0_0_8px_#ffba26]"></div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter">Monitoring</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 rounded-lg hover:bg-primary-container/10 text-on-surface-variant hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Trader Row 3 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest border border-primary-container/20 overflow-hidden">
+<img alt="Trader 3" data-alt="professional young man with glasses analyzing financial data on a transparent glass screen with code reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn5mXRLrNfrK7lODRJDae_zvq9A97g2U_qtuBEAxIBST3trxg83XsPSX4XUAq5qP-mUW8PXsNZUWj121HkChSYH-jv2jhW76jGjUBsoOyD7STBiccTZ0c6Mbfr_4xFYKOi2mArJJVmUfveE6-QPhvAwkdVslbQ8kQcF-1xfZNLs52QVZ8-6w10Zf75gasciLLwuBo5qt4PrPefLFSIjm9PtPk-nm-tRQBPREJ51AueVFSrobJt-KVtDBj5cXkSiUj-gg8W0JJ9lSjM"/>
+</div>
+<div>
+<p class="text-sm font-bold font-headline text-primary">Satoshi Nakamoto</p>
+<p class="text-[10px] text-on-surface-variant font-mono uppercase">ID: NF-00001</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="px-2 py-1 bg-primary-container/10 border border-primary-container/30 rounded text-[10px] text-primary-container font-bold">PHASE 1</div>
+<div class="w-16 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[15%]"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm font-bold font-headline text-primary">$50,000.00</td>
+<td class="px-6 py-5 text-sm font-medium text-primary-fixed">+4.2%</td>
+<td class="px-6 py-5">
+<div class="flex items-end gap-1 h-8">
+<div class="w-1 bg-primary-container/20 h-[10%]"></div>
+<div class="w-1 bg-primary-container/30 h-[20%]"></div>
+<div class="w-1 bg-primary-container/40 h-[30%]"></div>
+<div class="w-1 bg-primary-container/50 h-[40%]"></div>
+<div class="w-1 bg-primary-container h-[55%]"></div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Onboarding</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 rounded-lg hover:bg-primary-container/10 text-on-surface-variant hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-outline-variant/10 flex justify-between items-center text-xs text-on-surface-variant">
+<p>Showing 1 to 10 of 12,842 Commanders</p>
+<div class="flex items-center gap-2">
+<button class="p-1 rounded-lg bg-surface-container-highest hover:text-primary-container disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex items-center gap-1">
+<span class="px-3 py-1 rounded bg-primary-container text-on-primary-container font-bold">1</span>
+<span class="px-3 py-1 rounded hover:bg-surface-container-highest transition-colors">2</span>
+<span class="px-3 py-1 rounded hover:bg-surface-container-highest transition-colors">3</span>
+<span>...</span>
+<span class="px-3 py-1 rounded hover:bg-surface-container-highest transition-colors">1284</span>
+</div>
+<button class="p-1 rounded-lg bg-surface-container-highest hover:text-primary-container">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Asymmetric Support Grid -->
+<div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Activity Heatmap -->
+<div class="lg:col-span-2 liquid-glass backdrop-blur-[40px] p-6 rounded-xl border border-primary-container/10 glow-edge">
+<div class="flex justify-between items-center mb-6">
+<h4 class="font-headline font-bold text-primary">Liquidity Flux Map</h4>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1">
+<div class="w-3 h-3 bg-surface-container-highest rounded-sm"></div>
+<span class="text-[10px] text-on-surface-variant">Low</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="w-3 h-3 bg-primary-container rounded-sm"></div>
+<span class="text-[10px] text-on-surface-variant">Peak</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-24 gap-1">
+<!-- Simulated Heatmap Grid -->
+<div class="flex flex-wrap gap-1">
+<div class="w-6 h-6 bg-primary-container/10 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/30 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/20 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/60 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/40 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/80 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/30 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/10 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/20 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/40 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/50 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/10 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/30 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/20 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/60 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/40 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/80 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/30 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/10 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/20 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/40 rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container rounded-sm"></div>
+<div class="w-6 h-6 bg-primary-container/50 rounded-sm"></div>
+</div>
+</div>
+</div>
+<!-- Incident Log -->
+<div class="liquid-glass backdrop-blur-[40px] p-6 rounded-xl border border-tertiary-fixed-dim/20 glow-edge bg-tertiary-fixed-dim/5">
+<h4 class="font-headline font-bold text-tertiary-fixed-dim flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">warning</span>
+                        Critical Risk Alerts
+                    </h4>
+<div class="space-y-4">
+<div class="flex gap-3 items-start border-l-2 border-tertiary-fixed-dim pl-3">
+<div class="min-w-fit pt-1"><span class="material-symbols-outlined text-xs text-tertiary-fixed-dim">priority_high</span></div>
+<div>
+<p class="text-xs font-bold text-primary">Hard Breach Detected</p>
+<p class="text-[10px] text-on-surface-variant">User NF-1120 exceeded max daily drawdown (5.4%)</p>
+<p class="text-[9px] mt-1 text-tertiary-fixed-dim uppercase tracking-widest font-bold">2m ago</p>
+</div>
+</div>
+<div class="flex gap-3 items-start border-l-2 border-tertiary-fixed-dim/30 pl-3">
+<div class="min-w-fit pt-1"><span class="material-symbols-outlined text-xs text-on-surface-variant">info</span></div>
+<div>
+<p class="text-xs font-bold text-primary">Inactivity Warning</p>
+<p class="text-[10px] text-on-surface-variant">Tier-3 commander NF-889 inactive for 28 days</p>
+<p class="text-[9px] mt-1 text-on-surface-variant uppercase tracking-widest font-bold">14m ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

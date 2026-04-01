@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script type='text/javascript' nonce='GNHyFFavbaWxGQjMJ+NGQA==' src='https://contribution.usercontent.google.com/6E8MJYeSYQa4INuIvJ82sDomMW6Y_E65mqaY5tmZJ6fQR4D_Wd5ARLblA_M5qFUnIElnybERzRdMK4qw1D87FRG0Prj61ZwA8KB2zP2WkxWoh_uVPQGEM3PuvZ28Veqtiuq7vxazavJyVu3gA3QuIRSZUlXeThSP4l_7-SqLxsjRgp4GOAvAF5iqciEvAl80uwyrr9N5jAMD0Mlu_ScSTCq0jYtXI1ATZfGc0tUyCm48qlITlFN6dT3uTrgg4qyKbAhTsGoUVoUeovyGBb-cBECAkrgvdjQvqdVtHsBZIfdsyghcTbA4qzW-tfSe1k7zEDmoYC_O3qUvcDCs-KTvByiaBlNDWMDMNfwMxHsAjN95STL7YHejfLqtVAv-PsNI7EytWrIPlntkUejYjAJ_kbSaQNpJkVND_uEo2mqPy6nlOaOV-tqfBZdpLvWJ-1nAwLP1WA8aj2Mn5wQpLZBkrK-nbs6_nzvMZOpeNOC-3aGY53WG8668miyY0plWF4LjjjrtUnm_nJ_IL50UlDbk7Z-53V_7HWQpvjA2jciXbZxKM5SOnRv8FEFW3pvS5tmd95Mgtyqo68ykqYX79ZMOyBxqIFwWUzgGhgMmTIVvWERjwp_SpQwRUl7Xly1rR8nps961KeHrdZwd34QJHI9xMPzBVREVIZwDfUg8sq5HPhEgAQiu3MZeT5s9ymZUpJYMg6HWeWYDFL2XE4sk6s_IJJEN9R_8wz8ZKNM47tGO-V9aafj3sUpsXnL1dPygnu1XZ4TZT2mow4xKVfglHEvcH6hmuQ3OI94uSc56nInZ'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-container": "#c5e9e5",
+            "on-tertiary-fixed": "#00201e",
+            "secondary": "#ffbc7c",
+            "inverse-primary": "#006b54",
+            "tertiary-fixed": "#c6eae6",
+            "tertiary": "#fcfffe",
+            "tertiary-fixed-dim": "#aacdca",
+            "primary-container": "#00ffcc",
+            "outline-variant": "#3a4a44",
+            "primary": "#fdfffc",
+            "background": "#001716",
+            "surface-container": "#002423",
+            "surface-tint": "#00e0b3",
+            "primary-fixed": "#24ffcd",
+            "on-tertiary-fixed-variant": "#2b4c4a",
+            "error": "#ffb4ab",
+            "on-primary": "#00382b",
+            "surface-container-highest": "#183a38",
+            "inverse-on-surface": "#133634",
+            "on-secondary-fixed-variant": "#6a3b00",
+            "on-secondary-container": "#633700",
+            "on-surface-variant": "#b9cbc2",
+            "surface-variant": "#183a38",
+            "outline": "#83958d",
+            "surface-bright": "#1d3f3c",
+            "inverse-surface": "#c6eae6",
+            "on-secondary": "#4b2800",
+            "on-background": "#c6eae6",
+            "on-secondary-fixed": "#2d1600",
+            "surface-dim": "#001716",
+            "error-container": "#93000a",
+            "surface-container-lowest": "#001110",
+            "primary-fixed-dim": "#00e0b3",
+            "on-error-container": "#ffdad6",
+            "secondary-fixed-dim": "#ffb874",
+            "secondary-fixed": "#ffdcbf",
+            "surface": "#001716",
+            "on-primary-fixed": "#002118",
+            "surface-container-low": "#00201e",
+            "surface-container-high": "#0b2f2d",
+            "on-tertiary-container": "#496a67",
+            "secondary-container": "#fe9400",
+            "on-primary-fixed-variant": "#00513f",
+            "on-surface": "#c6eae6",
+            "on-tertiary": "#133634",
+            "on-primary-container": "#00725a",
+            "on-error": "#690005"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-panel {
+      background: rgba(11, 47, 45, 0.4);
+      backdrop-filter: blur(24px);
+      border: 1px solid rgba(0, 255, 204, 0.15);
+    }
+    .spotlight-glow {
+      box-shadow: 0 0 80px rgba(0, 255, 204, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#001716]/80 backdrop-blur-xl border-b border-[#00ffcc]/20 shadow-[0_20px_40px_rgba(0,255,204,0.04)]">
+<div class="flex items-center gap-8">
+<div class="text-xl font-bold text-[#00ffcc] tracking-widest uppercase font-[&#39;Space_Grotesk&#39;]">Noble Funded</div>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#fdfffc] border-b-2 border-[#00ffcc] pb-1 font-[&#39;Space_Grotesk&#39;] tracking-tight" href="#">Command</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors font-[&#39;Space_Grotesk&#39;] tracking-tight" href="#">Performance</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors font-[&#39;Space_Grotesk&#39;] tracking-tight" href="#">Compliance</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors font-[&#39;Space_Grotesk&#39;] tracking-tight" href="#">Messaging</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#b9cbc2] hover:bg-[#1d3f3c]/50 transition-all duration-300 rounded-lg">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-[#b9cbc2] hover:bg-[#1d3f3c]/50 transition-all duration-300 rounded-lg">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full border border-primary-container/30" data-alt="professional portrait of a high-level executive trader in a sleek dark suit with cold blue studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDroIpZMH9UoBaLIZ3tQvfhOuRFKVRDIDHHYgPDRsFgwa6NTyhJSMjlkr2iKhedGmVmnu22Q6uyuJLtBS66xH-k6cZhETaI0nBkwLE_iHDPQiZ9rJgSE-FcJ8cCln9ye18_fjRdJXZUFKzWDUR8CEN-WSprDwSzQXs4oSj8HSSJ4VvcbTLi2USxbWnbaL8fWPDJHDtrc5fdzF5B39FW3_lBtJajP5V2rGhu0YJOxUVe66jhM7kkV4C8aEqrqlC3zb3CAITyg0XBMsMg"/>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col pt-20 w-64 bg-[#00201e] border-r border-[#00ffcc]/10">
+<div class="px-6 mb-8">
+<div class="text-[#00ffcc] font-black uppercase tracking-tighter text-lg">Global Command</div>
+<div class="text-on-surface-variant text-xs font-medium uppercase tracking-widest opacity-60">Super Admin Access</div>
+</div>
+<nav class="flex-1">
+<div class="bg-[#00ffcc]/10 text-[#00ffcc] border-r-4 border-[#00ffcc] flex items-center gap-3 px-4 py-3 font-medium text-sm transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+        Dashboard
+      </div>
+<a class="text-[#b9cbc2] flex items-center gap-3 px-4 py-3 hover:bg-[#1d3f3c] hover:text-[#fdfffc] font-medium text-sm transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+        Performance
+      </a>
+<a class="text-[#b9cbc2] flex items-center gap-3 px-4 py-3 hover:bg-[#1d3f3c] hover:text-[#fdfffc] font-medium text-sm transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+        KYC Center
+      </a>
+<a class="text-[#b9cbc2] flex items-center gap-3 px-4 py-3 hover:bg-[#1d3f3c] hover:text-[#fdfffc] font-medium text-sm transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+        Messages
+      </a>
+<a class="text-[#b9cbc2] flex items-center gap-3 px-4 py-3 hover:bg-[#1d3f3c] hover:text-[#fdfffc] font-medium text-sm transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+        Analytics
+      </a>
+<a class="text-[#b9cbc2] flex items-center gap-3 px-4 py-3 hover:bg-[#1d3f3c] hover:text-[#fdfffc] font-medium text-sm transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+        Settings
+      </a>
+</nav>
+<div class="p-4 border-t border-[#00ffcc]/5">
+<button class="w-full bg-primary-container text-on-primary py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+        New Broadcast
+      </button>
+</div>
+<div class="mt-auto pb-6">
+<a class="text-[#b9cbc2] flex items-center gap-3 px-4 py-3 hover:bg-[#1d3f3c] hover:text-[#fdfffc] font-medium text-sm transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+        Support
+      </a>
+<a class="text-[#b9cbc2] flex items-center gap-3 px-4 py-3 hover:bg-[#1d3f3c] hover:text-[#fdfffc] font-medium text-sm transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+        Logout
+      </a>
+</div>
+</aside>
+<!-- Main Background Canvas -->
+<main class="ml-64 pt-16 min-h-screen relative overflow-hidden bg-background">
+<!-- Atmospheric Background Textures -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-container/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[150px]"></div>
+</div>
+<!-- Spotlight Search Overlay (Active state simulation) -->
+<div class="fixed inset-0 z-[60] bg-[#001716]/60 backdrop-blur-2xl flex items-start justify-center pt-32 px-4">
+<div class="w-full max-w-3xl glass-panel spotlight-glow rounded-xl overflow-hidden shadow-2xl flex flex-col">
+<!-- Search Header -->
+<div class="p-6 flex items-center gap-4 bg-surface-container-high/40">
+<span class="material-symbols-outlined text-primary-container text-3xl" data-icon="search">search</span>
+<input class="bg-transparent border-none text-2xl font-headline text-primary focus:ring-0 w-full placeholder:text-on-surface-variant/30" placeholder="Search users, challenges, or system logs..." type="text" value="Active Phase 2"/>
+<div class="flex gap-1.5">
+<kbd class="px-2 py-1 rounded bg-surface-container-highest text-[10px] text-on-surface-variant font-mono border border-outline-variant/30">ESC</kbd>
+</div>
+</div>
+<!-- Results Canvas -->
+<div class="max-h-[614px] overflow-y-auto custom-scrollbar p-2">
+<!-- Category: Users -->
+<section class="mb-6">
+<div class="px-4 py-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant/50 flex justify-between items-center">
+              Users
+              <span class="text-primary-container/40">3 Matches</span>
+</div>
+<div class="space-y-1">
+<div class="group flex items-center gap-4 p-4 rounded-lg hover:bg-primary-container/10 transition-all cursor-pointer">
+<div class="w-10 h-10 rounded-full border border-primary-container/20 flex items-center justify-center bg-surface-container">
+<span class="material-symbols-outlined text-primary-container" data-icon="person">person</span>
+</div>
+<div class="flex-1">
+<div class="text-primary font-medium">Alexander Sterling <span class="text-primary-container text-xs ml-2">#ID-9921</span></div>
+<div class="text-on-surface-variant text-xs">alex.sterling@noblefunded.com • <span class="text-secondary">Level 3 Account</span></div>
+</div>
+<div class="text-primary-container opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</div>
+</div>
+<div class="group flex items-center gap-4 p-4 rounded-lg hover:bg-primary-container/10 transition-all cursor-pointer">
+<div class="w-10 h-10 rounded-full border border-primary-container/20 flex items-center justify-center bg-surface-container">
+<span class="material-symbols-outlined text-primary-container" data-icon="person">person</span>
+</div>
+<div class="flex-1">
+<div class="text-primary font-medium">Elena Vance <span class="text-primary-container text-xs ml-2">#ID-4402</span></div>
+<div class="text-on-surface-variant text-xs">vance.trader@obsidian.io • <span class="text-primary-container/70">Verified Professional</span></div>
+</div>
+<div class="text-primary-container opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Challenges -->
+<section class="mb-6">
+<div class="px-4 py-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant/50 flex justify-between items-center">
+              Challenges
+              <span class="text-primary-container/40">2 Matches</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 px-2">
+<div class="group p-4 bg-surface-container-highest/20 rounded-lg border border-outline-variant/10 hover:border-primary-container/40 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-headline font-bold text-primary-fixed uppercase tracking-wider">Apex Voyager</span>
+<span class="px-2 py-0.5 rounded text-[10px] bg-primary-container/10 text-primary-container">PHASE 2</span>
+</div>
+<div class="text-xl font-headline text-primary mb-1">$200,000</div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+                  Profit: +$12,440.00
+                </div>
+</div>
+<div class="group p-4 bg-surface-container-highest/20 rounded-lg border border-outline-variant/10 hover:border-primary-container/40 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-headline font-bold text-primary-fixed uppercase tracking-wider">Titan Elite</span>
+<span class="px-2 py-0.5 rounded text-[10px] bg-primary-container/10 text-primary-container">PHASE 2</span>
+</div>
+<div class="text-xl font-headline text-primary mb-1">$50,000</div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+                  Profit: +$2,105.50
+                </div>
+</div>
+</div>
+</section>
+<!-- Category: System Logs -->
+<section class="">
+<div class="px-4 py-2 text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant/50 flex justify-between items-center">
+              System Logs
+              <span class="text-primary-container/40">1 Match</span>
+</div>
+<div class="px-4 py-3 flex items-center gap-4 bg-error/5 border-l-2 border-error rounded-r-lg group hover:bg-error/10 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-error" data-icon="terminal">terminal</span>
+<div class="flex-1">
+<div class="text-sm font-mono text-primary flex justify-between">
+<span>LOG_EVENT: CRITICAL_PHASE_TRANSITION</span>
+<span class="text-on-surface-variant/50">14:20:01</span>
+</div>
+<div class="text-[11px] font-mono text-on-surface-variant truncate">User #ID-9921 triggered auto-upgrade to Phase 2 after clearing Drawdown Check...</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Search Footer -->
+<div class="p-4 bg-surface-container-low border-t border-outline-variant/20 flex justify-between items-center">
+<div class="flex gap-6">
+<div class="flex items-center gap-2">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-highest text-[10px] text-on-surface-variant font-mono">↑↓</kbd>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Navigate</span>
+</div>
+<div class="flex items-center gap-2">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-highest text-[10px] text-on-surface-variant font-mono">ENTER</kbd>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Select</span>
+</div>
+</div>
+<div class="text-[10px] uppercase tracking-widest text-primary-container font-bold">
+            6 Results found in 12ms
+          </div>
+</div>
+</div>
+</div>
+<!-- Hidden Dashboard Content (Simulated Background) -->
+<div class="p-10 grid grid-cols-12 gap-8 opacity-40 blur-sm pointer-events-none">
+<div class="col-span-8 space-y-8">
+<div class="h-64 glass-panel rounded-xl"></div>
+<div class="grid grid-cols-3 gap-6">
+<div class="h-32 glass-panel rounded-xl"></div>
+<div class="h-32 glass-panel rounded-xl"></div>
+<div class="h-32 glass-panel rounded-xl"></div>
+</div>
+<div class="h-96 glass-panel rounded-xl"></div>
+</div>
+<div class="col-span-4 space-y-8">
+<div class="h-[500px] glass-panel rounded-xl"></div>
+<div class="h-64 glass-panel rounded-xl"></div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-16 bg-surface-container-low flex justify-around items-center z-50 border-t border-primary-container/10">
+<button class="flex flex-col items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: &#39;FILL&#39; 1;">dashboard</span>
+<span class="text-[10px] font-bold">Command</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="text-[10px]">Metrics</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="text-[10px]">Inbox</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px]">Profile</span>
+</button>
+</nav>
+</body></html>
