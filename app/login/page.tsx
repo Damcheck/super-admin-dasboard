@@ -14,18 +14,19 @@ export default function NobleFundedAdminAuth() {
     const video = videoRef.current
     if (!video) return
     video.muted = true
-    video.load()
+    
+    // Just try to play if autoplay was blocked by the browser.
+    // Avoid calling .load() as it flushes the buffer and forces a redownload.
     const attempt = () => {
-      video.play().catch(() => {
-        setTimeout(() => video.play().catch(() => {}), 300)
-      })
+      if (video.paused) {
+        video.play().catch(() => {})
+      }
     }
-    if (video.readyState >= 3) {
-      attempt()
-    } else {
-      video.addEventListener("canplay", attempt, { once: true })
-    }
-    return () => video.removeEventListener("canplay", attempt)
+    
+    // Slight delay to ensure it catches up after render.
+    const timeout = setTimeout(attempt, 150)
+    
+    return () => clearTimeout(timeout)
   }, [])
 
   function handleSubmit() {
