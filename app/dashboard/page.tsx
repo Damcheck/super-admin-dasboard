@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { LogOut, X } from "lucide-react";
 import { Role, ROLE_CONFIGS } from "@/lib/types";
 import Sidebar from "@/components/admin/Sidebar";
@@ -99,6 +100,7 @@ function SignOutModal({ onConfirm, onCancel }: { onConfirm: () => void; onCancel
 }
 
 export default function AdminDashboard() {
+  const router = useRouter();
   const [role, setRole] = useState<Role>("Super Admin");
   const [activeTab, setActiveTab] = useState<string>(ROLE_CONFIGS["Super Admin"].defaultTab);
   const [activeTicketId, setActiveTicketId] = useState<string>("TKT-5021");
@@ -118,10 +120,8 @@ export default function AdminDashboard() {
 
   const handleSignOut = () => {
     setSignOutModalOpen(false);
-    // In production: call auth signout API, clear session, redirect to login
-    // For this demo, reset to default state
-    setRole("Super Admin");
-    setActiveTab(ROLE_CONFIGS["Super Admin"].defaultTab);
+    sessionStorage.removeItem("nf_admin_logged_in");
+    router.push("/login");
   };
 
   const renderView = () => {
