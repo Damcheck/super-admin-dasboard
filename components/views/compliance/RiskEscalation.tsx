@@ -168,7 +168,7 @@ const ESCALATED: EscalatedAccount[] = [
   },
 ];
 
-const TYPE_META: Record<EscalationType, { label: string; color: string; icon: React.ComponentType<{ size?: number }> }> = {
+const TYPE_META: Record<EscalationType, { label: string; color: string; icon: React.ComponentType<{ size?: number; style?: React.CSSProperties; className?: string }> }> = {
   copy_trading: { label: "Copy Trading / Signal Abuse", color: "#ff6b6b", icon: Flame },
   latency_arb: { label: "Latency Arbitrage", color: "#ff6b6b", icon: Zap },
   coordinated_breach: { label: "Coordinated Breach Test", color: "#f59e0b", icon: AlertTriangle },

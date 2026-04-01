@@ -85,7 +85,7 @@ const OVERRIDE_LOGS: OverrideLog[] = [
   { id: "ol5", mt5Login: "MT5-66712", traderName: "Uche Bello", action: "reinstate", performedBy: "Sarah O. (Compliance)", reason: "Broker API outage caused missed equity read — reinstated", timestamp: "3 days ago", webhookSent: false, webhookStatus: "failed" },
 ];
 
-const ACTION_LABELS: Record<OverrideType, { label: string; color: string; icon: React.ComponentType<{ size?: number }> }> = {
+const ACTION_LABELS: Record<OverrideType, { label: string; color: string; icon: React.ComponentType<{ size?: number; style?: React.CSSProperties; className?: string }> }> = {
   reinstate: { label: "Reinstate Account", color: "#00ffcc", icon: RotateCcw },
   forgive_breach: { label: "Forgive Breach", color: "#60a5fa", icon: CheckCircle2 },
   reset_balance: { label: "Reset Balance", color: "#a78bfa", icon: Coins },

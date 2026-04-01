@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react";
 import {
   SlidersHorizontal, Save, RotateCcw, CheckCircle2, AlertTriangle,
-  Shield, Trophy, CreditCard, Clock, Toggle, Zap, Info, TrendingDown,
+  Shield, Trophy, CreditCard, Clock, Zap, Info, TrendingDown,
   ChevronRight, ToggleLeft, ToggleRight, Database,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -63,7 +63,7 @@ const INITIAL_RULES: ConfigRule[] = [
 const CATEGORIES = ["Risk Management", "Challenge Rules", "Payout Rules", "Platform"] as const;
 type Category = typeof CATEGORIES[number];
 
-const CATEGORY_META: Record<Category, { color: string; icon: React.ComponentType<{ size?: number }> }> = {
+const CATEGORY_META: Record<Category, { color: string; icon: React.ComponentType<{ size?: number; style?: React.CSSProperties; className?: string }> }> = {
   "Risk Management": { color: "#ff6b6b", icon: Shield },
   "Challenge Rules": { color: "#00ffcc", icon: Trophy },
   "Payout Rules": { color: "#a78bfa", icon: CreditCard },
