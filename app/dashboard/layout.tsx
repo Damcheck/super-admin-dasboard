@@ -8,7 +8,6 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const router = useRouter()
 
   useEffect(() => {
-    // Mock auth guard — redirect to login if not signed in
     const loggedIn = sessionStorage.getItem("nf_admin_logged_in")
     if (!loggedIn) {
       router.replace("/login")

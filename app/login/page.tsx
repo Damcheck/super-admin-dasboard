@@ -17,7 +17,6 @@ export default function NobleFundedAdminAuth() {
     video.load()
     const attempt = () => {
       video.play().catch(() => {
-        // retry silently after 300ms if browser blocks initial autoplay
         setTimeout(() => video.play().catch(() => {}), 300)
       })
     }
@@ -80,7 +79,6 @@ export default function NobleFundedAdminAuth() {
         fontFamily: "'Inter', sans-serif",
       }}
     >
-      {/* Diagonal light streak */}
       <div
         aria-hidden="true"
         style={{
@@ -96,7 +94,6 @@ export default function NobleFundedAdminAuth() {
         }}
       />
 
-      {/* Sparkle bottom-right */}
       <div
         aria-hidden="true"
         style={{
@@ -115,7 +112,6 @@ export default function NobleFundedAdminAuth() {
         </svg>
       </div>
 
-      {/* LAYER 1: Outer glass backplate */}
       <div
         className="nf-outer-card"
         style={{
@@ -141,7 +137,6 @@ export default function NobleFundedAdminAuth() {
           zIndex: 10,
         }}
       >
-        {/* LAYER 2: Inner glass panel */}
         <div
           className="nf-inner-card"
           style={{
@@ -160,7 +155,6 @@ export default function NobleFundedAdminAuth() {
             ].join(", "),
           }}
         >
-          {/* LEFT: Form section */}
           <div
             className="nf-form-panel"
             style={{
@@ -174,7 +168,6 @@ export default function NobleFundedAdminAuth() {
                 "radial-gradient(ellipse at 30% 40%, rgba(0, 160, 140, 0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 90%, rgba(0, 80, 80, 0.08) 0%, transparent 50%)",
             }}
           >
-            {/* Logo */}
             <div
               style={{
                 display: "flex",
@@ -194,7 +187,6 @@ export default function NobleFundedAdminAuth() {
               />
             </div>
 
-            {/* Heading */}
             <h1
               className="nf-heading"
               style={{
@@ -314,7 +306,7 @@ export default function NobleFundedAdminAuth() {
             </div>
           </div>
 
-          {/* RIGHT: Video section — no overlays, just the video filling the space */}
+          {/* RIGHT: Video panel */}
           <div
             className="nf-video-panel"
             style={{
