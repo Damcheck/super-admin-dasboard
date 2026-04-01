@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noble Funded | System Status &amp; Error Logs</title>
+<script type='text/javascript' nonce='xZG+3scg2GxL8C3x/RvFPA==' src='https://contribution.usercontent.google.com/iP7elLtOHommD13UwwWDcHNZfNhRLeLIVNT4_HqVmItrHNKbMtMRbAOtvM70M8NKj8bYjuMxeoPHpukEfg_t_RIjOheAgNKseDTKnTUB37MT04Sca0RdMdckspiNjCz4dsniJTafrKGpBVs_7ZZYcjn8ZooBUskewLifTaDmy2WdxyWf9KIwcWFgFXkw8UfmLKsIaPNh-gIoOC5OJoI94DsPkQLjUVSSP3XeIhItIfgd6Q6S-H0Hk7h0VM-U6BFTrg1ogsTstFjtk32aandHfscdta4a3M-F0oBiMacuE83TWt_QJgd3pnc3AcJIKlRVWC43NKWfuNU2T0wreVT9uaWBmhYAnMwT-hbnx3LxY7inxIZMfY4nphzBqU0UzWZaqEEzRuPJWpSjYIRVMtmrOHcGp7g4zI84-nwmQBZ86pOHTaYDu9EB1w1GwkUfWTrQOifwq-fQlZ6UoAt89thXYkElGpVb8KCq76wNYj-5YMzOy49hxvx53AhMDyocyVBmTTtXNi4C1u7Ht2eTDzqQBK5G6UOqVc6gKPfzcQNhYJPYoqn7RQvc05ORxuLKNUHSmXcB9mkZUx_UOOVyIsSp8qsyoB2dtjEBgxu8UbWZ_yULbdvy70sfZR0Nvw6dGI4sYL_JYxeSVSbyx1WSElyAx_vIwo7QpWxcWF_Niyj71v1u9uMXjchnfeCai8n-O8-MJRxU_LAL9IZMPXqJE9D8g0vpeS4VEYZru1P_rgo00D-8N_I0RCBlAbM0BvVDlQO6_dKbgI8wStxfenTqt4SDj0z98I1LnOcnTS5qb1jE'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#00201e",
+                        "primary": "#fdfffc",
+                        "on-tertiary-fixed": "#00201e",
+                        "on-tertiary-container": "#496a67",
+                        "inverse-surface": "#c6eae6",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#0b2f2d",
+                        "background": "#001716",
+                        "surface-dim": "#001716",
+                        "secondary": "#ffbc7c",
+                        "surface-container-highest": "#183a38",
+                        "on-primary-container": "#00725a",
+                        "surface-variant": "#183a38",
+                        "outline-variant": "#3a4a44",
+                        "on-primary-fixed": "#002118",
+                        "inverse-primary": "#006b54",
+                        "primary-container": "#00ffcc",
+                        "secondary-fixed-dim": "#ffb874",
+                        "secondary-container": "#fe9400",
+                        "tertiary-fixed": "#c6eae6",
+                        "on-secondary-fixed-variant": "#6a3b00",
+                        "surface-bright": "#1d3f3c",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#aacdca",
+                        "on-tertiary": "#133634",
+                        "tertiary": "#fcfffe",
+                        "on-background": "#c6eae6",
+                        "on-tertiary-fixed-variant": "#2b4c4a",
+                        "on-error": "#690005",
+                        "primary-fixed": "#24ffcd",
+                        "primary-fixed-dim": "#00e0b3",
+                        "on-surface-variant": "#b9cbc2",
+                        "surface-container": "#002423",
+                        "outline": "#83958d",
+                        "tertiary-container": "#c5e9e5",
+                        "on-secondary-fixed": "#2d1600",
+                        "on-primary-fixed-variant": "#00513f",
+                        "surface": "#001716",
+                        "secondary-fixed": "#ffdcbf",
+                        "on-secondary-container": "#633700",
+                        "surface-tint": "#00e0b3",
+                        "surface-container-lowest": "#001110",
+                        "on-secondary": "#4b2800",
+                        "on-primary": "#00382b",
+                        "on-surface": "#c6eae6",
+                        "inverse-on-surface": "#133634",
+                        "error": "#ffb4ab"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "mono": ["JetBrains Mono"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(11, 47, 45, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 204, 0.1);
+        }
+        .status-glow {
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+        }
+        .terminal-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .terminal-scroll::-webkit-scrollbar-thumb {
+            background: rgba(0, 255, 204, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col bg-[#00201e]/80 backdrop-blur-xl h-screen w-64 border-r border-[#00ffcc]/10 z-50 font-[&#39;Space_Grotesk&#39;] tracking-tight shadow-[20px_0_40px_rgba(0,255,204,0.02)]">
+<div class="p-8">
+<div class="text-[#00ffcc] font-bold text-xl uppercase tracking-widest">Noble Funded</div>
+<div class="text-[10px] text-on-surface-variant uppercase tracking-[0.2em] mt-1">Institutional Terminal</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1d3f3c]/50 transition-all duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-xl">terminal</span>
+<span class="text-sm font-medium">System</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#00ffcc]/10 text-[#00ffcc] border-r-2 border-[#00ffcc] transition-all duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-xl">list_alt</span>
+<span class="text-sm font-medium">Logs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1d3f3c]/50 transition-all duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-xl">error_outline</span>
+<span class="text-sm font-medium">Errors</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1d3f3c]/50 transition-all duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-xl">rocket_launch</span>
+<span class="text-sm font-medium">Deploy</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1d3f3c]/50 transition-all duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-xl">database</span>
+<span class="text-sm font-medium">Database</span>
+</a>
+</nav>
+<div class="p-4 space-y-2 border-t border-[#00ffcc]/5">
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1d3f3c]/50 transition-all duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#fdfffc] hover:bg-[#1d3f3c]/50 transition-all duration-300 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span class="text-sm font-medium">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-40 flex items-center justify-between px-8 w-full h-16 bg-[#001716]/60 backdrop-blur-xl border-b border-[#00ffcc]/10 font-[&#39;Inter&#39;] text-sm font-medium">
+<div class="flex items-center gap-4">
+<h1 class="text-[#fdfffc] font-headline font-bold text-lg tracking-tight">System Status &amp; Error Logs</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-3">
+<span class="text-[#b9cbc2]">Monitoring Job:</span>
+<div class="flex items-center gap-2 bg-[#00ffcc]/10 px-3 py-1 rounded-full border border-[#00ffcc]/20">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#00ffcc]"></span>
+<span class="text-[#00ffcc] text-xs font-bold tracking-wider">RUNNING</span>
+</div>
+</div>
+<div class="h-6 w-[1px] bg-outline-variant/20"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<div class="text-[#fdfffc] text-xs font-bold leading-none">Lead Engineer</div>
+<div class="text-[#b9cbc2] text-[10px] uppercase tracking-tighter mt-1">L7 Permissions</div>
+</div>
+<div class="w-8 h-8 rounded-lg overflow-hidden border border-[#00ffcc]/30">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a senior software engineer with glasses in a tech studio with blue ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq2zovL8BvQbhD4bT96Pwe8SaVLFBghLVNtc2gVKx8_SZdOl0SlYI0VBoEMpubYPHx28Rcn-BKLTyCSuK0lit_NM-zpydalygmlLxmisXFDGWdOp9rMVh51pdmVxA7pYkP959TwT3NiuSMKDvw-nVlcjBErSYd-U_KPxJIzvksOAn986ts9M5zXPr9lP1p3KsmDMjUdVbbtRzQ2DdltvXkVCv0pKE6qkugBTXDhuN20xrvBnI3QCORd6TLCuhVFpaao1GQPLsQd80o"/>
+</div>
+</div>
+<button class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- Canvas Area -->
+<div class="p-8 space-y-8 max-w-7xl mx-auto w-full">
+<!-- Top Row: Status Indicator Pills -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="glass-card p-4 rounded-xl flex items-center justify-between group hover:border-[#00ffcc]/40 transition-all duration-500">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">API Gateway</span>
+<span class="text-[#fdfffc] font-headline font-bold text-sm">Healthy</span>
+</div>
+<div class="relative flex items-center justify-center">
+<div class="absolute w-4 h-4 bg-primary-container/20 rounded-full animate-ping"></div>
+<div class="w-2.5 h-2.5 bg-primary-container rounded-full status-glow"></div>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-center justify-between group hover:border-[#00ffcc]/40 transition-all duration-500">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Database</span>
+<span class="text-[#fdfffc] font-headline font-bold text-sm">Connected</span>
+</div>
+<div class="relative flex items-center justify-center">
+<div class="absolute w-4 h-4 bg-primary-container/20 rounded-full animate-ping"></div>
+<div class="w-2.5 h-2.5 bg-primary-container rounded-full status-glow"></div>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-center justify-between group hover:border-[#00ffcc]/40 transition-all duration-500">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">MT5 API</span>
+<span class="text-[#fdfffc] font-headline font-bold text-sm">Active</span>
+</div>
+<div class="relative flex items-center justify-center">
+<div class="absolute w-4 h-4 bg-primary-container/20 rounded-full animate-ping"></div>
+<div class="w-2.5 h-2.5 bg-primary-container rounded-full status-glow"></div>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl flex items-center justify-between group hover:border-[#00ffcc]/40 transition-all duration-500">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Payment API</span>
+<span class="text-[#fdfffc] font-headline font-bold text-sm">Active</span>
+</div>
+<div class="relative flex items-center justify-center">
+<div class="absolute w-4 h-4 bg-primary-container/20 rounded-full animate-ping"></div>
+<div class="w-2.5 h-2.5 bg-primary-container rounded-full status-glow"></div>
+</div>
+</div>
+</div>
+<!-- Main Layout: Bento Style -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Terminal Card -->
+<div class="col-span-12 lg:col-span-8">
+<div class="glass-card rounded-xl overflow-hidden flex flex-col h-[500px]">
+<div class="flex items-center justify-between px-6 py-4 bg-surface-container-highest/30 border-b border-[#00ffcc]/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#00ffcc] text-lg">terminal</span>
+<h2 class="font-headline font-bold tracking-tight text-primary">Recent Errors (Last 24h)</h2>
+</div>
+<div class="flex gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-error opacity-40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-secondary opacity-40"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container opacity-40"></div>
+</div>
+</div>
+<div class="flex-1 p-6 font-mono text-sm overflow-y-auto terminal-scroll bg-[#001110]/80">
+<div class="space-y-4">
+<!-- Error Entry -->
+<div class="flex items-start justify-between group">
+<div class="flex gap-4">
+<span class="text-on-tertiary-container/50">[14:22:15]</span>
+<span class="text-error font-bold tracking-tight">ERR_TIMEOUT:</span>
+<span class="text-on-surface-variant">Payment webhook timeout from provider <span class="text-[#00ffcc]">Stripe_Main_Hub</span></span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity bg-primary-container/10 text-primary-container px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider border border-primary-container/20 hover:bg-primary-container/20">Fix</button>
+</div>
+<!-- Error Entry -->
+<div class="flex items-start justify-between group">
+<div class="flex gap-4">
+<span class="text-on-tertiary-container/50">[14:18:02]</span>
+<span class="text-error font-bold tracking-tight">AUTH_FAIL:</span>
+<span class="text-on-surface-variant">MT5 login failed for user <span class="text-[#00ffcc]">#998241</span> - Socket closed unexpectedly</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity bg-primary-container/10 text-primary-container px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider border border-primary-container/20 hover:bg-primary-container/20">Fix</button>
+</div>
+<!-- Error Entry -->
+<div class="flex items-start justify-between group">
+<div class="flex gap-4">
+<span class="text-on-tertiary-container/50">[13:55:40]</span>
+<span class="text-secondary font-bold tracking-tight">WARN_LATENCY:</span>
+<span class="text-on-surface-variant">Database cluster <span class="text-[#00ffcc]">US-EAST-1</span> exceeding 250ms threshold</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity bg-primary-container/10 text-primary-container px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider border border-primary-container/20 hover:bg-primary-container/20">Fix</button>
+</div>
+<!-- Error Entry -->
+<div class="flex items-start justify-between group">
+<div class="flex gap-4">
+<span class="text-on-tertiary-container/50">[12:10:11]</span>
+<span class="text-error font-bold tracking-tight">IO_EXCEPTION:</span>
+<span class="text-on-surface-variant">File descriptor limit reached on node <span class="text-[#00ffcc]">worker-alpha-02</span></span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity bg-primary-container/10 text-primary-container px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider border border-primary-container/20 hover:bg-primary-container/20">Fix</button>
+</div>
+<!-- Error Entry -->
+<div class="flex items-start justify-between group">
+<div class="flex gap-4">
+<span class="text-on-tertiary-container/50">[11:45:33]</span>
+<span class="text-on-primary-container font-bold tracking-tight">INFO:</span>
+<span class="text-on-surface-variant">Automated cleanup script executed. <span class="text-[#00ffcc]">42GB</span> cleared from temp storage.</span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity bg-primary-container/10 text-primary-container px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider border border-primary-container/20 hover:bg-primary-container/20">View</button>
+</div>
+<!-- Error Entry -->
+<div class="flex items-start justify-between group">
+<div class="flex gap-4">
+<span class="text-on-tertiary-container/50">[10:02:15]</span>
+<span class="text-error font-bold tracking-tight">MT5_ERROR:</span>
+<span class="text-on-surface-variant">Trade execution rejected - Insufficient margin for account <span class="text-[#00ffcc]">#221045</span></span>
+</div>
+<button class="opacity-0 group-hover:opacity-100 transition-opacity bg-primary-container/10 text-primary-container px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider border border-primary-container/20 hover:bg-primary-container/20">Fix</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Widgets -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- API Latency Widget -->
+<div class="glass-card rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary-container">speed</span>
+</div>
+<div class="relative z-10">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Average API Latency</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-4xl font-headline font-bold text-primary-fixed">14</span>
+<span class="text-lg font-headline text-primary-fixed-dim">ms</span>
+</div>
+<div class="mt-4 h-16 w-full flex items-end gap-1">
+<!-- Mock Line Chart Bars -->
+<div class="flex-1 bg-primary-container/20 h-[40%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary-container/20 h-[30%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary-container/30 h-[50%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary-container/20 h-[25%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary-container/40 h-[60%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary-container/20 h-[35%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary-container/60 h-[80%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary-container/30 h-[45%] rounded-t-sm"></div>
+<div class="flex-1 bg-primary-container/100 h-[20%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+<!-- Server Load Widget -->
+<div class="glass-card rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-secondary">memory</span>
+</div>
+<div class="relative z-10">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Global Server Load</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-4xl font-headline font-bold text-secondary">24</span>
+<span class="text-lg font-headline text-secondary-fixed-dim">%</span>
+</div>
+<!-- Radial Meter Mockup -->
+<div class="mt-6 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Cluster A: 12%</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Cluster B: 36%</span>
+</div>
+</div>
+<div class="w-16 h-16 border-4 border-surface-container-highest rounded-full flex items-center justify-center relative">
+<div class="absolute inset-0 border-4 border-secondary rounded-full border-t-transparent border-r-transparent -rotate-45"></div>
+<span class="text-[10px] font-bold text-secondary">OPT.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- HUD Data Points -->
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest font-medium">Uptime</span>
+<span class="text-2xl font-headline font-bold text-primary-fixed">99.98%</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest font-medium">Req/Sec</span>
+<span class="text-2xl font-headline font-bold text-primary-fixed">4.2k</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Quick Actions (Tonal Layering) -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-[#00ffcc]/5 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-surface shadow-lg" data-alt="team member avatar, young man with headset in low light tech office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZYgPsywqbY-Nyt_mHmM39u1j64BYjW0UQd9AO3a2LNMWm2mbmsguCUy8cRIuFbQU0w2O34sYun94E-LOcXF83RIZk7qm2zlPzQW5EcMaUQt9a8rJ_7lHcxR9ix_HPtaF4Bv105yc2eICACV6Qx-64bSxv1rVlGNJ4LgBylckUH--srZVUczlXWjVVy39KnWoz_ABp_YMvL70FaX0fzvujUAsg_mxjJ6YsGbh2cxbVNZR-n8fqEkYDiK6j354MSbi2BOmAr648lBu0"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface shadow-lg" data-alt="team member avatar, professional woman in modern workspace with soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5GeZF4aHOph3X4Vd2_l6PRo3EkTmH03f2HHKFS73D1wT7wDG0IQw7RexHusF6QhOy96fh5mufwRu8MTv2Jpz7BFXUq8DePWqaaSGn0Tx92SrkRJmcntjuyMJqUaCm5PbR5P_rdWhJEFaLSR0Cew_1GW6r4iWBD6QJRbrcLsJuE-IX4OsgydWJGeAM-rspPZDJ2izDQJcgb2Os8PCfjIBzNJrvfedmx_xvTVJJYNOOw4k8uOTOERQxqwMvLaXm_5V0TQgrCEA8myLn"/>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center text-[10px] font-bold text-primary">+3</div>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">5 active engineers currently on-call for Noble Funded.</span>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary-container text-on-primary px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest hover:brightness-110 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">emergency_share</span>
+                        Trigger Drill
+                    </button>
+<button class="border border-primary-container/40 text-primary-container px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-widest hover:bg-primary-container/10 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">settings_backup_restore</span>
+                        System Reboot
+                    </button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

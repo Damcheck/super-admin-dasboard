@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noble Funded | Challenges Management</title>
+<script type='text/javascript' nonce='t5+fgkts/Ga6FKhV3ysotg==' src='https://contribution.usercontent.google.com/O9O2lLu3uBbPjb6MKgYXAGvBrGSkgJQKtouVPU_GI66yusRCxAwOifBjdenD96yraCCKNOUg8UyNc6XmOEJysQEjcjuQqrjhBDUD7ebZESlFOTlIxfaUnaoXSw2uogsn8r6_YoLOAide-kk7L1yEoBwRgAYTd_mT1_Hg84cMCV2Q_D1mJqq_6s-9zs8Yw7pEpv9QhAQS1AssyXB_JR1mONx93WqL1xIkZpEUpjlt-xFR-XtqXGrXJ5GpXTLQPURKuRzC1WKIu5wiiuFQpBHSAkn4t5t9hxa1SbuCy89CXZ7BlngrEt8WJbFNGiTWgv3mDum5TuVtG5eijnsxtF3Cwhc5_SB2gL6fQ8t-c7H2x1wASgpJogPzYVHbsE-EOLix4yEa4Z20NEiubOeUw1jd7HeUuFVZzV6Lr1QzTvz6isqd7Z_gkpNPvpu7YbD9OgJyIot-oX49I5AYxOppv77nwstAA-hraTPR1qeZ-qnZtkQKjQ_Si0aL3ew0qYVgbKNnB78ZnlcErP_P3C9XBYsxXFRmjY5MF4wNaXF5nUOK-N2GiioZ0XuUc4mARKs9Iy_MRB80jB-hi_vMznhAes7I5fyZ3Wh8oaIyRoLFqsrsP3sF6qsrMC2Anou14PevH7AsmKXbL9sI0-F-ti4DU1X3w9WsTScTMipLwusqzZ7BknGWJ9j3c7OaLkBTKzgLihsl3I98F7NMjocnbPX6qEXL3EHW6MqEtZrB3tl8yhMkPvklJa7l4QyHaFh_aWsNKRll0BBFCFLBi3FiSIxVWqUeg36NvozPIC5d58ZGKvJh'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#002423",
+              "secondary": "#ffbc7c",
+              "inverse-on-surface": "#133634",
+              "tertiary-container": "#c5e9e5",
+              "outline-variant": "#3a4a44",
+              "on-tertiary": "#133634",
+              "tertiary-fixed": "#c6eae6",
+              "surface-bright": "#1d3f3c",
+              "primary": "#fdfffc",
+              "surface-variant": "#183a38",
+              "error": "#ffb4ab",
+              "on-tertiary-container": "#496a67",
+              "tertiary-fixed-dim": "#aacdca",
+              "on-secondary-fixed-variant": "#6a3b00",
+              "primary-fixed-dim": "#00e0b3",
+              "on-background": "#c6eae6",
+              "surface-container-high": "#0b2f2d",
+              "on-primary-fixed-variant": "#00513f",
+              "on-primary": "#00382b",
+              "inverse-surface": "#c6eae6",
+              "on-primary-fixed": "#002118",
+              "primary-container": "#00ffcc",
+              "on-tertiary-fixed-variant": "#2b4c4a",
+              "surface-dim": "#001716",
+              "surface-container-low": "#00201e",
+              "on-surface-variant": "#b9cbc2",
+              "on-secondary-container": "#633700",
+              "surface-tint": "#00e0b3",
+              "on-primary-container": "#00725a",
+              "tertiary": "#fcfffe",
+              "surface": "#001716",
+              "on-tertiary-fixed": "#00201e",
+              "secondary-container": "#fe9400",
+              "error-container": "#93000a",
+              "outline": "#83958d",
+              "surface-container-lowest": "#001110",
+              "on-surface": "#c6eae6",
+              "secondary-fixed-dim": "#ffb874",
+              "secondary-fixed": "#ffdcbf",
+              "on-error": "#690005",
+              "primary-fixed": "#24ffcd",
+              "on-secondary": "#4b2800",
+              "background": "#001716",
+              "surface-container-highest": "#183a38",
+              "on-secondary-fixed": "#2d1600",
+              "inverse-primary": "#006b54",
+              "on-error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(11, 47, 45, 0.4);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(0, 255, 204, 0.1);
+      }
+      .neon-glow:hover {
+        box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+      }
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #001716; }
+      ::-webkit-scrollbar-thumb { background: #0b2f2d; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar Anchor -->
+<nav class="fixed left-0 top-0 h-full z-50 flex flex-col h-screen w-64 border-r border-[#00ffcc]/10 bg-[#00201e] shadow-[20px_0_40px_rgba(0,255,204,0.02)]">
+<div class="p-6">
+<div class="text-2xl font-black text-[#00ffcc] tracking-tighter font-headline">Noble Funded</div>
+<div class="text-[10px] uppercase tracking-widest text-[#b9cbc2] mt-1 font-headline opacity-60">Proprietary Trading</div>
+</div>
+<div class="flex-1 mt-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c] hover:text-[#00ffcc] transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-headline font-bold tracking-tight">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c] hover:text-[#00ffcc] transition-all duration-200" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-headline font-bold tracking-tight">Users</span>
+</a>
+<!-- Active Tab: Challenges -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#00ffcc] bg-[#0b2f2d]/40 backdrop-blur-xl border-l-4 border-[#00ffcc] transition-all" href="#">
+<span class="material-symbols-outlined">military_tech</span>
+<span class="font-headline font-bold tracking-tight">Challenges</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c] hover:text-[#00ffcc] transition-all duration-200" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-headline font-bold tracking-tight">Payouts</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c] hover:text-[#00ffcc] transition-all duration-200" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-headline font-bold tracking-tight">Activity Logs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c] hover:text-[#00ffcc] transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-headline font-bold tracking-tight">Settings</span>
+</a>
+</div>
+<div class="p-4 border-t border-[#00ffcc]/10">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-high/20">
+<img class="w-10 h-10 rounded-lg object-cover" data-alt="Portrait of a professional male financial administrator in a modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmZmUFfqTH_jchHPwXWors3sqrFfkGKyZWMUGrVdP19bxzTLSIHhUIhnuV1WQg_SZ4kS59y6Q18mrSF3Fts7vpLQeeWxJm8cBLd_or9J82HGKw-zx-i5kVt-k5H-wT_y5nkjDdqw-6kfU2VtMxnP2t6-sGLMnkmbIK8wO7283pHAzXPyFp_t2e7k4FCg4xo9KfNq_5ZQ5znkESBbTf11-o0JKJTU0sdT5f1Of-wrtkWhqzlgqsB8YsymbeDcFGFJJ426WC4Z97p1uV"/>
+<div>
+<div class="text-sm font-bold text-primary font-headline">Admin Profile</div>
+<div class="text-xs text-on-surface-variant">System Master</div>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="ml-64 min-h-screen relative overflow-x-hidden">
+<!-- TopNavBar Anchor -->
+<header class="fixed top-0 right-0 left-64 h-16 flex justify-between items-center px-8 z-40 bg-[#001716]/80 backdrop-blur-xl border-b border-[#00ffcc]/10">
+<div class="flex items-center gap-4 flex-1 max-w-xl">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-lg pl-10 pr-4 py-2 text-sm text-on-surface focus:ring-1 focus:ring-[#00ffcc]/50 transition-all placeholder:text-on-surface-variant/50" placeholder="Search by User, Challenge ID, MT5 login..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-[#b9cbc2] hover:text-[#00ffcc] transition-all">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-secondary rounded-full border-2 border-surface"></span>
+</button>
+<div class="h-8 w-px bg-outline-variant/20"></div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-primary-fixed uppercase tracking-tighter font-headline">Live Market Node: Active</span>
+<div class="w-2 h-2 bg-primary-container rounded-full animate-pulse shadow-[0_0_8px_#00ffcc]"></div>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="mt-16 p-8">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<h1 class="text-4xl font-black font-headline text-primary tracking-tight">Challenges Management</h1>
+<p class="text-on-surface-variant mt-2 max-w-md">Real-time oversight of all trading evaluations. Eligible traders receive an <span class="text-primary-container font-bold">80% profit split</span> upon successful funding.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-high border border-outline-variant/30 text-on-surface rounded-xl hover:bg-surface-bright transition-all font-medium text-sm">
+<span class="material-symbols-outlined text-sm">download</span>
+                        Export to CSV
+                    </button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-primary-container text-on-primary rounded-xl font-bold text-sm neon-glow transition-all">
+<span class="material-symbols-outlined text-sm">add_circle</span>
+                        New Challenge
+                    </button>
+</div>
+</div>
+<!-- Filter HUD -->
+<div class="glass-card rounded-2xl p-6 mb-8 flex flex-wrap items-center gap-6">
+<div class="flex flex-col gap-1.5">
+<label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant ml-1">Status</label>
+<select class="bg-surface-container-highest border-none rounded-lg text-sm px-4 py-2 pr-10 text-on-surface focus:ring-1 focus:ring-[#00ffcc]/50">
+<option>All Statuses</option>
+<option>Active</option>
+<option>Passed</option>
+<option>Failed</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant ml-1">Account Type</label>
+<select class="bg-surface-container-highest border-none rounded-lg text-sm px-4 py-2 pr-10 text-on-surface focus:ring-1 focus:ring-[#00ffcc]/50">
+<option>All Types</option>
+<option>Phase 1</option>
+<option>Phase 2</option>
+<option>Funded</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant ml-1">Date Range</label>
+<div class="flex items-center gap-2">
+<input class="bg-surface-container-highest border-none rounded-lg text-sm px-3 py-2 text-on-surface focus:ring-1 focus:ring-[#00ffcc]/50" type="date"/>
+<span class="text-on-surface-variant text-xs">to</span>
+<input class="bg-surface-container-highest border-none rounded-lg text-sm px-3 py-2 text-on-surface focus:ring-1 focus:ring-[#00ffcc]/50" type="date"/>
+</div>
+</div>
+<div class="flex-1"></div>
+<button class="px-6 py-2.5 bg-surface-bright/50 text-[#00ffcc] rounded-lg border border-[#00ffcc]/20 hover:bg-[#00ffcc]/10 transition-all text-sm font-bold uppercase tracking-widest">
+                    Apply Filters
+                </button>
+</div>
+<!-- High-End Glass Table -->
+<div class="glass-card rounded-2xl overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-highest/40 border-b border-outline-variant/10">
+<th class="px-6 py-4 text-[10px] uppercase font-black tracking-widest text-on-surface-variant">Challenge ID</th>
+<th class="px-6 py-4 text-[10px] uppercase font-black tracking-widest text-on-surface-variant">User</th>
+<th class="px-6 py-4 text-[10px] uppercase font-black tracking-widest text-on-surface-variant">Type</th>
+<th class="px-6 py-4 text-[10px] uppercase font-black tracking-widest text-on-surface-variant">Starting Bal.</th>
+<th class="px-6 py-4 text-[10px] uppercase font-black tracking-widest text-on-surface-variant">Current Bal.</th>
+<th class="px-6 py-4 text-[10px] uppercase font-black tracking-widest text-on-surface-variant">P/L %</th>
+<th class="px-6 py-4 text-[10px] uppercase font-black tracking-widest text-on-surface-variant">Status</th>
+<th class="px-6 py-4 text-[10px] uppercase font-black tracking-widest text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-bright/20 transition-all group">
+<td class="px-6 py-5">
+<div class="font-mono text-sm text-primary-fixed">#CH-99281</div>
+<div class="text-[10px] text-on-surface-variant opacity-60">MT5: 882010</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full ring-1 ring-primary-container/20 p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="Close up portrait of a young male trader with a sharp look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQCPuTBSGJ-B9GwGgqsgPwk37OOa-t9HImeIrtcncpSkTvfUHsmvFYflqr4oy70wldCCeBjP4pGFsQjazVv-zRe0shP527EqBfnh29NLE-DGQMmNFuyHEv4keO5S-MVisCGeLXq3lsTSgB-QImunwhX8yvwiSmFhTq8RKqC5CRRPIqR12E9u2Frtv_8k1JoOn_l9Ql7dPZAy_VZ04hHoTt87y0IOhSJz6Mt85J6exc3AKcnaj_3pq5EuQyhbRg74ZFQXfZxF7145yl"/>
+</div>
+<div class="text-sm font-semibold text-primary">Alex Sterling</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="px-2 py-0.5 bg-surface-container-highest border border-outline-variant/20 rounded text-[10px] inline-block text-on-surface-variant font-bold uppercase tracking-tighter">Dollar / Phase 1</div>
+</td>
+<td class="px-6 py-5 text-sm font-medium">$50,000.00</td>
+<td class="px-6 py-5">
+<div class="text-sm font-bold text-primary">$54,230.15</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="font-headline font-bold">+8.46%</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest bg-primary-container/10 text-primary-container border border-primary-container/20 shadow-[0_0_10px_rgba(0,255,204,0.1)]">Active</span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary transition-all text-on-surface-variant"><span class="material-symbols-outlined text-sm">visibility</span></button>
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-error-container hover:text-on-error transition-all text-on-surface-variant"><span class="material-symbols-outlined text-sm">block</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-bright/20 transition-all group">
+<td class="px-6 py-5">
+<div class="font-mono text-sm text-primary-fixed">#CH-98112</div>
+<div class="text-[10px] text-on-surface-variant opacity-60">MT5: 881092</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full ring-1 ring-primary-container/20 p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="Portrait of a focused professional female executive in a modern business attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWA64b0kOmQCR43Iznocadt75_lUe0WITKBoQ9GV8DBIlFWATHVMgUioWXYF9XyPJQt4Gr1nBhx9isPsoV2R09uozEpBa_DFpI54TN4zTENgKJe_MZ0SQd6El5uvY2-zAkKbhvFduCV5ocPjjFWGQU6mIVYuc22hs0MAUFC0kf-aofnJKcWCgP_aejnZtrwKueSUnTLBoi-J46A_aqsstGO5jl7d18Bp1RYQiyYHhqnJUePZJd27VFilYU0zSFI5mBc5lS8oQ1yFC0"/>
+</div>
+<div class="text-sm font-semibold text-primary">Sarah Chen</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="px-2 py-0.5 bg-surface-container-highest border border-outline-variant/20 rounded text-[10px] inline-block text-on-surface-variant font-bold uppercase tracking-tighter">Naira / Funded</div>
+</td>
+<td class="px-6 py-5 text-sm font-medium">₦10,000,000</td>
+<td class="px-6 py-5">
+<div class="text-sm font-bold text-primary">₦11,200,000</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="font-headline font-bold">+12.0%</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest bg-secondary-container/10 text-secondary border border-secondary/20">Passed</span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary transition-all text-on-surface-variant"><span class="material-symbols-outlined text-sm">visibility</span></button>
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-error-container hover:text-on-error transition-all text-on-surface-variant"><span class="material-symbols-outlined text-sm">block</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-bright/20 transition-all group">
+<td class="px-6 py-5">
+<div class="font-mono text-sm text-primary-fixed">#CH-97003</div>
+<div class="text-[10px] text-on-surface-variant opacity-60">MT5: 881554</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full ring-1 ring-primary-container/20 p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="Portrait of a young business man smiling slightly in a professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxEffIOeeeHNLOLFzIG-1UjrZ_v4HuaNuLNpC2p-iDc3rmuChf0e5IMViKyhpQ8O8_yLy_tbsCeJD_7xBoRiZaXt5zeIRj9ZSTRXk02PG5RakkDHqslwKKlePefE3PqNjfA3AmSXCarTw9fvPQwXYZsFfzZMlWyE5k3qjLkddVXAJcvQQEeXqcprsQjQbpUG7pAoAfuwwa04D4PN0L18fbTHg-EBpF-esZMBYxtn8kOY1riikdrD3OLhwtum0RUfWGSHPDimZ9BO9R"/>
+</div>
+<div class="text-sm font-semibold text-primary">Marcus Thorne</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="px-2 py-0.5 bg-surface-container-highest border border-outline-variant/20 rounded text-[10px] inline-block text-on-surface-variant font-bold uppercase tracking-tighter">Dollar / Phase 2</div>
+</td>
+<td class="px-6 py-5 text-sm font-medium">$100,000.00</td>
+<td class="px-6 py-5">
+<div class="text-sm font-bold text-primary">$94,000.00</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-sm">trending_down</span>
+<span class="font-headline font-bold">-6.00%</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest bg-error-container/10 text-error border border-error/20">Failed</span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-primary-container hover:text-on-primary transition-all text-on-surface-variant"><span class="material-symbols-outlined text-sm">visibility</span></button>
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-error-container hover:text-on-error transition-all text-on-surface-variant"><span class="material-symbols-outlined text-sm">block</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Table Footer / Pagination -->
+<div class="px-6 py-4 flex items-center justify-between bg-surface-container-highest/20">
+<div class="text-xs text-on-surface-variant">Showing 1-10 of 1,240 challenges</div>
+<div class="flex gap-2">
+<button class="p-1.5 rounded-lg border border-outline-variant/20 text-on-surface-variant hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="p-1.5 px-3 rounded-lg bg-primary-container text-on-primary text-xs font-bold">1</button>
+<button class="p-1.5 px-3 rounded-lg hover:bg-surface-bright text-xs font-bold transition-all">2</button>
+<button class="p-1.5 px-3 rounded-lg hover:bg-surface-bright text-xs font-bold transition-all">3</button>
+<button class="p-1.5 rounded-lg border border-outline-variant/20 text-on-surface-variant hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dashboard Stats HUD -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+<div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-6xl">account_balance_wallet</span>
+</div>
+<div class="text-[10px] font-black uppercase tracking-widest text-on-surface-variant mb-2">Total Managed Capital</div>
+<div class="text-3xl font-black font-headline text-primary">$4.2M</div>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-primary-container text-xs font-bold">+12%</span>
+<span class="text-on-surface-variant text-[10px] opacity-60 uppercase">vs last month</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-6xl">military_tech</span>
+</div>
+<div class="text-[10px] font-black uppercase tracking-widest text-on-surface-variant mb-2">Active Challenges</div>
+<div class="text-3xl font-black font-headline text-primary">854</div>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-primary-container text-xs font-bold">+5%</span>
+<span class="text-on-surface-variant text-[10px] opacity-60 uppercase">growth rate</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-6xl">verified</span>
+</div>
+<div class="text-[10px] font-black uppercase tracking-widest text-on-surface-variant mb-2">Success Rate</div>
+<div class="text-3xl font-black font-headline text-primary">14.2%</div>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-secondary text-xs font-bold">-1.2%</span>
+<span class="text-on-surface-variant text-[10px] opacity-60 uppercase">market volatility</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-6xl">payments</span>
+</div>
+<div class="text-[10px] font-black uppercase tracking-widest text-on-surface-variant mb-2">Payouts Pending</div>
+<div class="text-3xl font-black font-headline text-primary">$142K</div>
+<div class="mt-4 flex items-center gap-2">
+<span class="text-primary-container text-xs font-bold">80/20</span>
+<span class="text-on-surface-variant text-[10px] opacity-60 uppercase">split enabled</span>
+</div>
+</div>
+</div>
+<!-- Footer Message -->
+<footer class="mt-12 mb-8 flex justify-between items-center text-on-surface-variant/40">
+<div class="text-[10px] uppercase font-bold tracking-[0.2em] font-headline">Noble Funded Infrastructure • v4.0.2</div>
+<div class="text-[10px] uppercase font-bold tracking-[0.2em] font-headline">Standard Profit Split: 80% to Trader</div>
+</footer>
+</div>
+<!-- Background Ambient Glow -->
+<div class="fixed top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary-container/5 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
+<div class="fixed bottom-[-5%] left-[-5%] w-[400px] h-[400px] bg-secondary/5 blur-[100px] rounded-full -z-10 pointer-events-none"></div>
+</main>
+</body></html>

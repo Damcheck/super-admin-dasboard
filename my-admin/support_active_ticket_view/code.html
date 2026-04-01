@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type='text/javascript' nonce='JPSc8yzlUOVW0ng8Mq0esg==' src='https://contribution.usercontent.google.com/Sboq8Yv03kgQ548l9B4QvtbsML5ShGvXbhQ26OMrDeM-O4H5S_pIzS0wfdaQ2pSgGqr8a2wjoTTt-Yjnah3SgM6t40QBS8rZG2253P3UnLKGMTnDTG1o0ifD62NNGaMx0VbvWEQGAsm_a2shxkI02emazfQwsX5AEzUU6vcFlenKBglrGqKAwYnJcr1kYG2xhW__rB7V5uJp-sAi5txXyGZRD4xuY_avfJ-bH2EQnLqkX-NK0w-vwVB0uOYfYE3W-FTrclMXwNKrPOk147tLul44eMm2xK-6h5LuXmq2O-gKLjUgNMD306e9nh5Sk78exHeoUfBqyoVd_Vwt6Y_CeVmLm-QQXWFApD2IZ2rdiR-jMnGxYIw1snVNbB_HFwmkPu0xrUXhkZpj4vZkGh5IZWSGJSUviO4mAz2tvNeP9eekz3QVz44bMlOQT1ijyfp8bU_zapOx1sXlb9T2dqXVfDvrb2IrOa-ueepJ5vIIIMabvspE1oflgYRmePmur2GBktzcsZgMFTi5DL7OWsNBvon_RY1LCcwxOmOuE82nEfAinh2ViQp1wnl2PfvkGr7u_s0PGelBa7OG2mnFb1ZzeQQLh2QyAcS-kF3gv0buxQsZshm6i9-lt2bRq5zFsG6TNwrmYu2R7ova88rA2gYpE9dg5oZZsqOFTOemTm8l1TiiT6DS9NcMI0iOxgsFut0EitIuQr7ueHqrP8PL4JXKbm9vF3I8f6Y_wwVyOtYNJJEw6rh5WMAWhjhAg8qapTVICm360-7x5pVoog4tJYq5NeBLb897AW6vogJX8-Ic'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface": "#c6eae6",
+                        "surface-container-highest": "#183a38",
+                        "surface-container": "#002423",
+                        "secondary": "#ffbc7c",
+                        "inverse-on-surface": "#133634",
+                        "on-secondary": "#4b2800",
+                        "surface-tint": "#00e0b3",
+                        "inverse-primary": "#006b54",
+                        "surface-dim": "#001716",
+                        "on-tertiary-container": "#496a67",
+                        "on-tertiary": "#133634",
+                        "tertiary-container": "#c5e9e5",
+                        "on-tertiary-fixed": "#00201e",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#fcfffe",
+                        "on-tertiary-fixed-variant": "#2b4c4a",
+                        "primary-fixed-dim": "#00e0b3",
+                        "surface-variant": "#183a38",
+                        "on-surface-variant": "#b9cbc2",
+                        "tertiary-fixed-dim": "#aacdca",
+                        "on-primary-container": "#00725a",
+                        "outline": "#83958d",
+                        "background": "#001716",
+                        "outline-variant": "#3a4a44",
+                        "primary-container": "#00ffcc",
+                        "surface": "#001716",
+                        "secondary-fixed-dim": "#ffb874",
+                        "on-primary-fixed-variant": "#00513f",
+                        "error": "#ffb4ab",
+                        "on-background": "#c6eae6",
+                        "surface-container-lowest": "#001110",
+                        "on-primary-fixed": "#002118",
+                        "tertiary-fixed": "#c6eae6",
+                        "on-secondary-fixed-variant": "#6a3b00",
+                        "on-error": "#690005",
+                        "inverse-surface": "#c6eae6",
+                        "surface-container-low": "#00201e",
+                        "secondary-container": "#fe9400",
+                        "on-primary": "#00382b",
+                        "surface-container-high": "#0b2f2d",
+                        "on-secondary-fixed": "#2d1600",
+                        "secondary-fixed": "#ffdcbf",
+                        "surface-bright": "#1d3f3c",
+                        "error-container": "#93000a",
+                        "primary": "#fdfffc",
+                        "on-secondary-container": "#633700",
+                        "primary-fixed": "#24ffcd"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(10, 46, 44, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 204, 0.1);
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #1d3f3c; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-fixed overflow-hidden">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-[#00201e]/80 backdrop-blur-xl h-screen w-64 border-r border-[#00ffcc]/20 z-50">
+<div class="px-6 mb-10">
+<h1 class="text-2xl font-bold text-[#00ffcc] tracking-tighter font-[&#39;Space_Grotesk&#39;]">Noble Funded</h1>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest mt-1">Proprietary Trading</p>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<!-- Tickets Active -->
+<a class="flex items-center gap-3 px-4 py-3 transition-all duration-300 ease-in-out bg-[#00ffcc]/10 text-[#00ffcc] border-r-2 border-[#00ffcc] font-[&#39;Space_Grotesk&#39;] font-bold tracking-tight" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+                Tickets
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 transition-all duration-300 ease-in-out text-[#b9cbc2] hover:text-[#00ffcc] hover:bg-[#1d3f3c]/30 font-[&#39;Space_Grotesk&#39;] font-bold tracking-tight" href="#">
+<span class="material-symbols-outlined">group</span>
+                Users
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 transition-all duration-300 ease-in-out text-[#b9cbc2] hover:text-[#00ffcc] hover:bg-[#1d3f3c]/30 font-[&#39;Space_Grotesk&#39;] font-bold tracking-tight" href="#">
+<span class="material-symbols-outlined">help_center</span>
+                FAQ
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 transition-all duration-300 ease-in-out text-[#b9cbc2] hover:text-[#00ffcc] hover:bg-[#1d3f3c]/30 font-[&#39;Space_Grotesk&#39;] font-bold tracking-tight" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+                Messages
+            </a>
+</nav>
+<div class="px-6 mt-auto">
+<div class="p-4 glass-panel rounded-xl flex items-center gap-3">
+<img alt="Support Agent Profile" class="w-10 h-10 rounded-full border border-primary-container/30" data-alt="professional support agent headshot with confident expression, wearing a sleek modern headset in a dark tech environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxV_aqrmrPT6EBHHRvAgW5fhWvHP3sJ83WTmOdnSbbBXoNuX6l-BNPMYRK-088Lax_qDjV8qg22YQ2H4bxcLWf4CTF31DlzQV7lSCo-NenGOpel8tdZCnknb-OXLwAF7TH3AUV8D8_nRdegqCzR4ESUATrRKUXf4DjrNAd3GYBIEFCiba-zMW5KoxG4dJFlbmOw_3jAtK-Y3lFIi3hYvjtoB30dt9vDxcpqCy9TH38Cac8PPTawvqi04xLrC-AgeGXfrMBo65tLly6"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold text-primary truncate">Support Agent</p>
+<p class="text-[10px] text-on-surface-variant">Lvl 3 Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-40 flex items-center justify-between px-8 w-full h-20 bg-[#001716]/60 backdrop-blur-md border-b border-[#00ffcc]/10">
+<div class="flex items-center gap-4">
+<span class="text-on-surface-variant text-sm font-medium font-[&#39;Inter&#39;]">Dashboard / Tickets /</span>
+<span class="text-primary font-bold">#TK-88291</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full border border-outline-variant/20">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="text-xs font-medium text-primary-container">Live Session</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-container transition-colors">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-container transition-colors">settings</span>
+</div>
+</div>
+</header>
+<!-- Viewport Grid -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Left Side: Chat Area (70%) -->
+<section class="w-[70%] flex flex-col border-r border-outline-variant/10">
+<!-- Chat Header -->
+<div class="p-6 flex items-center justify-between bg-surface-container-low/50">
+<div class="flex items-center gap-4">
+<div>
+<h2 class="text-xl font-headline font-bold text-primary tracking-tight">Withdrawal Delay Inquiry</h2>
+<div class="flex items-center gap-3 mt-1">
+<span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 bg-primary-container/10 text-primary-container border border-primary-container/20 rounded">Open</span>
+<span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 bg-error/10 text-error border border-error/20 rounded">High Priority</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 text-xs font-bold glass-panel hover:bg-surface-bright transition-colors rounded-lg">Assign To Me</button>
+<button class="px-4 py-2 text-xs font-bold bg-error/10 text-error border border-error/20 rounded-lg hover:bg-error/20 transition-colors">Close Ticket</button>
+</div>
+</div>
+<!-- Messages Stream -->
+<div class="flex-1 overflow-y-auto p-8 space-y-8 custom-scrollbar">
+<!-- User Message -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden border border-outline-variant/30">
+<img alt="User" data-alt="profile avatar of a young male trader with a modern tech-savvy look, neutral expression, stylized vector art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmBOVnQUszKPMN8p4ZH30HNsON6N71lHXECAc8FCsY8qIqbaid530BvnbJt_mIV711WcjTbauYzd9Peqiz8yZK7S7WGUA1p85XIruuM1iFmCgkQ0K3JlHKyBjxnmuneg_cX7YUP3P1d4pttwxgn5ht-Sw0HBYud3d7E0p3cdDF9sVWg1fSIAIQiIqzDyoZk5WBGwgwAOjYswmsH6VJtozaN3lurj65-r49FdXE5rvYc9uM30xhaGhgYucznIc-ga-Z9d79RKsga90D"/>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-primary">Felix K. (User)</span>
+<span class="text-[10px] text-on-surface-variant">10:42 AM</span>
+</div>
+<div class="p-4 glass-panel rounded-xl rounded-tl-none text-sm leading-relaxed text-on-surface">
+                                Hello, I requested a withdrawal of $4,200 from my Funded Account #4492 yesterday, but it's still showing as "Processing". My KYC is fully verified. Can you please check the status?
+                            </div>
+</div>
+</div>
+<!-- Agent Response -->
+<div class="flex gap-4 max-w-[85%] ml-auto flex-row-reverse">
+<div class="flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden border border-primary-container/30">
+<img alt="Agent" data-alt="support agent avatar, friendly professional look, glowing teal highlights, vector illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsUBPGjC3SpekdDC8AU-xGB7utQMhHj8f8sHCBN9xTt8ghceg1YxC75PO52DnRxzCDhPYOEdNymgAcYylb_O4k7LVpi71kGBWh4-oAEphxzDz_SaOxUyLYm0EmSx5mLCjZCVmxsmbdVT_15MdBtyHb3Gq1VJ2KBWGYuRnRKIvZi4mdEFBuFVi4jrmMmau-u8k0z8JHxyefaStSEk1Yxo8nMqvk4jLspRPbEiwqSkQgfDNdtFfMHWBqp3N8CgPiN5bG49R_c6EjzRHx"/>
+</div>
+<div class="space-y-2 text-right">
+<div class="flex items-center gap-3 justify-end">
+<span class="text-[10px] text-on-surface-variant">10:45 AM</span>
+<span class="text-sm font-bold text-primary-container">Support Agent</span>
+</div>
+<div class="p-4 bg-surface-container-highest/60 backdrop-blur-xl border border-primary-container/20 rounded-xl rounded-tr-none text-sm leading-relaxed text-on-surface">
+                                Hi Felix, thank you for reaching out. I'm looking into your account now. Due to the high volume of requests following the weekend, processing is taking slightly longer than our usual 24-hour window. 
+                            </div>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="flex-shrink-0 w-10 h-10 rounded-lg overflow-hidden border border-outline-variant/30">
+<img alt="User" data-alt="profile avatar of a young male trader with a modern tech-savvy look, neutral expression, stylized vector art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvtJotpSxH42nmP87QPTInVZuzMjmknlBgv5296ygh8bC8zfw3ROwOubvbIJHkfjKH6iwEg1y4El482ryqqp506XSdBcBfCsPjK7f20R6tJEvtn1w_0RrzxTK8hVx4p_wjqcrp8EMGlE-GuJ1pE7-r3vnnjRFjlC1ii0NLDR5cAtXvuoE47HwgowVa8O6fc2P_aF4HZYX-sOxWMxbtx4vgAEV2NKvtQKUKRMKsW2s4Od3q7rDMC7nG0PVyVNnk-6iXuNrAIhVdI74h"/>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-primary">Felix K. (User)</span>
+<span class="text-[10px] text-on-surface-variant">10:48 AM</span>
+</div>
+<div class="p-4 glass-panel rounded-xl rounded-tl-none text-sm leading-relaxed text-on-surface">
+                                I see. Is there any additional information you need from my side? I have the confirmation screenshot from my dashboard if that helps.
+                            </div>
+<div class="mt-2 w-48 h-32 rounded-lg border border-outline-variant/30 overflow-hidden relative group cursor-pointer">
+<img alt="Screenshot" class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all" data-alt="blurry screenshot of a trading dashboard with financial charts and withdrawal status indicators, dark UI theme" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlWdrd2ptQppPU4u09qnh7FTC4Jlpc6CuvSESKN8ytmrxHkesk9bWVUH6Knhy-V-8-Db2qb4HWdnF5M8n_bUCsSpy8rphWN2QmWifQsDLgzQU8Rw_Xi825bZ7QSQKSHtofmhTUVM91U0DDXuNd2EVfOCHM3gZBuFF8h4pQ64Pa6MkVA-jTyUKIjLN96lNyRB53fota52q_4WXzORIsIWFmfsYljj4PJ-Lwro8I9rO1xLvWDNX6eICXc7AqlyLW-Fxj9yFpJ-jmrrow"/>
+<div class="absolute inset-0 flex items-center justify-center bg-surface-dim/40 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-container">zoom_in</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Message Reply Box -->
+<div class="p-6 bg-surface-container-low/80 backdrop-blur-xl border-t border-outline-variant/10">
+<div class="glass-panel rounded-xl p-2 focus-within:border-primary-container/40 transition-all">
+<textarea class="w-full bg-transparent border-none focus:ring-0 text-sm p-3 min-h-[100px] resize-none text-on-surface placeholder:text-on-surface-variant/40" placeholder="Type your response here..."></textarea>
+<div class="flex items-center justify-between px-2 pb-2">
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-bright rounded-lg transition-colors text-on-surface-variant hover:text-primary-container">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<button class="p-2 hover:bg-surface-bright rounded-lg transition-colors text-on-surface-variant hover:text-primary-container">
+<span class="material-symbols-outlined">image</span>
+</button>
+<button class="px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest border border-error/20 text-error hover:bg-error/10 rounded-lg transition-all">
+                                    Escalate
+                                </button>
+</div>
+<button class="bg-primary-container text-on-primary-fixed px-6 py-2 rounded-lg text-sm font-bold flex items-center gap-2 hover:shadow-[0_0_20px_rgba(0,255,204,0.3)] transition-all">
+                                Send Message
+                                <span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Side: User Context Panel (30%) -->
+<aside class="w-[30%] bg-surface-container-low/30 overflow-y-auto custom-scrollbar">
+<!-- User Profile Header -->
+<div class="p-8 border-b border-outline-variant/10">
+<div class="flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-2xl overflow-hidden border-2 border-primary-container/20 mb-4 p-1">
+<img alt="User Profile" class="w-full h-full object-cover rounded-xl" data-alt="close up avatar of a male trader, tech style, dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIR3f486ko8q-dnCTlSvUNGoBqGYVRfD6BHy_1ChdjPxFrR6kFGvtYIzrbqYVyUiQFnk-eUNR3gvb_RvC9TO3GY69vRb7zBJmF2rmZ2T9gASuiMCbGj4rMzcVshA_XBEgbS6tMZeX6jMZiP6jQ7-M0jF4zJlHOa9pVBtK4GP6XlVRHKOOLwMCPXID_vPtsJHvzm_4od29NtsJS-gDBO2DRPJsEF1QRIUo9zc3ANkFvxuvXqQUwzDKfroZyCwiew4rz2csPoAfXP-JH"/>
+</div>
+<h3 class="text-xl font-headline font-bold text-primary">Felix Kjellberg</h3>
+<p class="text-sm text-on-surface-variant">felix.k@tradingmail.io</p>
+<div class="mt-4 flex gap-2">
+<span class="px-3 py-1 bg-primary-fixed/10 text-primary-fixed text-[10px] font-bold uppercase rounded-full border border-primary-fixed/20">Elite Tier</span>
+<span class="px-3 py-1 bg-surface-bright text-on-surface text-[10px] font-bold uppercase rounded-full">ID: 99281</span>
+</div>
+</div>
+</div>
+<div class="p-8 space-y-8">
+<!-- User Details -->
+<div class="space-y-4">
+<h4 class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant/60">Account Vitality</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 glass-panel rounded-xl">
+<p class="text-[10px] text-on-surface-variant mb-1">Active Challenges</p>
+<p class="text-lg font-headline font-bold text-primary">02</p>
+</div>
+<div class="p-4 glass-panel rounded-xl">
+<p class="text-[10px] text-on-surface-variant mb-1">Last Login</p>
+<p class="text-sm font-headline font-bold text-primary">2h ago</p>
+</div>
+</div>
+<div class="p-4 glass-panel rounded-xl flex items-center justify-between">
+<div>
+<p class="text-[10px] text-on-surface-variant mb-1">Account Balance</p>
+<p class="text-xl font-headline font-bold text-primary-container">$142,500.00</p>
+</div>
+<span class="material-symbols-outlined text-primary-container/40">account_balance_wallet</span>
+</div>
+</div>
+<!-- Previous Tickets -->
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<h4 class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant/60">History</h4>
+<a class="text-[10px] font-bold text-primary-container hover:underline" href="#">View All</a>
+</div>
+<div class="space-y-3">
+<div class="p-3 bg-surface-container-high/40 rounded-lg flex items-center justify-between border border-transparent hover:border-outline-variant/30 transition-all cursor-pointer">
+<div>
+<p class="text-xs font-bold text-primary">MT5 Connection Reset</p>
+<p class="text-[10px] text-on-surface-variant">Resolved • 12 Oct 2023</p>
+</div>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">chevron_right</span>
+</div>
+<div class="p-3 bg-surface-container-high/40 rounded-lg flex items-center justify-between border border-transparent hover:border-outline-variant/30 transition-all cursor-pointer">
+<div>
+<p class="text-xs font-bold text-primary">Verification Error</p>
+<p class="text-[10px] text-on-surface-variant">Resolved • 04 Sep 2023</p>
+</div>
+<span class="material-symbols-outlined text-sm text-on-surface-variant">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Quick Replies -->
+<div class="space-y-4">
+<h4 class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant/60">Quick Replies</h4>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-2 text-[10px] font-bold bg-surface-bright hover:bg-primary-container hover:text-on-primary-fixed rounded-lg border border-outline-variant/20 transition-all">Password Reset</button>
+<button class="px-3 py-2 text-[10px] font-bold bg-surface-bright hover:bg-primary-container hover:text-on-primary-fixed rounded-lg border border-outline-variant/20 transition-all">KYC Help</button>
+<button class="px-3 py-2 text-[10px] font-bold bg-surface-bright hover:bg-primary-container hover:text-on-primary-fixed rounded-lg border border-outline-variant/20 transition-all">Payment Issue</button>
+<button class="px-3 py-2 text-[10px] font-bold bg-surface-bright hover:bg-primary-container hover:text-on-primary-fixed rounded-lg border border-outline-variant/20 transition-all">Delayed Payout</button>
+<button class="px-3 py-2 text-[10px] font-bold bg-surface-bright hover:bg-primary-container hover:text-on-primary-fixed rounded-lg border border-outline-variant/20 transition-all">Technical Bug</button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</body></html>

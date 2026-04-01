@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noble Terminal | Team Management</title>
+<script type='text/javascript' nonce='zd6/jU9S6yUwJn6C95q45A==' src='https://contribution.usercontent.google.com/zT1PWAowmFsBPpZSYrzUOtBVZv-U7547nYdhJh_MkmdJtfSgT3g1nQcw2dJd5r7YyWoWMy-HGqhzYeOvNEC_oEdgx3djz4FnF1HMLIhwlesk2sOKKq8TIYwLMnEtqz6gtWm4y_etO1lpLzwvSoobbYRG13jz_CwRSL0yLZ9l6pj718WNG96ycADq_MoynelKa1al25W1Pq7TfD6gOIk6X1RDOCy3bDXWjCTBC24hhaScNVyILRawDolFW6eiixVzWYEPvF_cPfdfhs0j8a665kdrZEzTAUvs5QFrWo1SMJ7JOOArCxUU4Nh53RKilZsd6vIKVoNYHcExiLrCvsv33NSdpDMI1IuiIblKhINvCYz1Cg6B7Yr63grQw1QRPzgzZML-gH3m7BBs_lWEw3RmnNoC5A6NdPu1Gzt4BjxtZ1zEMm38F7Mc6MB5vECq4CkYsrSnfMBkHAy-loOY2-4b5umxZsDzRYUOyNJTcW06VeDU31p8TRqJGnpnCna4-f_aVQn0wkKk0Ne78F-7qdafpozOy50T2d4o6adXzPJ0dtkap7PkHcgRmR8mVtVn0OzY-TawL-wZcE-zf7Shtgi_cM-DplHpVXHiouv-Jhjmvc3DZVvgBtCdYl38QBW_kcI4bgupxytR0c6zFAZgL1EtInaOK1ZvYGu2WN35Cjo9rd9H-DTa7srrKvuhYKReeYlNoVnc7QXiyoFf_4-rft22N1g_BgCxBUYQChq0E3bai1d53ffFSbGatQCINo2HPzGOR8uvK4glGuhvSjo8hxG1uRSSfEOX5g8jgAWfa5xu'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#00e0b3",
+              "on-surface": "#c6eae6",
+              "error-container": "#93000a",
+              "outline": "#83958d",
+              "on-primary": "#00382b",
+              "inverse-on-surface": "#133634",
+              "secondary-fixed": "#ffdcbf",
+              "primary-container": "#00ffcc",
+              "on-secondary-fixed-variant": "#6a3b00",
+              "primary-fixed": "#24ffcd",
+              "tertiary-fixed": "#c6eae6",
+              "on-primary-container": "#00725a",
+              "inverse-primary": "#006b54",
+              "surface-container-highest": "#183a38",
+              "tertiary-container": "#c5e9e5",
+              "surface-bright": "#1d3f3c",
+              "inverse-surface": "#c6eae6",
+              "on-tertiary-fixed": "#00201e",
+              "tertiary-fixed-dim": "#aacdca",
+              "secondary": "#ffbc7c",
+              "secondary-container": "#fe9400",
+              "on-background": "#c6eae6",
+              "tertiary": "#fcfffe",
+              "primary": "#fdfffc",
+              "on-tertiary": "#133634",
+              "on-secondary": "#4b2800",
+              "on-error": "#690005",
+              "on-tertiary-fixed-variant": "#2b4c4a",
+              "on-secondary-container": "#633700",
+              "on-primary-fixed": "#002118",
+              "surface-container-high": "#0b2f2d",
+              "surface-container": "#002423",
+              "on-surface-variant": "#b9cbc2",
+              "surface-tint": "#00e0b3",
+              "on-secondary-fixed": "#2d1600",
+              "error": "#ffb4ab",
+              "secondary-fixed-dim": "#ffb874",
+              "outline-variant": "#3a4a44",
+              "on-tertiary-container": "#496a67",
+              "surface-variant": "#183a38",
+              "surface-container-lowest": "#001110",
+              "surface-container-low": "#00201e",
+              "surface-dim": "#001716",
+              "on-error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#00513f",
+              "background": "#001716",
+              "surface": "#001716"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(11, 47, 45, 0.4);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(0, 255, 204, 0.1);
+        }
+        .hud-border {
+            border-left: 2px solid #00ffcc;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary">
+<!-- TopNavBar Implementation -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#001716]/80 backdrop-blur-xl border-b border-[#00ffcc]/20 shadow-[0_20px_40px_rgba(0,255,204,0.04)]">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-[#00ffcc] uppercase font-headline">NOBLE FUNDED</span>
+<nav class="hidden md:flex items-center gap-6 font-headline tracking-tight">
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors" href="#">Dashboard</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors" href="#">Analytics</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors" href="#">Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<span class="material-symbols-outlined text-[#b9cbc2] p-2 hover:bg-[#1d3f3c]/50 transition-all duration-300 cursor-pointer rounded-lg">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary-container rounded-full"></span>
+</div>
+<span class="material-symbols-outlined text-[#b9cbc2] p-2 hover:bg-[#1d3f3c]/50 transition-all duration-300 cursor-pointer rounded-lg">account_circle</span>
+</div>
+</header>
+<!-- SideNavBar Implementation -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-[#00201e] border-r border-[#00ffcc]/10 flex flex-col pt-20 pb-6 z-40">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest border border-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: &#39;FILL&#39; 1;">shield_person</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-sm text-primary-container leading-none uppercase tracking-widest">Noble Terminal</h3>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-tighter opacity-70">Elite Institutional Access</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-3 space-y-1">
+<a class="flex items-center gap-3 px-3 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all rounded-lg font-medium text-sm group" href="#">
+<span class="material-symbols-outlined group-active:translate-x-1 transition-transform">gavel</span>
+                Compliance
+            </a>
+<a class="flex items-center gap-3 px-3 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all rounded-lg font-medium text-sm group" href="#">
+<span class="material-symbols-outlined group-active:translate-x-1 transition-transform">campaign</span>
+                Marketing
+            </a>
+<a class="flex items-center gap-3 px-3 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all rounded-lg font-medium text-sm group" href="#">
+<span class="material-symbols-outlined group-active:translate-x-1 transition-transform">terminal</span>
+                Developer
+            </a>
+<!-- Active State: Admin -->
+<a class="flex items-center gap-3 px-3 py-3 bg-[#0b2f2d]/60 text-[#00ffcc] border-r-4 border-[#00ffcc] shadow-[inset_-10px_0_20px_rgba(0,255,204,0.05)] transition-all rounded-l-lg font-medium text-sm group" href="#">
+<span class="material-symbols-outlined group-active:translate-x-1 transition-transform" style="font-variation-settings: &#39;FILL&#39; 1;">admin_panel_settings</span>
+                Admin
+            </a>
+</nav>
+<div class="px-3 pt-6 border-t border-outline-variant/10 space-y-1">
+<a class="flex items-center gap-3 px-3 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all rounded-lg font-medium text-sm group" href="#">
+<span class="material-symbols-outlined group-active:translate-x-1 transition-transform">history</span>
+                Logs
+            </a>
+<a class="flex items-center gap-3 px-3 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all rounded-lg font-medium text-sm group" href="#">
+<span class="material-symbols-outlined group-active:translate-x-1 transition-transform">settings</span>
+                Settings
+            </a>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="ml-64 pt-24 px-8 pb-12 min-h-screen">
+<!-- Header Section with Asymmetry -->
+<section class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-8 h-[1px] bg-primary-container"></span>
+<span class="text-primary-container font-headline text-xs tracking-[0.3em] uppercase">Security Infrastructure</span>
+</div>
+<h1 class="text-5xl font-headline font-bold text-primary leading-tight tracking-tighter">Team Management <span class="text-primary-container">.</span></h1>
+<p class="text-on-surface-variant mt-4 text-lg max-w-lg leading-relaxed">
+                    Orchestrate institutional access levels and monitor internal administrative footprints across the Noble ecosystem.
+                </p>
+</div>
+<button class="bg-primary-container text-on-primary px-8 py-4 font-headline font-bold text-sm tracking-widest flex items-center gap-3 hover:shadow-[0_0_20px_rgba(0,255,204,0.3)] transition-all active:scale-95 uppercase">
+<span class="material-symbols-outlined">person_add</span>
+                Add Staff Member
+            </button>
+</section>
+<!-- Metrics HUD (High Importance Global Metrics) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div class="hud-border pl-6 py-2">
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-label">Total Staff</span>
+<div class="text-4xl font-headline font-bold text-primary-fixed">124</div>
+</div>
+<div class="hud-border pl-6 py-2">
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-label">Active Sessions</span>
+<div class="text-4xl font-headline font-bold text-primary-fixed">18</div>
+</div>
+<div class="hud-border pl-6 py-2">
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-label">Admin Overrides</span>
+<div class="text-4xl font-headline font-bold text-secondary">03</div>
+</div>
+<div class="hud-border pl-6 py-2">
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-label">System Health</span>
+<div class="text-4xl font-headline font-bold text-primary-fixed">99.9%</div>
+</div>
+</div>
+<!-- Staff Table (Glassmorphism Bento Grid Style) -->
+<div class="glass-card rounded-xl overflow-hidden shadow-2xl">
+<div class="bg-surface-container-high/50 px-8 py-6 flex justify-between items-center border-b border-primary-container/10">
+<h2 class="font-headline font-bold text-xl tracking-tight text-primary">Personnel Directory</h2>
+<div class="flex gap-4">
+<div class="relative">
+<input class="bg-surface-container-highest/50 border border-outline-variant/20 rounded-lg pl-10 pr-4 py-2 text-sm focus:border-primary-container/50 focus:ring-0 transition-all text-on-surface placeholder:text-on-surface-variant/40" placeholder="Search parameters..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-xs text-on-surface-variant/60">search</span>
+</div>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary-container transition-colors text-sm font-medium px-3">
+<span class="material-symbols-outlined">filter_list</span>
+                        Filters
+                    </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/60 font-label border-b border-outline-variant/10">
+<th class="px-8 py-5 font-semibold">Staff Member</th>
+<th class="px-8 py-5 font-semibold">Institutional Role</th>
+<th class="px-8 py-5 font-semibold">Security Status</th>
+<th class="px-8 py-5 font-semibold">Last Activity</th>
+<th class="px-8 py-5 font-semibold text-right">Administrative Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Row 1 -->
+<tr class="group hover:bg-surface-bright/20 transition-all duration-300">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant/20 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional male executive with sharp features and modern attire in a high-tech studio setting with teal backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ_joRIAEo-dNHRSvJxXcgh6mtyG8cMgLr2pQFxGdXFxAXsuKZEHapEExisqeNI65-8V99wJJ6SnqvpJes02TNxcsukfc5BjQk3Q6LlqSKf3w_xqeiKntuMHuPL8VKZcyu-dyAQhujGskxXQNYysAqG6lL_gEyusqarFRKxJ6aMjWSro9hqAKN3FLW66ySEF8oAkAsk6yvm2WuObAsHh0A6-BO84fevTEfI9OHju-WWpsI1Qlf9hNtp4N6vKsNuUU5Ok-lp2GRZE6p"/>
+</div>
+<div>
+<div class="text-sm font-bold text-primary group-hover:text-primary-container transition-colors">Alexander Thorne</div>
+<div class="text-[11px] text-on-surface-variant/60 font-mono tracking-tighter">ID: NT-8829-X</div>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="text-xs font-mono font-medium text-tertiary-fixed-dim">Admin</span>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-primary-container/10 text-primary-container border border-primary-container/20">
+<span class="w-1 h-1 rounded-full bg-primary-container mr-2 animate-pulse"></span>
+                                    Verified
+                                </span>
+</td>
+<td class="px-8 py-6">
+<div class="text-xs text-on-surface-variant">2 mins ago</div>
+<div class="text-[10px] text-on-surface-variant/40">IP: 192.168.1.44</div>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-3 opacity-40 group-hover:opacity-100 transition-all">
+<button class="p-2 hover:bg-primary-container/10 hover:text-primary-container rounded-lg transition-all" title="Edit Permissions">
+<span class="material-symbols-outlined text-xl">shield_lock</span>
+</button>
+<button class="p-2 hover:bg-error-container/20 hover:text-error rounded-lg transition-all" title="Deactivate Account">
+<span class="material-symbols-outlined text-xl">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-surface-bright/20 transition-all duration-300">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant/20 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="confident female developer with short hair wearing tech-wear sitting in a dark office environment with glowing green screens reflected in her glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBloqTh5pHNWoXHgSAhkDEL3QcmtZp5DDvT_T63POb99aI94vx4ABfr1zY3fCauLcqioU25RoVfMaDhiumNYBvut7IJ--HkMX4VXoLhHsDC6vwxfLa_pfI_OyHZkI1imS3bnn7v8G-J2vdgwjfnW7XRT3ZWAyFaIrnjoZ5wLXZ69lGFZCtI2tMUFw35L7ou4iUFjAGQV3-P5vPzurnr19vG8dxyBH9zbDrTuTenO9b8qE6BnfXSo3KhROursoXv_MFFCq26_EvJECaE"/>
+</div>
+<div>
+<div class="text-sm font-bold text-primary group-hover:text-primary-container transition-colors">Elena Rodriguez</div>
+<div class="text-[11px] text-on-surface-variant/60 font-mono tracking-tighter">ID: NT-4421-Y</div>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="text-xs font-mono font-medium text-tertiary-fixed-dim">Developer</span>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-primary-container/10 text-primary-container border border-primary-container/20">
+<span class="w-1 h-1 rounded-full bg-primary-container mr-2 animate-pulse"></span>
+                                    Verified
+                                </span>
+</td>
+<td class="px-8 py-6">
+<div class="text-xs text-on-surface-variant">14 mins ago</div>
+<div class="text-[10px] text-on-surface-variant/40">IP: 45.12.98.22</div>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-3 opacity-40 group-hover:opacity-100 transition-all">
+<button class="p-2 hover:bg-primary-container/10 hover:text-primary-container rounded-lg transition-all" title="Edit Permissions">
+<span class="material-symbols-outlined text-xl">shield_lock</span>
+</button>
+<button class="p-2 hover:bg-error-container/20 hover:text-error rounded-lg transition-all" title="Deactivate Account">
+<span class="material-symbols-outlined text-xl">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-surface-bright/20 transition-all duration-300">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant/20 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="woman with striking features and glasses in a professional studio setup with moody atmospheric lighting and dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkAkGiTvwbmVHWCKhPr8cbYx9OXU73P8hSGO3FDeZkEdnSIDiG1YiF6R3pKP-oZv649AQGffou9LjfumDIYI6a1Xhh4w7W6X3FAh3rubxM5lqlIdlioQM34E7y2nhvN4fFMmLOCpKJLUKumdo_Sg1nWKkIo50GCxh5akzWJ0yaeG85ThbFljbWQDwqe6FJ44ZNiggRw6qw__ThwyOUcBmF2ukNYEyNgnmSt8myo3XH9BSAqAC-bLHpctKoG8B8AayqyJYTpWkSiOCu"/>
+</div>
+<div>
+<div class="text-sm font-bold text-primary group-hover:text-primary-container transition-colors">Sarah Jenkins</div>
+<div class="text-[11px] text-on-surface-variant/60 font-mono tracking-tighter">ID: NT-0912-C</div>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="text-xs font-mono font-medium text-tertiary-fixed-dim">Compliance</span>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-secondary/10 text-secondary border border-secondary/20">
+<span class="w-1 h-1 rounded-full bg-secondary mr-2"></span>
+                                    Flagged
+                                </span>
+</td>
+<td class="px-8 py-6">
+<div class="text-xs text-on-surface-variant">1 hour ago</div>
+<div class="text-[10px] text-on-surface-variant/40">IP: 82.33.11.04</div>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-3 opacity-40 group-hover:opacity-100 transition-all">
+<button class="p-2 hover:bg-primary-container/10 hover:text-primary-container rounded-lg transition-all" title="Edit Permissions">
+<span class="material-symbols-outlined text-xl">shield_lock</span>
+</button>
+<button class="p-2 hover:bg-error-container/20 hover:text-error rounded-lg transition-all" title="Deactivate Account">
+<span class="material-symbols-outlined text-xl">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="group hover:bg-surface-bright/20 transition-all duration-300">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant/20 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional man in a sharp suit with dark background and dramatic cinematic lighting highlighting his features" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMnLWA3kb16ctUAYO-fxXt6Cjb7W45cQoPtyLC8Dvsr7RGICBDqB2Qx7cPlRzJA0SnQajOyH2YbqhALpW6fAXe4weN8mWtbj87J8BT59hdz9j9bWuk6lSozYD02WhkkZux5E4cjBI9leQLdnoXT36jNRJH6aqBmq8jKM-JUR9wVSz-Y_8sWpAIer4xMUaTv6IrAsip9YNoR3UhmDQ8PPlRv2waRJfZfOoLkzzGYdx0Vselva9ZntXU8ZGxVXdyKMzSpAzbyX7NWsTD"/>
+</div>
+<div>
+<div class="text-sm font-bold text-primary group-hover:text-primary-container transition-colors">Marcus Chen</div>
+<div class="text-[11px] text-on-surface-variant/60 font-mono tracking-tighter">ID: NT-3301-S</div>
+</div>
+</div>
+</td>
+<td class="px-8 py-6">
+<span class="text-xs font-mono font-medium text-tertiary-fixed-dim">Support</span>
+</td>
+<td class="px-8 py-6">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-error-container/10 text-error border border-error-container/20">
+<span class="w-1 h-1 rounded-full bg-error mr-2"></span>
+                                    Suspended
+                                </span>
+</td>
+<td class="px-8 py-6">
+<div class="text-xs text-on-surface-variant">3 days ago</div>
+<div class="text-[10px] text-on-surface-variant/40">IP: 22.109.4.19</div>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-3 opacity-40 group-hover:opacity-100 transition-all">
+<button class="p-2 hover:bg-primary-container/10 hover:text-primary-container rounded-lg transition-all" title="Edit Permissions">
+<span class="material-symbols-outlined text-xl">shield_lock</span>
+</button>
+<button class="p-2 hover:bg-primary-container/20 hover:text-primary-container rounded-lg transition-all" title="Reactivate Account">
+<span class="material-symbols-outlined text-xl">settings_backup_restore</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bg-surface-container-high/30 px-8 py-4 flex justify-between items-center text-[10px] uppercase tracking-widest font-bold text-on-surface-variant/60">
+<div>Showing 4 of 124 Personnel</div>
+<div class="flex gap-4 items-center">
+<button class="hover:text-primary-container transition-colors p-1"><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+<span class="text-primary-container">Page 01</span>
+<button class="hover:text-primary-container transition-colors p-1"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+</div>
+</div>
+<!-- Role Distribution Visualizer (Asymmetric secondary section) -->
+<section class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 glass-card rounded-xl p-8">
+<h3 class="font-headline font-bold text-lg mb-6 text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container">query_stats</span>
+                    Access Tier Distribution
+                </h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-[10px] uppercase tracking-widest font-bold mb-2">
+<span class="text-on-surface">Administrative Core</span>
+<span class="text-primary-container">12%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[12%] shadow-[0_0_10px_#00ffcc]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[10px] uppercase tracking-widest font-bold mb-2">
+<span class="text-on-surface">Development &amp; Engineering</span>
+<span class="text-primary-container">45%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[45%] shadow-[0_0_10px_#00ffcc]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[10px] uppercase tracking-widest font-bold mb-2">
+<span class="text-on-surface">Compliance &amp; Audit</span>
+<span class="text-primary-container">28%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[28%] shadow-[0_0_10px_#00ffcc]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-8 relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity">
+<div class="h-full w-full" data-alt="faint abstract radial teal gradient glow on dark background" style="background-image: radial-gradient(circle at 20% 50%, #00ffcc 0%, transparent 50%)"></div>
+</div>
+<h3 class="font-headline font-bold text-lg mb-4 text-primary relative z-10">Security Protocol</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6 relative z-10">
+                    All administrative actions are recorded on an immutable ledger. Multi-factor authentication is mandatory for all access tiers NT-3 and above.
+                </p>
+<div class="flex items-center gap-3 p-4 bg-primary-container/5 border border-primary-container/10 rounded-lg relative z-10">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: &#39;FILL&#39; 1;">encrypted</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary-container">AES-256 Protocol Active</span>
+</div>
+</div>
+</section>
+</main>
+</body></html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noble Funded | Super Admin Dashboard</title>
+<script type='text/javascript' nonce='dFDDg+KFdKWpZ0Jw1hYi6A==' src='https://contribution.usercontent.google.com/XK4M5dq9F9lUIy9qKxRKhpofF_U-Ncn1vjGeuAy3jVhyCrRaNEtAzagkLoeMarppw7QE-p9zD7fZyjwMe-4MbZa5bWCXaU0wH_Aa04IQEKPi-vqe9kFyhkahCSQx5OSwSXtTpJ1a6oGZaDulbx3axHOXLTwHztfosMoBO5fhtlnIVKg1TIWEBRU-MIRlxTRe2Fr_msnDNq5CK-T3Umbkuwe4XM-UwoFn2NV-WODzNV3EAY6PVgcPNbA5CJyanU3HLOH2Bixy4ECUq-_qoWokfuVgMn8kiV0d9Lcasjsg_BXIP7p55Kd9JcYu8FnZqUfY5bfuXEiUHvDQoYLyadC8ehDHP7PRskAGLhkBKEInLwmWdfxK_KGrMT-tn5kkr8QUwySchch1tPQkgEBmm25gT74zlPUC27y0JOlfz9DyK_NcqKRkMTJw6sxvxx1stC_MjNU8OEL59aHhUwi2EfIa9W0K6LncUpIEfPz5TOPqv8OC4kGaLqBLOcZ2qGgT1BlGzjodd6v8sW-gZXYPW0OpvsQeyW_pDWBrwVMQsWq2bAWFN0wm2pvSLMRmLS-vsZIjRssmDIwK9H_ajgIORJ2sA8jKRh3ZeSuUwFMupIbqs1mFtNbsXV5cpXnSxzxUJ3cPMOcmiZAd6QEFpb7rac2NRw-hFqwQU1OdjupE7DmWGQ8StZ-ORIRUP6YbbIFuaAuBM2c8_XcpB4I5FSaPwjQ5tJfHn8cOHmspo-nAnMYyq8CvRJw3AGCZVW0imXnPnwEMtjywx7Nnb9sAsjq7YPB_ia_vKDW3JpRGHNrUKxnq'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary": "#00382b",
+                "secondary-container": "#fe9400",
+                "inverse-primary": "#006b54",
+                "on-secondary-fixed-variant": "#6a3b00",
+                "tertiary-container": "#c5e9e5",
+                "outline-variant": "#3a4a44",
+                "on-surface": "#c6eae6",
+                "surface-container-high": "#0b2f2d",
+                "secondary": "#ffbc7c",
+                "surface-tint": "#00e0b3",
+                "surface-variant": "#183a38",
+                "inverse-surface": "#c6eae6",
+                "on-error-container": "#ffdad6",
+                "surface-bright": "#1d3f3c",
+                "outline": "#83958d",
+                "primary": "#fdfffc",
+                "on-tertiary": "#133634",
+                "secondary-fixed-dim": "#ffb874",
+                "surface-dim": "#001716",
+                "on-secondary-container": "#633700",
+                "on-background": "#c6eae6",
+                "on-tertiary-container": "#496a67",
+                "on-surface-variant": "#b9cbc2",
+                "primary-container": "#00ffcc",
+                "on-primary-fixed-variant": "#00513f",
+                "on-tertiary-fixed": "#00201e",
+                "on-secondary": "#4b2800",
+                "on-primary-container": "#00725a",
+                "on-tertiary-fixed-variant": "#2b4c4a",
+                "error-container": "#93000a",
+                "surface-container": "#002423",
+                "surface-container-lowest": "#001110",
+                "background": "#001716",
+                "surface": "#001716",
+                "inverse-on-surface": "#133634",
+                "primary-fixed": "#24ffcd",
+                "tertiary": "#fcfffe",
+                "tertiary-fixed-dim": "#aacdca",
+                "tertiary-fixed": "#c6eae6",
+                "surface-container-highest": "#183a38",
+                "error": "#ffb4ab",
+                "on-error": "#690005",
+                "primary-fixed-dim": "#00e0b3",
+                "on-primary-fixed": "#002118",
+                "on-secondary-fixed": "#2d1600",
+                "secondary-fixed": "#ffdcbf",
+                "surface-container-low": "#00201e"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #001716;
+            background-image: radial-gradient(circle at 50% 50%, #1d3f3c 0%, #001716 100%);
+            color: #c6eae6;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(11, 47, 45, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 204, 0.1);
+        }
+        .glass-card-hover:hover {
+            border-color: rgba(0, 255, 204, 0.3);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-[#00ffcc]/20 bg-[#00201e]/80 backdrop-blur-xl flex flex-col py-6 z-50">
+<div class="px-6 mb-10">
+<h1 class="text-[#00ffcc] font-black tracking-tighter text-xl font-[&#39;Space_Grotesk&#39;] uppercase">Noble Funded</h1>
+<p class="text-[10px] text-on-surface-variant tracking-[0.2em] font-medium uppercase">Institutional Grade</p>
+</div>
+<nav class="flex-1 space-y-1 px-3">
+<!-- Active Navigation -->
+<a class="flex items-center gap-3 px-4 py-3 bg-[#00ffcc]/10 text-[#00ffcc] border-r-2 border-[#00ffcc] font-bold font-[&#39;Space_Grotesk&#39;] text-sm tracking-wide transition-all group" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="dashboard">dashboard</span>
+                Overview
+            </a>
+<!-- Inactive Navigations -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#00ffcc] hover:bg-[#1d3f3c]/50 transition-all duration-300 font-[&#39;Space_Grotesk&#39;] text-sm tracking-wide group" href="#">
+<span class="material-symbols-outlined text-lg opacity-70 group-hover:opacity-100" data-icon="group">group</span>
+                Users
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#00ffcc] hover:bg-[#1d3f3c]/50 transition-all duration-300 font-[&#39;Space_Grotesk&#39;] text-sm tracking-wide group" href="#">
+<span class="material-symbols-outlined text-lg opacity-70 group-hover:opacity-100" data-icon="military_tech">military_tech</span>
+                Challenges
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#00ffcc] hover:bg-[#1d3f3c]/50 transition-all duration-300 font-[&#39;Space_Grotesk&#39;] text-sm tracking-wide group" href="#">
+<span class="material-symbols-outlined text-lg opacity-70 group-hover:opacity-100" data-icon="payments">payments</span>
+                Payouts
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#00ffcc] hover:bg-[#1d3f3c]/50 transition-all duration-300 font-[&#39;Space_Grotesk&#39;] text-sm tracking-wide group" href="#">
+<span class="material-symbols-outlined text-lg opacity-70 group-hover:opacity-100" data-icon="payments">payments</span>
+                Revenue
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#00ffcc] hover:bg-[#1d3f3c]/50 transition-all duration-300 font-[&#39;Space_Grotesk&#39;] text-sm tracking-wide group" href="#">
+<span class="material-symbols-outlined text-lg opacity-70 group-hover:opacity-100" data-icon="badge">badge</span>
+                Team
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#00ffcc] hover:bg-[#1d3f3c]/50 transition-all duration-300 font-[&#39;Space_Grotesk&#39;] text-sm tracking-wide group" href="#">
+<span class="material-symbols-outlined text-lg opacity-70 group-hover:opacity-100" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:text-[#00ffcc] hover:bg-[#1d3f3c]/50 transition-all duration-300 font-[&#39;Space_Grotesk&#39;] text-sm tracking-wide group" href="#">
+<span class="material-symbols-outlined text-lg opacity-70 group-hover:opacity-100" data-icon="history">history</span>
+                Activity Logs
+            </a>
+</nav>
+<div class="mt-auto px-6 py-4 border-t border-[#00ffcc]/10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest overflow-hidden">
+<img alt="Noble Funded Logo" data-alt="close up of a professional minimalist logo icon with neon teal geometric shapes on a dark obsidian background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1jnBg0qFOltLASH5ibYrZ70iw3XkQVsOY3iUxciZLI-xeanGcZrOCjoulCdY-Mm0WVXBBxGwo9Bn0ect4CPgKaE1RYbI08SGkfTC_oyCY0uugjYQsjEd_MYBHiiNvhtRvnDWbWeBW2Wcb9sVSrfkajaVcKAuZesRFoarjAm1IBckmwSdgdorNzWlv1h0aKwqYKCFmBlcCCyZJX-XJqRchS5_ZCOaZBZLhmQ2J9DGJRW9QZb9FEAxnotHejTxdi9YbsTKAVDElNlI0"/>
+</div>
+<div>
+<p class="text-xs font-bold text-primary">System V2.4</p>
+<p class="text-[10px] text-on-surface-variant">Live Trading Active</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 bg-[#001716]/40 backdrop-blur-xl flex justify-between items-center px-8 z-40 border-b border-[#00ffcc]/10">
+<div class="flex items-center flex-1 max-w-md">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#b9cbc2] text-lg group-focus-within:text-[#00ffcc] transition-colors" data-icon="search">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-lg pl-10 pr-4 py-2 text-sm text-primary placeholder-[#b9cbc2]/50 focus:ring-1 focus:ring-[#00ffcc]/40 transition-all" placeholder="Search accounts, transactions, users..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-[#b9cbc2] hover:text-[#00ffcc] transition-colors group">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-[#fe9400] rounded-full border-2 border-surface shadow-[0_0_8px_rgba(254,148,0,0.5)]"></span>
+</button>
+<div class="h-8 w-[1px] bg-[#00ffcc]/10"></div>
+<div class="flex items-center gap-3 bg-surface-container-low px-3 py-1.5 rounded-full border border-[#00ffcc]/5">
+<div class="text-right">
+<p class="text-xs font-bold text-primary leading-none">Alexander Noble</p>
+<p class="text-[10px] text-[#00ffcc] font-medium tracking-wider uppercase mt-0.5">Super Admin</p>
+</div>
+<div class="w-8 h-8 rounded-full border border-[#00ffcc]/20 overflow-hidden">
+<img alt="Admin Avatar" data-alt="Portrait of a professional man in a dark minimalist futuristic studio with subtle teal accent lighting on his face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD926z7X12mjrwBA5zbAeSLzNk0uW5By7LOB9zC2hVp8PaSLA1LDAMCgGUAlj4Ccnp5Uk4GXdmtwJgYwAJNNmkBu8XOuKrXo08D47rT8ZwHNZ0nQV_nWe53POCMSt2AdMbQKVezBqkUFpCLDZHHCoXZzpgdS3evKm2P3E6L5Z6oBO5FrqZ95_HsPcFBFymm9XUuTWqZUxHAgwkq6ZBLbW8Sfp5455guZjmEfFT8jMvA19JpahuIZ8EVBgPYIdlWq5dfgbO7M4uc0zA6"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 pt-24 p-8 min-h-screen">
+<!-- Dashboard Header -->
+<div class="mb-8 flex justify-between items-end">
+<div>
+<h2 class="font-headline text-3xl font-bold text-primary tracking-tight">System Overview</h2>
+<p class="text-on-surface-variant text-sm mt-1">Real-time institutional liquidity and platform performance</p>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#00ffcc] border border-[#00ffcc]/20 rounded-lg hover:bg-[#00ffcc]/5 transition-all">
+                    Export Report
+                </button>
+<button class="px-4 py-2 text-xs font-bold uppercase tracking-widest bg-primary-container text-on-primary rounded-lg hover:shadow-[0_0_15px_rgba(0,255,204,0.4)] transition-all">
+                    System Refresh
+                </button>
+</div>
+</div>
+<!-- Top Row - Metric Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<!-- Revenue Card -->
+<div class="glass-panel p-6 rounded-xl glass-card-hover transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-[#00ffcc]/10 rounded-lg">
+<span class="material-symbols-outlined text-[#00ffcc]" data-icon="payments">payments</span>
+</div>
+<span class="text-[10px] font-bold text-[#00ffcc] bg-[#00ffcc]/10 px-2 py-0.5 rounded-full uppercase tracking-tighter">+12.4%</span>
+</div>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-widest">Revenue Today</p>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="text-primary font-headline text-2xl font-bold">₦847,000</span>
+</div>
+</div>
+<!-- Signups Card -->
+<div class="glass-panel p-6 rounded-xl glass-card-hover transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-secondary-container/10 rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="person_add">person_add</span>
+</div>
+<span class="text-[10px] font-bold text-secondary bg-secondary-container/10 px-2 py-0.5 rounded-full uppercase tracking-tighter">Target Met</span>
+</div>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-widest">New Signups</p>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="text-primary font-headline text-2xl font-bold">23</span>
+<span class="text-on-surface-variant text-xs">Users</span>
+</div>
+</div>
+<!-- Active Challenges Card -->
+<div class="glass-panel p-6 rounded-xl glass-card-hover transition-all">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-[#00ffcc]/10 rounded-lg">
+<span class="material-symbols-outlined text-[#00ffcc]" data-icon="military_tech">military_tech</span>
+</div>
+<span class="text-[10px] font-bold text-[#00ffcc] bg-[#00ffcc]/10 px-2 py-0.5 rounded-full uppercase tracking-tighter">Live</span>
+</div>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-widest">Active Challenges</p>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="text-primary font-headline text-2xl font-bold">156</span>
+<span class="text-on-surface-variant text-xs">Phases</span>
+</div>
+</div>
+<!-- Payouts Card -->
+<div class="glass-panel p-6 rounded-xl glass-card-hover transition-all border-[#fe9400]/20">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-[#fe9400]/10 rounded-lg">
+<span class="material-symbols-outlined text-[#fe9400]" data-icon="pending_actions">pending_actions</span>
+</div>
+<span class="text-[10px] font-bold text-[#fe9400] bg-[#fe9400]/10 px-2 py-0.5 rounded-full uppercase tracking-tighter">Action Required</span>
+</div>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-widest">Pending Payouts</p>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="text-primary font-headline text-2xl font-bold">8</span>
+<span class="text-on-surface-variant text-sm">/ ₦1.2M</span>
+</div>
+</div>
+</div>
+<!-- Middle Row - Chart & Quick Actions -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+<!-- Revenue Chart -->
+<div class="lg:col-span-2 glass-panel rounded-xl p-8 relative overflow-hidden">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h3 class="font-headline text-xl font-bold text-primary">Revenue Velocity</h3>
+<p class="text-on-surface-variant text-xs uppercase tracking-widest">30-Day Performance Window</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#00ffcc]"></span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Gross Rev</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#fe9400]"></span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Payouts</span>
+</div>
+</div>
+</div>
+<!-- Mock Chart Visualization -->
+<div class="h-64 flex items-end justify-between gap-2">
+<div class="w-full bg-[#00ffcc]/5 rounded-t h-[40%] hover:bg-[#00ffcc]/20 transition-all cursor-pointer relative group">
+<div class="hidden group-hover:block absolute -top-8 left-1/2 -translate-x-1/2 bg-surface-container-highest px-2 py-1 rounded text-[10px] border border-[#00ffcc]/20">₦120k</div>
+</div>
+<div class="w-full bg-[#00ffcc]/5 rounded-t h-[60%] hover:bg-[#00ffcc]/20 transition-all cursor-pointer relative group"></div>
+<div class="w-full bg-[#00ffcc]/5 rounded-t h-[45%] hover:bg-[#00ffcc]/20 transition-all cursor-pointer relative group"></div>
+<div class="w-full bg-[#00ffcc]/5 rounded-t h-[80%] hover:bg-[#00ffcc]/20 transition-all cursor-pointer relative group">
+<div class="hidden group-hover:block absolute -top-8 left-1/2 -translate-x-1/2 bg-surface-container-highest px-2 py-1 rounded text-[10px] border border-[#00ffcc]/20">₦240k</div>
+</div>
+<div class="w-full bg-[#00ffcc]/5 rounded-t h-[55%] hover:bg-[#00ffcc]/20 transition-all cursor-pointer relative group"></div>
+<div class="w-full bg-[#00ffcc]/5 rounded-t h-[90%] hover:bg-[#00ffcc]/20 transition-all cursor-pointer relative group"></div>
+<div class="w-full bg-[#00ffcc]/5 rounded-t h-[35%] hover:bg-[#00ffcc]/20 transition-all cursor-pointer relative group"></div>
+<div class="w-full bg-[#00ffcc]/10 rounded-t h-[100%] hover:bg-[#00ffcc]/30 transition-all cursor-pointer relative group border-x border-t border-[#00ffcc]/40">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#00ffcc] text-on-primary px-2 py-1 rounded text-[10px] font-bold">₦847k</div>
+</div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-on-surface-variant tracking-tighter uppercase">
+<span>30 Days Ago</span>
+<span>15 Days Ago</span>
+<span>Current Day</span>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="glass-panel rounded-xl p-8 flex flex-col">
+<h3 class="font-headline text-xl font-bold text-primary mb-6">Quick Actions</h3>
+<div class="grid grid-cols-1 gap-4">
+<button class="flex items-center justify-between p-4 bg-surface-container-highest/40 hover:bg-[#00ffcc]/10 rounded-xl group transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#b9cbc2] group-hover:text-[#00ffcc]" data-icon="manage_accounts">manage_accounts</span>
+<span class="text-sm font-medium">View Users</span>
+</div>
+<span class="material-symbols-outlined text-[#b9cbc2]/30 text-lg" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-4 bg-surface-container-highest/40 hover:bg-[#fe9400]/10 rounded-xl group transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#b9cbc2] group-hover:text-[#fe9400]" data-icon="task_alt">task_alt</span>
+<span class="text-sm font-medium">Approve Payouts</span>
+</div>
+<span class="material-symbols-outlined text-[#b9cbc2]/30 text-lg" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-4 bg-surface-container-highest/40 hover:bg-error/10 rounded-xl group transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#b9cbc2] group-hover:text-error" data-icon="error_outline">error_outline</span>
+<span class="text-sm font-medium">Check Failed</span>
+</div>
+<span class="material-symbols-outlined text-[#b9cbc2]/30 text-lg" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-4 bg-surface-container-highest/40 hover:bg-[#b9cbc2]/10 rounded-xl group transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#b9cbc2] group-hover:text-white" data-icon="settings_applications">settings_applications</span>
+<span class="text-sm font-medium">System Settings</span>
+</div>
+<span class="material-symbols-outlined text-[#b9cbc2]/30 text-lg" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="mt-auto pt-8">
+<div class="p-4 bg-[#00ffcc]/5 rounded-xl border border-[#00ffcc]/10">
+<p class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest mb-2">Liquidity Guard</p>
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-primary">Status: Optimal</span>
+<span class="w-2 h-2 rounded-full bg-[#00ffcc] shadow-[0_0_8px_rgba(0,255,204,0.6)]"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Row - Activity Feed & Widget -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Activity Feed -->
+<div class="lg:col-span-2 glass-panel rounded-xl p-8">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline text-xl font-bold text-primary">Recent Activity Feed</h3>
+<button class="text-xs text-[#00ffcc] hover:underline uppercase tracking-tighter">View All logs</button>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center border border-[#00ffcc]/10 text-[#00ffcc]">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex-1">
+<p class="text-sm text-primary font-medium">Jane's payout approved</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest mt-0.5">2 mins ago • Finance Ops</p>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold text-primary">₦45,000</span>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center border border-secondary/10 text-secondary">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+<div class="flex-1">
+<p class="text-sm text-primary font-medium">New user registered</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest mt-0.5">14 mins ago • User Mgmt</p>
+</div>
+<div class="text-right px-2 py-0.5 bg-secondary/10 rounded border border-secondary/20">
+<span class="text-[10px] font-bold text-secondary uppercase">ID: 4821</span>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center border border-[#00ffcc]/10 text-[#00ffcc]">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+</div>
+<div class="flex-1">
+<p class="text-sm text-primary font-medium">Challenge completed</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest mt-0.5">45 mins ago • Phase 1 Clear</p>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold text-[#00ffcc]">Mark S.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Platform Status Widget -->
+<div class="glass-panel rounded-xl p-8 bg-gradient-to-br from-[#0b2f2d]/60 to-[#001716]/40">
+<h3 class="font-headline text-xl font-bold text-primary mb-6">Platform Status</h3>
+<div class="mb-8">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs text-on-surface-variant uppercase tracking-widest font-bold">Profit Split Config</span>
+<span class="text-2xl font-headline font-bold text-[#00ffcc]">80%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-[#00ffcc] to-[#006b54]" style="width: 80%"></div>
+</div>
+<p class="text-[10px] text-on-surface-variant mt-2 italic">Active split for funded accounts</p>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between py-3 border-b border-[#00ffcc]/5">
+<span class="text-sm text-on-surface-variant">API Latency</span>
+<span class="text-sm font-bold text-[#00ffcc]">14ms</span>
+</div>
+<div class="flex justify-between py-3 border-b border-[#00ffcc]/5">
+<span class="text-sm text-on-surface-variant">Active Nodes</span>
+<span class="text-sm font-bold text-primary">12 / 12</span>
+</div>
+<div class="flex justify-between py-3">
+<span class="text-sm text-on-surface-variant">Uptime (24h)</span>
+<span class="text-sm font-bold text-primary">99.98%</span>
+</div>
+</div>
+<button class="w-full mt-6 py-3 bg-[#1d3f3c] text-primary text-xs font-bold uppercase tracking-widest rounded-xl hover:bg-[#2b4c4a] transition-all border border-[#00ffcc]/10">
+                    Detailed Diagnostics
+                </button>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Suppressing as per guidelines for detailed dashboards) -->
+</body></html>

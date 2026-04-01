@@ -61,6 +61,32 @@ import DatabaseView from "@/components/views/developer/Database";
 // ─── Shared Views ──────────────────────────────────────────────────────────
 import NotificationsView from "@/components/views/shared/Notifications";
 import AccountSettings from "@/components/views/shared/AccountSettings";
+import BroadcastCenter from "@/components/views/shared/BroadcastCenter";
+import LeaderboardModeration from "@/components/views/shared/LeaderboardModeration";
+import CertificateManager from "@/components/views/shared/CertificateManager";
+
+// ─── New Super Admin Views ─────────────────────────────────────────────────
+import RiskEngine from "@/components/views/super-admin/RiskEngine";
+import PromoCodes from "@/components/views/super-admin/PromoCodes";
+import PaymentGateway from "@/components/views/super-admin/PaymentGateway";
+import BrokerAPI from "@/components/views/super-admin/BrokerAPI";
+import FXRateEngine from "@/components/views/super-admin/FXRateEngine";
+import RuleConfigMatrix from "@/components/views/super-admin/RuleConfigMatrix";
+
+// ─── Workflow & Override Views ─────────────────────────────────────────────
+import ManualOverrideView from "@/components/views/shared/ManualOverride";
+import WebhookMonitor from "@/components/views/developer/WebhookMonitor";
+import RiskEscalation from "@/components/views/compliance/RiskEscalation";
+
+// ─── New Marketing Views ───────────────────────────────────────────────────
+import Competitions from "@/components/views/marketing/Competitions";
+
+// ─── Detail Pages ──────────────────────────────────────────────────────────
+import TraderDetail from "@/components/views/detail/TraderDetail";
+import ChallengeDetail from "@/components/views/detail/ChallengeDetail";
+import PayoutDetail from "@/components/views/detail/PayoutDetail";
+import AffiliateDetail from "@/components/views/detail/AffiliateDetail";
+import StaffDetail from "@/components/views/detail/StaffDetail";
 
 // ─── Sign-out Confirmation Modal ───────────────────────────────────────────
 function SignOutModal({ onConfirm, onCancel }: { onConfirm: () => void; onCancel: () => void }) {
@@ -107,6 +133,11 @@ export default function AdminDashboard() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [signOutModalOpen, setSignOutModalOpen] = useState(false);
 
+  // ── Detail page state ───────────────────────────────────────────────────
+  const [detailType, setDetailType] = useState<"trader" | "challenge" | "payout" | "affiliate" | "staff" | null>(null);
+  const [detailId, setDetailId] = useState<string>("");
+  const [prevTab, setPrevTab] = useState<string>("");
+
   const handleRoleChange = (newRole: Role) => {
     setRole(newRole);
     setActiveTab(ROLE_CONFIGS[newRole].defaultTab);
@@ -114,6 +145,9 @@ export default function AdminDashboard() {
   };
 
   const handleTabChange = (tab: string) => {
+    // Always clear detail page so navigation is never locked to a sub-page
+    setDetailType(null);
+    setDetailId("");
     setActiveTab(tab);
     setMobileMenuOpen(false);
   };
@@ -124,7 +158,57 @@ export default function AdminDashboard() {
     router.push("/login");
   };
 
+  // ── Detail navigation helpers ──────────────────────────────────────────
+  const openDetail = (type: "trader" | "challenge" | "payout" | "affiliate" | "staff", id: string) => {
+    setPrevTab(activeTab);
+    setDetailType(type);
+    setDetailId(id);
+  };
+
+  const closeDetail = () => {
+    setDetailType(null);
+    setDetailId("");
+    setActiveTab(prevTab || activeTab);
+  };
+
   const renderView = () => {
+    // ── Detail pages (overlay the current tab with full drill-down) ──────
+    if (detailType === "trader") return (
+      <TraderDetail
+        traderId={detailId}
+        onBack={closeDetail}
+        onViewChallenge={(id) => openDetail("challenge", id)}
+        onViewPayout={(id) => openDetail("payout", id)}
+      />
+    );
+    if (detailType === "challenge") return (
+      <ChallengeDetail
+        challengeId={detailId}
+        onBack={closeDetail}
+        onViewTrader={(id) => openDetail("trader", id)}
+      />
+    );
+    if (detailType === "payout") return (
+      <PayoutDetail
+        payoutId={detailId}
+        onBack={closeDetail}
+        onViewTrader={(id) => openDetail("trader", id)}
+      />
+    );
+    if (detailType === "affiliate") return (
+      <AffiliateDetail
+        affiliateId={detailId}
+        onBack={closeDetail}
+        onViewTrader={(id) => openDetail("trader", id)}
+      />
+    );
+    if (detailType === "staff") return (
+      <StaffDetail
+        staffId={detailId}
+        onBack={closeDetail}
+      />
+    );
+
     // ── Shared (available to any role) ──────────────────────────────────
     if (activeTab === "notifications") return <NotificationsView role={role} />;
     if (activeTab === "account-settings") return <AccountSettings role={role} onSignOut={() => setSignOutModalOpen(true)} />;
@@ -132,37 +216,76 @@ export default function AdminDashboard() {
     // ── Super Admin ──────────────────────────────────────────────────────
     if (role === "Super Admin") {
       if (activeTab === "overview") return <SuperAdminOverview onTabChange={handleTabChange} />;
-      if (activeTab === "users") return <UsersView />;
-      if (activeTab === "challenges") return <ChallengesView />;
+      if (activeTab === "users") return (
+        <UsersView
+          onViewTrader={(id) => openDetail("trader", id)}
+        />
+      );
+      if (activeTab === "challenges") return (
+        <ChallengesView
+          onViewChallenge={(id) => openDetail("challenge", id)}
+        />
+      );
       if (activeTab === "challenge-plans") return <ChallengePlansView />;
       if (activeTab === "mt5-accounts") return <MT5AccountsView />;
-      if (activeTab === "payouts") return <PayoutsView />;
+      if (activeTab === "payouts") return (
+        <PayoutsView
+          onViewPayout={(id) => openDetail("payout", id)}
+        />
+      );
       if (activeTab === "revenue") return <RevenueView />;
-      if (activeTab === "affiliates") return <AffiliatesView />;
+      if (activeTab === "affiliates") return (
+        <AffiliatesView
+          onViewAffiliate={(id) => openDetail("affiliate", id)}
+        />
+      );
       if (activeTab === "leaderboard") return <LeaderboardView />;
       if (activeTab === "certificates") return <CertificatesView />;
       if (activeTab === "rules") return <RulesView />;
-      if (activeTab === "kyc") return <KYCView />;
+      if (activeTab === "kyc") return <KYCView onViewTrader={(id) => openDetail("trader", id)} />;
+      if (activeTab === "risk-engine") return <RiskEngine />;
+      if (activeTab === "promo-codes") return <PromoCodes />;
+      if (activeTab === "payment-gateway") return <PaymentGateway />;
+      if (activeTab === "broker-api") return <BrokerAPI />;
+      if (activeTab === "fx-rate") return <FXRateEngine />;
+      if (activeTab === "broadcast") return <BroadcastCenter role={role} />;
       if (activeTab === "trader-performance") return <TraderPerformance />;
       if (activeTab === "advanced-reporting") return <AdvancedReporting />;
       if (activeTab === "global-command") return <GlobalCommand />;
-      if (activeTab === "team") return <TeamView />;
+      if (activeTab === "team") return (
+        <TeamView
+          onViewStaff={(id) => openDetail("staff", id)}
+        />
+      );
       if (activeTab === "staff-permissions") return <StaffPermissions />;
       if (activeTab === "settings") return <SettingsView />;
       if (activeTab === "activity-logs") return <ActivityLogsView />;
+      if (activeTab === "rule-config-matrix") return <RuleConfigMatrix />;
+      if (activeTab === "manual-override") return <ManualOverrideView />;
     }
 
     // ── Compliance ───────────────────────────────────────────────────────
     if (role === "Compliance") {
       if (activeTab === "overview") return <ComplianceOverview onTabChange={handleTabChange} />;
       if (activeTab === "monitor") return <MonitorView />;
-      if (activeTab === "payouts") return <CompliancePayoutsView />;
-      if (activeTab === "flagged") return <FlaggedView />;
+      if (activeTab === "risk-escalation") return <RiskEscalation />;
+      if (activeTab === "manual-override") return <ManualOverrideView />;
+      if (activeTab === "payouts") return (
+        <CompliancePayoutsView
+          onViewPayout={(id) => openDetail("payout", id)}
+        />
+      );
+      if (activeTab === "flagged") return (
+        <FlaggedView
+          onViewTrader={(id) => openDetail("trader", id)}
+        />
+      );
       if (activeTab === "violations") return <ViolationsView />;
+      if (activeTab === "leaderboard-mod") return <LeaderboardModeration />;
       if (activeTab === "reports") return <ComplianceReports />;
     }
 
-    // ── Support ──────────────────────────────────────────────────────────
+    // ── Support ───────────────────────────────────────────────���──────────
     if (role === "Support") {
       if (activeTab === "tickets") return (
         <TicketsView
@@ -178,7 +301,15 @@ export default function AdminDashboard() {
           onBack={() => handleTabChange("tickets")}
         />
       );
-      if (activeTab === "users") return <SupportUsersView />;
+      if (activeTab === "users") return (
+        <SupportUsersView
+          onViewTrader={(id) => openDetail("trader", id)}
+        />
+      );
+      if (activeTab === "manual-override") return <ManualOverrideView />;
+      if (activeTab === "certificate-manager") return <CertificateManager />;
+      if (activeTab === "leaderboard-mod") return <LeaderboardModeration />;
+      if (activeTab === "broadcast") return <BroadcastCenter role={role} />;
       if (activeTab === "faq") return <FAQView />;
       if (activeTab === "messages") return <MessagesView />;
     }
@@ -190,7 +321,14 @@ export default function AdminDashboard() {
       if (activeTab === "sources") return <SourcesView />;
       if (activeTab === "conversions") return <ConversionsView />;
       if (activeTab === "campaigns") return <CampaignsView />;
-      if (activeTab === "affiliates") return <AffiliatesView />;
+      if (activeTab === "competitions") return <Competitions />;
+      if (activeTab === "promo-codes") return <PromoCodes />;
+      if (activeTab === "broadcast") return <BroadcastCenter role={role} />;
+      if (activeTab === "affiliates") return (
+        <AffiliatesView
+          onViewAffiliate={(id) => openDetail("affiliate", id)}
+        />
+      );
       if (activeTab === "reports") return <MarketingReports />;
     }
 
@@ -199,8 +337,11 @@ export default function AdminDashboard() {
       if (activeTab === "system") return <SystemView />;
       if (activeTab === "logs") return <LogsView />;
       if (activeTab === "errors") return <ErrorsView />;
+      if (activeTab === "webhook-monitor") return <WebhookMonitor />;
       if (activeTab === "deploy") return <DeployView />;
       if (activeTab === "database") return <DatabaseView />;
+      if (activeTab === "broker-api") return <BrokerAPI />;
+      if (activeTab === "notifications") return <NotificationsView role={role} />;
     }
 
     // Fallback
@@ -215,7 +356,7 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-[var(--surface)]">
+    <div className="flex h-screen w-screen bg-[var(--surface)]" style={{ isolation: "isolate" }}>
       {/* Sidebar */}
       <Sidebar
         role={role}
@@ -226,8 +367,8 @@ export default function AdminDashboard() {
         onMobileClose={() => setMobileMenuOpen(false)}
       />
 
-      {/* Main content */}
-      <div className="flex flex-col flex-1 min-w-0 overflow-hidden">
+      {/* Main content — overflow visible so header dropdowns aren't clipped */}
+      <div className="flex flex-col flex-1 min-w-0 overflow-visible">
         <Header
           role={role}
           onRoleChange={handleRoleChange}
@@ -235,7 +376,7 @@ export default function AdminDashboard() {
           onMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
           onSignOut={() => setSignOutModalOpen(true)}
         />
-        <main className="flex-1 overflow-y-auto px-4 lg:px-6 py-4 lg:py-5">
+        <main className="flex-1 overflow-y-auto overflow-x-hidden px-3 sm:px-4 lg:px-6 py-3 lg:py-5">
           {renderView()}
         </main>
       </div>

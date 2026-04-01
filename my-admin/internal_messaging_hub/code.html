@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script type='text/javascript' nonce='ve1v+mQK2IisYGesfV/sHw==' src='https://contribution.usercontent.google.com/3bs9dMVmTZMr1Ebzi1AqYPvAH4UpugRnTPhikaL6Y0XVCRpvqiCHxyr005cVre9vU7n3IA8MkwmgMcYt84IFEdQZHnuf6ZtbLPmwsu05cN-s-55_6D2f7A3YP7tHSyZhN9_LZBpjUGV0g1cG1Js_jqiP8YHG_z7qwNpf4tQp-NrJny9fwwZc0m5uozn7pm-j5IraaTh9A0fmqXSp7hCjQYCY8YCEMG3Bt4HELurE6DFS-uMXaCYKQR8rDDHRCFVv5m_O_waPcmhoVn94BuwFIWRfGcOJ_MrvFPf61lH7Xxf-XwuiOAUZUeyrbZpUT4Mio89NowQPW1KjUBRQsN8Zh-BEMA_2UbH4QG1-dnR-COE9k4BBbs6i4QquLxS4WAOmzCfevZJvTYQGjLg87bDSKbQdWwi4o0CWpqs9ndg3ATrH8qBaCj4ydTWnaoKrklgZSbAqqd7w1hUAc8Zb4O1-oQH4CcbgtYEL01nULzZHjI8s3SlDt40FdjnSHqtRnCM_aHD2n1lLedfBxIvtVLrvYoE5x7GdnURO-8ynPg0MMcI5_i841vD5cfq4sR_EN0efbYCCGc35fD39kNJ7QrQmGf0rb74bpxeQznG4Vfq0Hk7MxgHKCw4AKJAbUZj_Cxs1XtfLT6Ydss16HSoliIxlU3Srau0yEpPoVcumpBqsI3bn0CFti2LhtsqqSXppreqe4YcyvEHEVLfioGlI3lH63ytW7f1uf-rtSqdI43Wlx8rz5FcKBqJlCIEHHYzhTlyNPcP0dwF2HLLasFL9rAvklszBGjy8OfJZaUOIrR6l'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-container": "#c5e9e5",
+            "on-tertiary-fixed": "#00201e",
+            "secondary": "#ffbc7c",
+            "inverse-primary": "#006b54",
+            "tertiary-fixed": "#c6eae6",
+            "tertiary": "#fcfffe",
+            "tertiary-fixed-dim": "#aacdca",
+            "primary-container": "#00ffcc",
+            "outline-variant": "#3a4a44",
+            "primary": "#fdfffc",
+            "background": "#001716",
+            "surface-container": "#002423",
+            "surface-tint": "#00e0b3",
+            "primary-fixed": "#24ffcd",
+            "on-tertiary-fixed-variant": "#2b4c4a",
+            "error": "#ffb4ab",
+            "on-primary": "#00382b",
+            "surface-container-highest": "#183a38",
+            "inverse-on-surface": "#133634",
+            "on-secondary-fixed-variant": "#6a3b00",
+            "on-secondary-container": "#633700",
+            "on-surface-variant": "#b9cbc2",
+            "surface-variant": "#183a38",
+            "outline": "#83958d",
+            "surface-bright": "#1d3f3c",
+            "inverse-surface": "#c6eae6",
+            "on-secondary": "#4b2800",
+            "on-background": "#c6eae6",
+            "on-secondary-fixed": "#2d1600",
+            "surface-dim": "#001716",
+            "error-container": "#93000a",
+            "surface-container-lowest": "#001110",
+            "primary-fixed-dim": "#00e0b3",
+            "on-error-container": "#ffdad6",
+            "secondary-fixed-dim": "#ffb874",
+            "secondary-fixed": "#ffdcbf",
+            "surface": "#001716",
+            "on-primary-fixed": "#002118",
+            "surface-container-low": "#00201e",
+            "surface-container-high": "#0b2f2d",
+            "on-tertiary-container": "#496a67",
+            "secondary-container": "#fe9400",
+            "on-primary-fixed-variant": "#00513f",
+            "on-surface": "#c6eae6",
+            "on-tertiary": "#133634",
+            "on-primary-container": "#00725a",
+            "on-error": "#690005"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-panel {
+      backdrop-filter: blur(12px);
+      background: rgba(11, 47, 45, 0.4);
+      border: 1px solid rgba(0, 255, 204, 0.1);
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .neon-border-right {
+      border-right: 2px solid #00ffcc;
+      background: linear-gradient(90deg, rgba(0, 255, 204, 0.1) 0%, transparent 100%);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body overflow-hidden h-screen">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#001716]/80 backdrop-blur-xl border-b border-[#00ffcc]/20">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold text-[#00ffcc] tracking-widest uppercase font-headline">Noble Funded</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors font-label py-1" href="#">Command</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors font-label py-1" href="#">Performance</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors font-label py-1" href="#">Compliance</a>
+<a class="text-[#fdfffc] border-b-2 border-[#00ffcc] pb-1 font-label" href="#">Messaging</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container p-2 transition-all">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container p-2 transition-all">settings</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container p-2 transition-all">help</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary-container/30 ml-2">
+<img alt="User profile avatar" data-alt="close-up professional portrait of a tech executive with soft neon teal lighting highlights on their silhouette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6LxbMgKtukPWGYW38V-69UY5rV7A_zHU7qIp-f7KySgz63F6nVwDcOZYK6BpWHFRPSLWF5tZr93ePk1Pck-L4PD8K5Ji4F5nO3HILm2CBPlzw_zgHfaxcJvjQzIHey3a85TyHySxvX_ckmidG_Zl4KqDhYzK2ng7daaAlvkl_xRF85SOuiIJhslB-H6Zg8zY4xeNK75GNEPkLf248gDIMLpRLjE8-cVs-A86uIrXZuU2Asxp5bll_RhHvfYtyhcsO0Ci6iRhPc1Zq"/>
+</div>
+</div>
+</header>
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col pt-20 bg-[#00201e] w-64 border-r border-[#00ffcc]/10">
+<div class="px-6 mb-8">
+<h2 class="text-[#00ffcc] font-black uppercase tracking-tighter font-headline text-lg">Global Command</h2>
+<p class="text-xs text-on-surface-variant/60 font-label tracking-widest uppercase">Super Admin Access</p>
+</div>
+<nav class="flex-1 overflow-y-auto scrollbar-hide">
+<div class="space-y-1">
+<a class="text-[#b9cbc2] flex items-center gap-3 px-6 py-3 hover:bg-[#1d3f3c] transition-all group" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="text-[#b9cbc2] flex items-center gap-3 px-6 py-3 hover:bg-[#1d3f3c] transition-all group" href="#">
+<span class="material-symbols-outlined text-xl">monitoring</span>
+<span class="font-medium">Performance</span>
+</a>
+<a class="text-[#b9cbc2] flex items-center gap-3 px-6 py-3 hover:bg-[#1d3f3c] transition-all group" href="#">
+<span class="material-symbols-outlined text-xl">verified_user</span>
+<span class="font-medium">KYC Center</span>
+</a>
+<a class="bg-[#00ffcc]/10 text-[#00ffcc] border-r-4 border-[#00ffcc] flex items-center gap-3 px-6 py-3" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: &#39;FILL&#39; 1;">mail</span>
+<span class="font-medium">Messages</span>
+</a>
+<a class="text-[#b9cbc2] flex items-center gap-3 px-6 py-3 hover:bg-[#1d3f3c] transition-all group" href="#">
+<span class="material-symbols-outlined text-xl">query_stats</span>
+<span class="font-medium">Analytics</span>
+</a>
+<a class="text-[#b9cbc2] flex items-center gap-3 px-6 py-3 hover:bg-[#1d3f3c] transition-all group" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+</div>
+</nav>
+<div class="p-4 mt-auto border-t border-outline-variant/10">
+<button class="w-full bg-primary-container text-on-primary font-bold py-3 rounded flex items-center justify-center gap-2 hover:shadow-[0_0_15px_rgba(0,255,204,0.3)] transition-all uppercase tracking-wider text-xs">
+<span class="material-symbols-outlined text-sm">add_comment</span>
+        New Broadcast
+      </button>
+<div class="mt-4 space-y-1">
+<a class="text-[#b9cbc2] flex items-center gap-3 px-2 py-2 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">contact_support</span>
+<span class="text-xs">Support</span>
+</a>
+<a class="text-[#b9cbc2] flex items-center gap-3 px-2 py-2 hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span class="text-xs">Logout</span>
+</a>
+</div>
+</div>
+</aside>
+<main class="ml-64 pt-16 h-screen flex">
+<section class="w-80 bg-surface-container-low flex flex-col border-r border-outline-variant/10">
+<div class="p-6">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant font-headline">Channels</h3>
+<button class="material-symbols-outlined text-primary-container text-lg">add_circle</button>
+</div>
+<div class="space-y-2">
+<button class="w-full text-left px-4 py-3 rounded bg-surface-container-highest/50 border-l-2 border-primary-container text-primary-container flex items-center gap-3 group">
+<span class="text-on-surface-variant/40 font-mono text-lg">#</span>
+<span class="font-medium">payouts</span>
+<span class="ml-auto w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#00ffcc]"></span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded hover:bg-surface-bright transition-all text-on-surface-variant flex items-center gap-3">
+<span class="text-on-surface-variant/40 font-mono text-lg">#</span>
+<span class="font-medium">risk-alerts</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded hover:bg-surface-bright transition-all text-on-surface-variant flex items-center gap-3">
+<span class="text-on-surface-variant/40 font-mono text-lg">#</span>
+<span class="font-medium">tech-support</span>
+<span class="ml-auto bg-surface-container-highest text-[10px] px-2 py-0.5 rounded-full border border-outline-variant/20">12</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded hover:bg-surface-bright transition-all text-on-surface-variant flex items-center gap-3">
+<span class="text-on-surface-variant/40 font-mono text-lg">#</span>
+<span class="font-medium">liquidity-feed</span>
+</button>
+</div>
+<div class="mt-10">
+<h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant font-headline mb-4">Direct Messages</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3 px-2">
+<div class="relative">
+<img alt="Avatar" class="w-8 h-8 rounded-lg border border-outline-variant/20" data-alt="Macro portrait of a data scientist in a dark room illuminated by neon blue computer screens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf9Ae8pIzsID-kotChULUS3_TNUlPYfaiRgysI9FHDkoXzFDT0QsqVMEJW5Hb1_tnMskHajPeC1PvUz2fHxm3gcPN7qwpmLn_mnrr2sY2ShQeCMCe-hkgnFJ1MulL8pnXTJ2CNU3InToc3jfriMM1L4gRZBpi5wQtp6VLVyoMO-_kCZjDOFxyrHeh30TSJ-2pXsqvs0sm0d1lTrjezr7gL6wOEAxspdk1I478vzkJbaI-HUSw_22KhKtjPzERWyygfqn4yBfcobsLE"/>
+<div class="absolute -bottom-1 -right-1 w-3 h-3 bg-primary-container rounded-full border-2 border-surface-container-low"></div>
+</div>
+<div>
+<p class="text-sm font-medium text-primary">Julian Drake</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Chief Strategist</p>
+</div>
+</div>
+<div class="flex items-center gap-3 px-2 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-pointer">
+<div class="relative">
+<img alt="Avatar" class="w-8 h-8 rounded-lg border border-outline-variant/20" data-alt="Headshot of a modern software engineer wearing dark minimalist clothing in a high-tech lab setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYx2GBcvkebPMkja2nde86ywnK1QAuIw6tPqg2bV86QjJUwbkv8yx0TTTbx5Tswm67hTe3NsBy5fNG2agAd0P1Bf1AZtJ9q6LGEfCcNXZvmIS-nd6q9sYFypbqmqhvB9hEaMtg83qO8dTxIYd7ToU4x-bdWX2fQrG3R2xhCwgZpYGaIsiVU5zjDbKTVpXA5mj6XuWK7PEKix7VltQuaWBJla-QsAMO0hpuMhsCYXWrvwwp9-eKfbxnkSxcgwIlOO3cuIBFFP7JC5OY"/>
+<div class="absolute -bottom-1 -right-1 w-3 h-3 bg-outline rounded-full border-2 border-surface-container-low"></div>
+</div>
+<div>
+<p class="text-sm font-medium text-on-surface-variant">Sasha Volkov</p>
+<p class="text-[10px] text-on-surface-variant/50 uppercase tracking-tighter">Dev Ops</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="flex-1 flex flex-col bg-surface overflow-hidden">
+<header class="h-16 px-8 flex items-center justify-between border-b border-outline-variant/5 bg-surface-container/30 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<span class="text-primary-container text-2xl font-mono">#</span>
+<div>
+<h1 class="font-headline font-bold text-lg text-primary tracking-tight">payouts</h1>
+<p class="text-xs text-on-surface-variant">Approval workflow for institutional profit distributions.</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex -space-x-2">
+<img class="w-7 h-7 rounded-full border-2 border-surface" data-alt="Portrait of a young professional woman in tech wearing glasses and dark techwear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDhmXdpFaK9LyxFEW4aiKXDVC3hKmujsjG8LG1BdeT5AQIme8V3C4hawXneQlAPMqKjRn_r3mEOzNauPrzwP1wSJNGSWOHEyJ4ma1X0U3dIeNGJGci5u1ghybLK4KVvMvHCvYbd1xnM5l5kxxNjCdh23HCKlAC8_rzlcLL_xK54VvkyQP8qod65Tdh2P5BmSJrb2JhWy8jsT9N6fTH9KCXA4vvrrP2-C2Iqdhf4S5r0TLpDiCL1RfMjWnF_pOL58VYCOp2c98y7RGo"/>
+<img class="w-7 h-7 rounded-full border-2 border-surface" data-alt="Portrait of a man with short hair and a beard, tech environment background with teal accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf7VmR5QLWWklx00FnwzZHBk0PwWUg7fuiiqeGbrMiprscDt68e4u7EOMZ4khC7IfXHW4DU1Af56fT71rmwjkHqcrPlJNICqI3q0CErpd1EKNqACdPTZ2HPU8Kc-L8sQdNrWxQ1v2lQTx7IjPH6kAKyqqvK6tA6_HnrzmiqQij5YldIOByzUMtraZkC_q_bXgJaKUam5lUNiXceQjRQP0HCDZXNsLTlFg735UZbga-B3e-NJS4pIMcqdRmVrHSa1XdaU4zf2mB2Wap"/>
+<img class="w-7 h-7 rounded-full border-2 border-surface" data-alt="Portrait of an Asian female software developer in a moody office environment with server racks behind" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDr-l6h3CsbtFCbl201WwxejFzqeO8i1hXVr_1zG_T1Wu1QdOJfkkINR3nS7_6ax5BOI3p9BiHYcJlfYr6Oq6BjaVxST1UER1HSSbq9Sgxe4X_pgnymo4UmyNFuFw0L5b1qodohC-eoOlwlDWd9OC9ZhoWZC1rzjOC7rSxRYQRoEw6XQoyOjZCWDUkdCNlb_pec2geI7EujV7Q-Rhfa3qkDg77NDyMgL42rY00jA76BvbehKCEv2m3Iea368Dl11NbipbZwEfFT9lb"/>
+<div class="w-7 h-7 rounded-full bg-surface-bright flex items-center justify-center text-[10px] border-2 border-surface font-bold text-primary-container">+14</div>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container">more_vert</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 space-y-10 scrollbar-hide">
+<div class="flex flex-col items-center py-10 opacity-40">
+<div class="h-px w-32 bg-gradient-to-r from-transparent via-outline-variant to-transparent mb-4"></div>
+<span class="text-[10px] uppercase tracking-[0.4em] font-headline">November 14, 2024</span>
+<div class="h-px w-32 bg-gradient-to-r from-transparent via-outline-variant to-transparent mt-4"></div>
+</div>
+<div class="flex gap-4 group">
+<img class="w-10 h-10 rounded-xl mt-1 border border-primary-container/10" data-alt="Professional avatar icon for a senior executive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzHrjy5QATkcVUW7pGz-Z2dl3tS7i28vWGQ83jh7NJiF0pOojZ_wTN9GGeoJcIOpGJJyhCdLVU_Dz6CYT5Frez45tXSa4aVC6mDvvFK_-pK9l0aeolOuGcHKj-b0VsnJjZL-exwWrjqmPojZisQWIddnitAr4LsnIvaFY1jmV0d8NnYUhLIcNqyzz_2RTGoX4EfzJPmkl4y6_DpBB10gMwGzSHV7DxSEfaUAaPID_0564jioklVi7MiKtsBTFKAmGtOY3KhMydCBWG"/>
+<div class="flex-1">
+<div class="flex items-baseline gap-3 mb-1">
+<span class="font-bold text-primary font-headline">Julian Drake</span>
+<span class="text-[10px] text-on-surface-variant font-medium">10:42 AM</span>
+</div>
+<div class="text-on-surface-variant leading-relaxed max-w-3xl">
+              Initiating the batch process for Tier-1 Funded accounts. <span class="text-primary-container bg-primary-container/10 px-1 rounded">@FinanceTeam</span>, please review the ledger sync before we push to the gateway.
+            </div>
+<div class="mt-4 glass-panel p-4 rounded-xl flex items-center gap-4 max-w-sm border-primary-container/20 border">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-primary truncate">payout_report_Q4_v2.csv</p>
+<p class="text-[10px] text-on-surface-variant">42.8 KB • CSV Spreadsheet</p>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container">download</button>
+</div>
+</div>
+</div>
+<div class="flex gap-4 group border-l-2 border-surface-bright pl-4 ml-5">
+<img class="w-10 h-10 rounded-xl mt-1 border border-outline-variant/20" data-alt="Avatar for an analyst character" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcPZGK4A4GLSXbeatFEJhwyHqpuvjsfRzOOZPMyD6WnJz-vye1bIcTASa4qr5bzmu3MRaqOcuLIGa09dWFiG4HwCkFa0OOtRgYzJI1D61AJ6ZOrpYDZUkGJV6-usOXgWoLSQcQ-rEwaYHe-2fy4jPgtyyfiJUb4tjoa1MW5xUz11RS0Hcx-O-TNTET3sJmDJFu9YLbncWZrWWfa5bPUMZ6JpD4-JYWErHm_zCH3a7PbfVwpnqxCVGb6hnLqoDQNNfW3JVdP29Gdm2F"/>
+<div class="flex-1">
+<div class="flex items-baseline gap-3 mb-1">
+<span class="font-bold text-secondary font-headline">Aria Miller</span>
+<span class="text-[10px] text-on-surface-variant font-medium">10:45 AM</span>
+</div>
+<div class="text-on-surface-variant leading-relaxed">
+              Ledger sync completed. All balances reconciled against the Obsidian core. Proceeding with distribution.
+            </div>
+<div class="flex gap-2 mt-2">
+<div class="bg-surface-container-high/60 border border-outline-variant/10 rounded-full px-2 py-0.5 flex items-center gap-1.5 cursor-pointer hover:bg-primary-container/10 transition-all">
+<span class="text-xs">✅</span>
+<span class="text-[10px] font-bold text-on-surface-variant">4</span>
+</div>
+<div class="bg-surface-container-high/60 border border-outline-variant/10 rounded-full px-2 py-0.5 flex items-center gap-1.5 cursor-pointer hover:bg-primary-container/10 transition-all">
+<span class="text-xs">🚀</span>
+<span class="text-[10px] font-bold text-on-surface-variant">2</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-4 group">
+<img class="w-10 h-10 rounded-xl mt-1 border border-outline-variant/20" data-alt="Avatar for system message notification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlGQxiMYhFTJgJVWpA96QoJ1tc1prpOq_sr89un9jutVfiPkJFrqZ4dBXOQoy0CJy8cncuThd_emDylB0LvQBFa9VWiRIi0zM_CAU1HPSGILX-A7tND0ev0eRppNx11ed6LW4nmmEbW12Dx-XDGZ3_fEUCbv24k4Ik28DIyRooe58zxTqxF2ZwJkq1CTUSXLj8JbrHjvt95UXRcDPctZid42J6E_iebAL9Ynr_HGQkkZYnk2AhI0APUQgC4cI98-40ECFXWI-Ccd4i"/>
+<div class="flex-1">
+<div class="flex items-baseline gap-3 mb-1">
+<span class="font-bold text-primary-fixed font-headline tracking-tighter">SYSTEM_NOTIFIER</span>
+<span class="bg-primary-container/20 text-primary-container text-[8px] px-1 rounded font-bold uppercase tracking-widest">BOT</span>
+<span class="text-[10px] text-on-surface-variant font-medium">11:02 AM</span>
+</div>
+<div class="text-on-surface-variant leading-relaxed p-4 glass-panel border-l-4 border-l-secondary rounded-r-lg max-w-2xl italic text-sm">
+              Critical Alert: High volatility detected in XAU/USD feed. Slippage monitoring active. Distribution will pause automatically if deviation exceeds 0.05%.
+            </div>
+</div>
+</div>
+</div>
+<footer class="p-8 bg-gradient-to-t from-surface to-transparent">
+<div class="glass-panel rounded-xl overflow-hidden focus-within:border-primary-container/50 transition-all">
+<div class="flex items-center px-4 py-2 border-b border-outline-variant/10 gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container text-xl">format_bold</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container text-xl">format_italic</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container text-xl">code</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container text-xl">link</button>
+<div class="h-4 w-px bg-outline-variant/20 mx-1"></div>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container text-xl">list</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container text-xl">mention</button>
+</div>
+<div class="flex items-center p-4 gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container p-2 bg-surface-container-highest rounded-lg transition-all">add</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-primary placeholder:text-on-surface-variant/30 font-body" placeholder="Message #payouts" type="text"/>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-secondary text-xl">mood</button>
+<button class="bg-primary-container text-on-primary w-10 h-10 rounded-lg flex items-center justify-center hover:shadow-[0_0_20px_rgba(0,255,204,0.4)] transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">send</span>
+</button>
+</div>
+</div>
+</div>
+<p class="text-[10px] text-center mt-3 text-on-surface-variant/40 tracking-[0.2em] uppercase font-headline">End-to-End Encrypted Terminal</p>
+</footer>
+</section>
+<aside class="w-80 bg-surface-container-low border-l border-outline-variant/10 hidden xl:flex flex-col">
+<div class="p-8 border-b border-outline-variant/5">
+<h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant font-headline mb-6">Pinned Data</h3>
+<div class="space-y-4">
+<div class="p-4 rounded-xl glass-panel border-primary-container/10">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] uppercase font-bold text-primary-container tracking-widest">Active Batch</span>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">push_pin</span>
+</div>
+<p class="text-xl font-headline font-bold text-primary">$1,248,000.00</p>
+<div class="w-full bg-surface-container-highest h-1 mt-3 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[65%] shadow-[0_0_10px_#00ffcc]"></div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] text-on-surface-variant">
+<span>65% Processed</span>
+<span>248 Accounts</span>
+</div>
+</div>
+<div class="p-4 rounded-xl glass-panel border-secondary/10">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[10px] uppercase font-bold text-secondary tracking-widest">Compliance Lock</span>
+<span class="material-symbols-outlined text-secondary text-sm">security</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-tight">Batch ID: #NF-9923-TRX requires multi-sig approval from <span class="text-primary">Admin_01</span>.</p>
+</div>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant font-headline mb-6">Shared Files</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="w-10 h-10 bg-surface-container-highest rounded-lg flex items-center justify-center group-hover:bg-primary-container/10 transition-colors">
+<span class="material-symbols-outlined text-primary-container/60 group-hover:text-primary-container">picture_as_pdf</span>
+</div>
+<div class="min-w-0">
+<p class="text-xs font-bold text-primary truncate">compliance_memo.pdf</p>
+<p class="text-[10px] text-on-surface-variant">2.1 MB • Today at 9:15 AM</p>
+</div>
+</div>
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="w-10 h-10 bg-surface-container-highest rounded-lg flex items-center justify-center group-hover:bg-primary-container/10 transition-colors">
+<span class="material-symbols-outlined text-primary-container/60 group-hover:text-primary-container">table_chart</span>
+</div>
+<div class="min-w-0">
+<p class="text-xs font-bold text-primary truncate">ledger_snapshot_nov.xlsx</p>
+<p class="text-[10px] text-on-surface-variant">1.4 MB • Yesterday</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 text-xs font-bold uppercase tracking-widest text-primary-container hover:underline transition-all">View All Vault Assets</button>
+</div>
+</aside>
+</main>
+<div class="md:hidden fixed bottom-0 w-full z-50 bg-[#001716]/90 backdrop-blur-xl border-t border-[#00ffcc]/10 px-4 py-2 flex justify-around">
+<button class="flex flex-col items-center gap-1 text-[#00ffcc]">
+<span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">mail</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Chat</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#b9cbc2]">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Users</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#b9cbc2]">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Stats</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#b9cbc2]">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</button>
+</div>
+</body></html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payout Management | Obsidian Prop Trading Admin</title>
+<script type='text/javascript' nonce='XN3YKWMx6RfyGqNbl3Ff2A==' src='https://contribution.usercontent.google.com/fNNfvOY2tjHErVumwn9MAPshxE4nw3tRrkREBFZLr1mPwACVfltY1Xe5bx4GqS4aWs_E61RwPNyzBHeHZlQ51bt2ki3jMbLGnfgQ43t9EMBO8xceiAoPGdPDJqZGzN-DBfAfA_hH03_BsJ38k0iCGevint6HMfRa9l4Ej2JZYB3U6TAGY8hiG0m_fYGGmQnkNCteJ-0XAfk4t-6_RrvcKsqbYGj7_Mi51GVSxIswWZPUz3EYmgkBc4yPSyo-_VeWyG-mSC5LOASB0QlVX5VsGzPsK12y2XHamfDFj2ynn8qANew8fcdAV59FXRkQqJw0lmBTWdqushhbhBLkegcY3mHBuX1EoU7k-7nn8nBOqDU-X3e2HwqTUplsjoaVgiuqDePPrSZOgCVLTrpRWM_xFas4ihIvCPchy7iwuPAs-V78DyN-VaRt_NFit2vlQ3iJB9Cf5G7gzafDXbbjDs4l2bcGasNMy_R8zvloRjrDFTbGIt-avOds17fHtkE0TK2ppZ0xB-onjY8kc-cSEhgwZZaAMROBUpl8dChn89TKxFi0BsO1Bvf97P6G6meM78XGs-Ttvx9kAVZZBiXfzkBoqx7EEzphH_P0z9eRZQQglrOXz7zieZ8s2hThxre_4AhqqPoM5Ca4oKwoE-LYu6e_hvM3ojQBugiGf8HteQToojwX_dDhIHuifb0a2abvoEEfLj-UGrZlBSzpH2h48sENUaQZD8CbAHl5G5uV43_a7JfgeX99L2Q8s3OgA8arswhuqj7kwx_kuI0g1b2oSZ6aHMg949iUxsOLnaepQMpJ'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #001716;
+            color: #c6eae6;
+        }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(11, 47, 45, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 255, 204, 0.1);
+        }
+        .glass-edge {
+            position: relative;
+        }
+        .glass-edge::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(0, 255, 204, 0.2) 0%, transparent 50%, rgba(0, 255, 204, 0.05) 100%);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #001716; }
+        ::-webkit-scrollbar-thumb { background: #1d3f3c; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ffcc; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "tertiary-container": "#c5e9e5",
+                "on-tertiary-fixed": "#00201e",
+                "on-error-container": "#ffdad6",
+                "surface-dim": "#001716",
+                "on-tertiary-container": "#496a67",
+                "on-tertiary": "#133634",
+                "on-secondary": "#4b2800",
+                "surface-tint": "#00e0b3",
+                "inverse-primary": "#006b54",
+                "on-surface": "#c6eae6",
+                "surface-container-highest": "#183a38",
+                "surface-container": "#002423",
+                "secondary": "#ffbc7c",
+                "inverse-on-surface": "#133634",
+                "outline-variant": "#3a4a44",
+                "primary-container": "#00ffcc",
+                "on-surface-variant": "#b9cbc2",
+                "tertiary-fixed-dim": "#aacdca",
+                "on-primary-container": "#00725a",
+                "outline": "#83958d",
+                "background": "#001716",
+                "surface-variant": "#183a38",
+                "tertiary": "#fcfffe",
+                "on-tertiary-fixed-variant": "#2b4c4a",
+                "primary-fixed-dim": "#00e0b3",
+                "on-primary-fixed": "#002118",
+                "surface-container-lowest": "#001110",
+                "on-background": "#c6eae6",
+                "surface": "#001716",
+                "secondary-fixed-dim": "#ffb874",
+                "on-primary-fixed-variant": "#00513f",
+                "error": "#ffb4ab",
+                "on-secondary-container": "#633700",
+                "primary-fixed": "#24ffcd",
+                "secondary-fixed": "#ffdcbf",
+                "surface-bright": "#1d3f3c",
+                "error-container": "#93000a",
+                "primary": "#fdfffc",
+                "surface-container-low": "#00201e",
+                "secondary-container": "#fe9400",
+                "on-primary": "#00382b",
+                "surface-container-high": "#0b2f2d",
+                "on-secondary-fixed": "#2d1600",
+                "tertiary-fixed": "#c6eae6",
+                "on-secondary-fixed-variant": "#6a3b00",
+                "on-error": "#690005",
+                "inverse-surface": "#c6eae6"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden">
+<!-- SideNavBar (Rail & Drawer) -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low flex flex-col z-50 border-r border-outline-variant/20">
+<div class="px-6 py-8">
+<div class="text-2xl font-bold tracking-tighter text-primary-container font-headline">Obsidian</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium mt-1">Prop Trading Admin</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary-container hover:bg-surface-container-high/40 px-4 py-3 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary-container hover:bg-surface-container-high/40 px-4 py-3 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+<span class="text-sm font-medium">Users</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary-container hover:bg-surface-container-high/40 px-4 py-3 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+<span class="text-sm font-medium">Challenges</span>
+</a>
+<a class="flex items-center gap-3 text-primary-container bg-surface-container-high/60 border-r-2 border-primary-container px-4 py-3 transition-all font-bold" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &#39;FILL&#39; 1;">payments</span>
+<span class="text-sm">Payouts</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary-container hover:bg-surface-container-high/40 px-4 py-3 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+<span class="text-sm font-medium">Revenue</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary-container hover:bg-surface-container-high/40 px-4 py-3 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+<span class="text-sm font-medium">Team</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary-container hover:bg-surface-container-high/40 px-4 py-3 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary-container hover:bg-surface-container-high/40 px-4 py-3 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">history</span>
+<span class="text-sm font-medium">Activity Logs</span>
+</a>
+</nav>
+<div class="p-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-3 p-2 rounded-xl bg-surface-container-highest/20">
+<img alt="Admin Profile Avatar" class="w-10 h-10 rounded-lg object-cover" data-alt="close up professional headshot of a corporate super admin in dark attire, soft ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtOKQD8P3-pLfueo5sDwfsA9fsmQfzKlTDLrpnq21RtWzyv4Xa_ezb7-gHVDKXJoayUgKV_tVLpXRuz8Ov5Vpaa1U5AKVNN-JWB9r6OIigbEOkLLjbOgo_HB0ehRPE0xiOCOceO31GcwDfJKDMmbYN8Ll-SjrEPKkN00FhUpLBX6SH_7Do-EosjNrr-fbonasTXw22kd0wu7C6Ozi7MGJcydWXYUkP3TYuxrsgPoM05eKdUBh7rEaxGPeP8434WiMnpUYPuOQ_bIz9"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold text-on-surface truncate">Super Admin</p>
+<p class="text-[10px] text-on-surface-variant truncate">admin@noblefunded.com</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="ml-64 h-16 sticky top-0 bg-surface/80 backdrop-blur-xl z-40 flex justify-between items-center px-8 border-b border-outline-variant/10">
+<div class="flex items-center flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full bg-surface-container-highest/30 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary-container transition-all text-on-surface placeholder:text-on-surface-variant/50" placeholder="Search by Trader ID or Transaction..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface-variant transition-all relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-1.5 h-1.5 bg-secondary rounded-full"></span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface-variant transition-all">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+<div class="h-6 w-px bg-outline-variant/20"></div>
+<div class="flex items-center gap-3">
+<span class="text-xs font-semibold text-primary-container">Payout Management</span>
+<div class="w-8 h-8 rounded-md bg-primary-container/10 flex items-center justify-center border border-primary-container/20">
+<span class="material-symbols-outlined text-primary-container text-[18px]">verified_user</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 p-8">
+<!-- Header -->
+<header class="mb-10">
+<h1 class="text-4xl font-bold font-headline text-primary tracking-tight mb-2">Payout Management</h1>
+<p class="text-on-surface-variant max-w-2xl">Review and process withdrawal requests from funded traders. Ensure all compliance checks are completed before approval.</p>
+</header>
+<!-- Summary Row (HUD Metrics) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="glass-card glass-edge p-6 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[64px]">pending_actions</span>
+</div>
+<p class="text-xs font-medium text-on-surface-variant mb-2 uppercase tracking-wider">Pending Payouts</p>
+<div class="flex flex-col">
+<span class="text-3xl font-bold font-headline text-primary-fixed">18 Requests</span>
+<span class="text-xl font-medium text-secondary">₦12,400,000</span>
+</div>
+</div>
+<div class="glass-card glass-edge p-6 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[64px]">schedule</span>
+</div>
+<p class="text-xs font-medium text-on-surface-variant mb-2 uppercase tracking-wider">Avg. Processing Time</p>
+<div class="flex flex-col">
+<span class="text-3xl font-bold font-headline text-primary-fixed">14.5 Hours</span>
+<span class="text-sm text-on-surface-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-container">trending_down</span> 
+                        2.1h faster than last week
+                    </span>
+</div>
+</div>
+<div class="glass-card glass-edge p-6 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[64px]">check_circle</span>
+</div>
+<p class="text-xs font-medium text-on-surface-variant mb-2 uppercase tracking-wider">Approved (Last 24h)</p>
+<div class="flex flex-col">
+<span class="text-3xl font-bold font-headline text-primary-fixed">₦4,200,000</span>
+<span class="text-sm text-on-surface-variant mt-2">12 transactions completed</span>
+</div>
+</div>
+</section>
+<!-- Filters -->
+<section class="mb-6 flex flex-wrap items-center justify-between gap-4 p-4 glass-card rounded-xl">
+<div class="flex flex-wrap items-center gap-3">
+<div class="relative min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-lg pl-10 pr-4 py-2 text-xs focus:ring-1 focus:ring-primary-container transition-all text-on-surface placeholder:text-on-surface-variant/50" placeholder="Trader ID..." type="text"/>
+</div>
+<select class="bg-surface-container-highest border-none rounded-lg px-4 py-2 text-xs text-on-surface focus:ring-1 focus:ring-primary-container cursor-pointer min-w-[140px]">
+<option>All Status</option>
+<option>Pending</option>
+<option>Processing</option>
+<option>Approved</option>
+<option>Flagged</option>
+</select>
+<div class="flex items-center gap-2 bg-surface-container-highest rounded-lg px-4 py-2 cursor-pointer border border-transparent hover:border-outline-variant/20 transition-all">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">calendar_today</span>
+<span class="text-xs text-on-surface font-medium">Oct 01, 2023 - Oct 31, 2023</span>
+</div>
+</div>
+<button class="flex items-center gap-2 bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg text-xs font-bold hover:shadow-[0_0_20px_rgba(0,255,204,0.3)] transition-all active:scale-95">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                Export Report
+            </button>
+</section>
+<!-- Requests Table -->
+<section class="glass-card rounded-xl overflow-hidden border border-outline-variant/10">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/50 border-b border-outline-variant/10">
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">ID</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">Trader</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">Request Date</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">Amount (₦)</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">Method</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">Status</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Row 1: Pending -->
+<tr class="hover:bg-surface-container-highest/20 transition-colors group">
+<td class="px-6 py-5 text-sm font-mono text-on-surface-variant">#PAY-8921</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<img alt="Trader Avatar" class="w-10 h-10 rounded-lg object-cover" data-alt="professional profile photo of a young male trader with headphones, neutral corporate background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOons-agv0xjpBIDfuYvdVdvkDATMb878zfmohKwayqoh5xVwjL_6UOy1rrHk2wTJkMj-fjoVZCG4ytS7J6ZXdlWag0aupvXTtKWn4a6T4mU__SV_qn6dD9hpqew9fnvCUbVBt0FtrWzC2xz9WA3v3cs9RxG_YMREWEvjLSOhgthkdUyVFp5QywYrrmCgcmbrA7d3PA8GY4D_TTJQyljiIBCUdLYz_Cj_bPPfnPY5OTD74449SIXC1THQhUmNxJ0TPehy0q4SZ98zs"/>
+<div>
+<p class="text-sm font-semibold text-primary">Ayo Tobi</p>
+<p class="text-[11px] text-on-surface-variant">ayo.tobi@gmail.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm text-on-surface">Oct 24, 2:15 PM</td>
+<td class="px-6 py-5 text-sm font-bold text-primary-fixed">₦1,250,000</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">account_balance</span> Bank Transfer
+                            </div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold bg-secondary/10 text-secondary uppercase border border-secondary/20 tracking-tighter">
+                                Pending
+                            </span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="px-3 py-1.5 text-[10px] font-bold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-all">Review</button>
+<button class="px-3 py-1.5 text-[10px] font-bold bg-primary-container text-on-primary-container rounded shadow-[0_0_10px_rgba(0,255,204,0.2)] hover:shadow-[0_0_15px_rgba(0,255,204,0.4)] transition-all">Approve</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Processing -->
+<tr class="hover:bg-surface-container-highest/20 transition-colors group">
+<td class="px-6 py-5 text-sm font-mono text-on-surface-variant">#PAY-8920</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<img alt="Trader Avatar" class="w-10 h-10 rounded-lg object-cover" data-alt="headshot of a female executive trader with glasses, smiling confidently, soft office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLxovo-HD8QBMRcuMi7qcVL6zghwyhZO6DurMsmLEzH9vntDA3ut1ZeJ5a9WNZvlJm-g7XxrgWnL5rFoTz309nlll_pIDaCUL-SBjszwyXkATogwfGfwprmeX6FLMijUbRZD1zjHHxoXTqR241KpGK5iSQ6-0eAXFG3zn3LqTpbH2nQTcTma8Zzkj0jq0-7NDV3uOr2XqOSgffCNplnVyXeSC_12KNdRO6c8BDrlfP4Py2s4jJAFMCB05ULnMhmY_RSaXE7LOGq2Rp"/>
+<div>
+<p class="text-sm font-semibold text-primary">Sarah Nwosu</p>
+<p class="text-[11px] text-on-surface-variant">snwosu_fx@yahoo.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm text-on-surface">Oct 24, 11:30 AM</td>
+<td class="px-6 py-5 text-sm font-bold text-primary-fixed">₦2,800,000</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">currency_bitcoin</span> USDT (ERC20)
+                            </div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold bg-blue-500/10 text-blue-400 uppercase border border-blue-500/20 tracking-tighter">
+                                Processing
+                            </span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="px-3 py-1.5 text-[10px] font-bold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-all">Review</button>
+<button class="px-3 py-1.5 text-[10px] font-bold bg-primary-container/20 text-primary-container border border-primary-container/30 rounded cursor-not-allowed opacity-50">Approve</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Flagged -->
+<tr class="hover:bg-surface-container-highest/20 transition-colors group">
+<td class="px-6 py-5 text-sm font-mono text-on-surface-variant">#PAY-8918</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<img alt="Trader Avatar" class="w-10 h-10 rounded-lg object-cover" data-alt="portrait of a focused professional male trader in a dark studio setting, dramatic lighting on one side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq7IEFTCRkla9XHuNg_blmvNmyjjSPeT-tU7Yxm6v3ub_wOQ6bdhQnX5AcuMlpcKFVJp9QAXOf2Y8J9czPpgCz5-61CzkKIIYeU88HFEmPldehqK-Omtp9bJWTRZmXbPSSVP5p95GALlyw2N5yY0jG1vnzq-cs4JlBjF0L72c2-YbvSzikG1xuK7FqHI0F6AAuhaO-jM8-Kpin3Y_1ji3EsOmcIUFgrh0E8Rf5BiunvKZO7X5ePcvarlDaz_bbVWhC5w114P-GuG89"/>
+<div>
+<p class="text-sm font-semibold text-primary">Musa Okoro</p>
+<p class="text-[11px] text-on-surface-variant">musa.okoro@outlook.com</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm text-on-surface">Oct 24, 09:05 AM</td>
+<td class="px-6 py-5 text-sm font-bold text-primary-fixed">₦450,000</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">account_balance</span> Bank Transfer
+                            </div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold bg-error-container/20 text-error uppercase border border-error-container/40 tracking-tighter">
+                                Flagged
+                            </span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="px-3 py-1.5 text-[10px] font-bold text-error border border-error/20 hover:bg-error/10 rounded transition-all">Investigate</button>
+<button class="px-3 py-1.5 text-[10px] font-bold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-all">Review</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Approved -->
+<tr class="hover:bg-surface-container-highest/20 transition-colors group">
+<td class="px-6 py-5 text-sm font-mono text-on-surface-variant">#PAY-8915</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<img alt="Trader Avatar" class="w-10 h-10 rounded-lg object-cover" data-alt="close up of a professional woman with a warm expression, modern office background with blue accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuq5IFMmbQJNt9qCAMsDlsEc6xz1TmkBKSPfMR-yLkdgs-XF-naG7lEQ7fsmYfNtGLYqsRHt-geMoxcs0t-Uoq6xRVMr_xLds7gNhDTj0B00XaBKzW5Cs4jixjxkX_RYmK9QinsBMSFzBBn2YeIYi04PRZUuWgTC_LHSFxtNT-j7QYBZutdYoqSQTJEeXzfCHhCAHqZMla9-ab2Er1sx3CL7Gb7_V8xWm55ZLtzOBZOKBbBtcwVbAWM5cnQJf9kuhLoT8DkQoF0TcF"/>
+<div>
+<p class="text-sm font-semibold text-primary">Emeka Bakare</p>
+<p class="text-[11px] text-on-surface-variant">ebakare@fintech.ng</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5 text-sm text-on-surface">Oct 23, 04:45 PM</td>
+<td class="px-6 py-5 text-sm font-bold text-primary-fixed">₦950,000</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">currency_bitcoin</span> USDT (TRC20)
+                            </div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold bg-primary-container/10 text-primary-container uppercase border border-primary-container/20 tracking-tighter">
+                                Approved
+                            </span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination -->
+<div class="px-6 py-4 bg-surface-container-high/30 border-t border-outline-variant/10 flex items-center justify-between">
+<span class="text-xs text-on-surface-variant">Showing <span class="text-on-surface font-bold">1-10</span> of <span class="text-on-surface font-bold">128</span> requests</span>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container-highest text-on-surface-variant opacity-50 cursor-not-allowed transition-all">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-primary-container text-on-primary-container text-xs font-bold">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container-highest text-on-surface-variant text-xs font-bold hover:text-primary-container transition-all">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container-highest text-on-surface-variant text-xs font-bold hover:text-primary-container transition-all">3</button>
+<span class="text-on-surface-variant px-1">...</span>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container-highest text-on-surface-variant text-xs font-bold hover:text-primary-container transition-all">13</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-surface-container-highest text-on-surface-variant hover:text-primary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Background Decorative Gradient -->
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+<div class="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] rounded-full bg-primary-container/5 blur-[120px]"></div>
+<div class="absolute top-[40%] -left-[5%] w-[40%] h-[40%] rounded-full bg-secondary/5 blur-[100px]"></div>
+<div class="absolute bottom-0 right-0 w-full h-[50%] bg-gradient-to-t from-surface-container-low/20 to-transparent"></div>
+</div>
+</body></html>

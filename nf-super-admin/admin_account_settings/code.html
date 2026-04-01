@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type='text/javascript' nonce='GBVTQQojpvA2TEF/8YPX5Q==' src='https://contribution.usercontent.google.com/FtYqaS76MCYyfDV5kpSUvo-9rmT9-b57zZe0HnjB5DXQCUrmVa-SSua4VcqHmRriB1WNDqPzTW9uMsu046tm-fclIWYIRssBBEYlXNc1KwvYwy3KUAsO4NsM7oA8aRgLC-POojTPx1nphHguWLYclY3EK4km_qx-DAcJnhi3_lB2c9LJOsnlX8Ox2pMxSCPOTQHpMTujaUJqessTOd85G9k_rByo79VOM9fvj3wHcbZHd94GxrSSPsH3OLzqB9PbpF57ME34ZMbFzFHrptUfcSyv8dclx6Q1IfHLVFI3FqgvD4nLIVY69mlsxZ-nUlWoC6BUeTAqXMxWwcMufmuo8u32AgsEK3GFesz4LJUCklpOTBk-xYQWZeex8jkArlbZtUVeijwe8yiig8TQDjR2FkmLVyP1RoZzmczZxyLpg33vZbFvEJ5CfGVsic8SCUVB1kBoRYMifJ_foKQL0Lm1tffdBr8u9RpndFpzFRbN-qTYCce7jbYHaZVV3X8WP_9hqsPv9kuyM3PD-lR6KSs5cINOwBWkziO_vxFt0QUgaXsiRr8j-oct1bfDRhojpJGXV6Dcb6xuU34JMPx1j1uZZwMa414tEn39X25_oDErkG4iW5G_py1OpUm6f6ltoWpB6-hlUG17mrQE_IAh-cda3ehzqDOyViDJCDxFj8cDm0L0bZZVbyAj7J26aA1HSbOJVeMpNE2SuHWGZtOvm2AvvH6iy8fyrrDsNq42IdSp45RNISJ6WlHqnHc7giRnomGcMAIuykN2OhrBr_iHT4ilM6cimn1Z9MSJrPqaOmry'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(11, 47, 45, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 204, 0.1);
+        }
+        .glass-border-glow:focus-within {
+            border-color: rgba(0, 255, 204, 0.5);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.05);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#00e0b3",
+                        "on-surface": "#c6eae6",
+                        "error-container": "#93000a",
+                        "outline": "#83958d",
+                        "on-primary": "#00382b",
+                        "inverse-on-surface": "#133634",
+                        "secondary-fixed": "#ffdcbf",
+                        "primary-container": "#00ffcc",
+                        "on-secondary-fixed-variant": "#6a3b00",
+                        "primary-fixed": "#24ffcd",
+                        "tertiary-fixed": "#c6eae6",
+                        "on-primary-container": "#00725a",
+                        "inverse-primary": "#006b54",
+                        "surface-container-highest": "#183a38",
+                        "tertiary-container": "#c5e9e5",
+                        "surface-bright": "#1d3f3c",
+                        "inverse-surface": "#c6eae6",
+                        "on-tertiary-fixed": "#00201e",
+                        "tertiary-fixed-dim": "#aacdca",
+                        "secondary": "#ffbc7c",
+                        "secondary-container": "#fe9400",
+                        "on-background": "#c6eae6",
+                        "tertiary": "#fcfffe",
+                        "primary": "#fdfffc",
+                        "on-tertiary": "#133634",
+                        "on-secondary": "#4b2800",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#2b4c4a",
+                        "on-secondary-container": "#633700",
+                        "on-primary-fixed": "#002118",
+                        "surface-container-high": "#0b2f2d",
+                        "surface-container": "#002423",
+                        "on-surface-variant": "#b9cbc2",
+                        "surface-tint": "#00e0b3",
+                        "on-secondary-fixed": "#2d1600",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#ffb874",
+                        "outline-variant": "#3a4a44",
+                        "on-tertiary-container": "#496a67",
+                        "surface-variant": "#183a38",
+                        "surface-container-lowest": "#001110",
+                        "surface-container-low": "#00201e",
+                        "surface-dim": "#001716",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#00513f",
+                        "background": "#001716",
+                        "surface": "#001716"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container/30">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#001716]/80 backdrop-blur-xl border-b border-[#00ffcc]/20 shadow-[0_20px_40px_rgba(0,255,204,0.04)] font-[&#39;Space_Grotesk&#39;] tracking-tight">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-[#00ffcc] uppercase">NOBLE FUNDED</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors" href="#">Dashboard</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors" href="#">Analytics</a>
+<a class="text-[#b9cbc2] hover:text-[#00ffcc] transition-colors" href="#">Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#b9cbc2] hover:bg-[#1d3f3c]/50 transition-all duration-300 rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-outline-variant/30">
+<div class="flex flex-col items-end">
+<span class="text-xs font-headline font-bold text-primary">ADMIN_01</span>
+<span class="text-[10px] text-primary-container/60 uppercase tracking-widest">Super Admin</span>
+</div>
+<button class="w-10 h-10 rounded-full border border-primary-container/20 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a professional man with a neutral expression against a dark textured studio background with moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWvpRjM_JpLZdkvxUI3glVjmeRBSOYRIXReLWYjYX6Dth1DwwpXyfS3RxmyXtCF5c5FO9Z_SheApoVolT12t_5uh0MRiP-sRynw9Zw9TnDtjN8GwnwavQhm2l9dODqsxg6ULWco133T6mZaGdeO6m2QVsaZgO-8WPFuecGiejmtrYnWwuN0rtF17B92D61CfUPd_3UtPL4NXnqX0b3J2mZJtGUbmMenaz3o79Sts0x_7mdUgQEjK5Qav5uxmWz7hP2LpbVbTiexmes"/>
+</button>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen pt-16">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-[#00201e] border-r border-[#00ffcc]/10 flex flex-col h-screen pt-20 pb-6 z-40">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 p-3 glass-panel rounded-xl">
+<div class="w-8 h-8 rounded bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-sm" data-icon="terminal">terminal</span>
+</div>
+<div>
+<p class="text-xs font-bold text-primary tracking-tight">Noble Terminal</p>
+<p class="text-[10px] text-on-surface-variant">Elite Institutional Access</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all font-[&#39;Inter&#39;] text-sm font-medium rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span>Compliance</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all font-[&#39;Inter&#39;] text-sm font-medium rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+<span>Marketing</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all font-[&#39;Inter&#39;] text-sm font-medium rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span>Developer</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#0b2f2d]/60 text-[#00ffcc] border-r-4 border-[#00ffcc] shadow-[inset_-10px_0_20px_rgba(0,255,204,0.05)] font-[&#39;Inter&#39;] text-sm font-medium rounded-l-lg" href="#">
+<span class="material-symbols-outlined" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span>Admin</span>
+</a>
+</nav>
+<div class="px-4 mt-auto pt-6 border-t border-outline-variant/10 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all font-[&#39;Inter&#39;] text-sm font-medium rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span>Logs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#b9cbc2] hover:bg-[#1d3f3c]/30 hover:text-[#00ffcc] transition-all font-[&#39;Inter&#39;] text-sm font-medium rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-64 p-8 bg-surface overflow-y-auto">
+<div class="max-w-6xl mx-auto">
+<!-- Page Header -->
+<div class="mb-10 flex justify-between items-end">
+<div>
+<h1 class="text-4xl font-headline font-bold text-primary tracking-tighter mb-2">Account Settings</h1>
+<p class="text-on-surface-variant font-medium">Manage your elite administrative profile and security protocols.</p>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-primary-container/10 border border-primary-container/20 rounded-lg">
+<div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
+<span class="text-[10px] uppercase tracking-widest font-bold text-primary-container">System Status: Secure</span>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Profile Card -->
+<div class="col-span-12 lg:col-span-8 glass-panel rounded-xl p-8 border border-outline-variant/10">
+<div class="flex items-start justify-between mb-8">
+<div class="flex gap-6 items-center">
+<div class="relative group">
+<div class="w-24 h-24 rounded-xl overflow-hidden border-2 border-primary-container/30">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a professional man with a neutral expression against a dark textured studio background with moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP2AimwzNgAa9cgo89J2iD5w3ErFxIezIUIrRX6BpBpHtfyfvaV7mer4fTcYzHF4Wnn_py_F-Nvue5M0Tzt2qnIJ_KrP-hNddE2zWZ-Dzujw9EyNZcCNICDb1zA-cgQzxQdzcGqE3o4QQXDMM5VAywa5GcGflfK1scSGaGRFBP0swlbtvHHtpJlAyN8sKiOxjBIjDvTGkm-UCUCSDoEouVwyejvjBpqT292-u5HFYKMFNeD2TRVkukdDdyZHk1e-93fh0sOHaM7kQI"/>
+</div>
+<button class="absolute -bottom-2 -right-2 bg-primary-container text-on-primary p-2 rounded-lg shadow-xl hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</button>
+</div>
+<div>
+<h2 class="text-2xl font-headline font-bold text-primary">Admin Profile</h2>
+<p class="text-on-surface-variant text-sm">Update your public identity within the terminal.</p>
+</div>
+</div>
+<button class="px-6 py-2 bg-primary-container text-on-primary font-headline font-bold text-xs uppercase tracking-widest rounded hover:shadow-[0_0_20px_rgba(0,255,204,0.3)] transition-all">Save Changes</button>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Display Name</label>
+<div class="glass-border-glow bg-surface-container-highest/50 border border-outline-variant/20 rounded-lg p-3">
+<input class="bg-transparent border-none text-primary w-full focus:ring-0 font-medium" type="text" value="Alexander Noble"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Institutional Email</label>
+<div class="glass-border-glow bg-surface-container-highest/50 border border-outline-variant/20 rounded-lg p-3">
+<input class="bg-transparent border-none text-primary w-full focus:ring-0 font-medium" type="email" value="alexander@noblefunded.com"/>
+</div>
+</div>
+<div class="col-span-2 space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Admin Bio</label>
+<div class="glass-border-glow bg-surface-container-highest/50 border border-outline-variant/20 rounded-lg p-3">
+<textarea class="bg-transparent border-none text-primary w-full focus:ring-0 font-medium resize-none" rows="3">Lead technical architect for Noble Funded. Overseeing institutional risk management and platform stability.</textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- 2FA Setup -->
+<div class="col-span-12 lg:col-span-4 glass-panel rounded-xl p-8 border border-outline-variant/10 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary" data-icon="shield_lock" style="font-variation-settings: &#39;FILL&#39; 1;">shield_lock</span>
+<h2 class="text-xl font-headline font-bold text-primary">Security Protocol</h2>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Multi-factor authentication adds an extra layer of security to your terminal access.</p>
+<div class="p-4 bg-secondary/5 border border-secondary/20 rounded-xl mb-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">2FA Status</span>
+<span class="text-[10px] bg-secondary/20 text-secondary px-2 py-0.5 rounded uppercase font-bold">Inactive</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-tight">Your account is currently only protected by a password. Enable 2FA for institutional-grade safety.</p>
+</div>
+</div>
+<button class="w-full py-3 border border-secondary/40 text-secondary font-headline font-bold text-xs uppercase tracking-widest rounded hover:bg-secondary/10 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="key">key</span>
+                            Enable 2FA
+                        </button>
+</div>
+<!-- Password Management -->
+<div class="col-span-12 lg:col-span-5 glass-panel rounded-xl p-8 border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary-container" data-icon="password">password</span>
+<h2 class="text-xl font-headline font-bold text-primary">Terminal Access</h2>
+</div>
+<div class="space-y-4">
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Current Password</label>
+<div class="glass-border-glow bg-surface-container-highest/50 border border-outline-variant/20 rounded-lg p-3">
+<input class="bg-transparent border-none text-primary w-full focus:ring-0" placeholder="••••••••••••" type="password"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">New Security Key</label>
+<div class="glass-border-glow bg-surface-container-highest/50 border border-outline-variant/20 rounded-lg p-3">
+<input class="bg-transparent border-none text-primary w-full focus:ring-0" placeholder="••••••••••••" type="password"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Confirm Key</label>
+<div class="glass-border-glow bg-surface-container-highest/50 border border-outline-variant/20 rounded-lg p-3">
+<input class="bg-transparent border-none text-primary w-full focus:ring-0" placeholder="••••••••••••" type="password"/>
+</div>
+</div>
+<button class="w-full mt-4 py-3 bg-surface-bright text-primary border border-outline-variant/20 font-headline font-bold text-xs uppercase tracking-widest rounded hover:bg-surface-container-highest transition-all">Update Security Key</button>
+</div>
+</div>
+<!-- Notifications Grid -->
+<div class="col-span-12 lg:col-span-7 glass-panel rounded-xl p-8 border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary-container" data-icon="notifications_active">notifications_active</span>
+<h2 class="text-xl font-headline font-bold text-primary">Intelligence Alerts</h2>
+</div>
+<div class="space-y-6">
+<!-- Toggle Item 1 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container/5 flex items-center justify-center group-hover:bg-primary-container/10 transition-colors">
+<span class="material-symbols-outlined text-primary-container text-xl" data-icon="monitor_heart">monitor_heart</span>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">System Health Reports</p>
+<p class="text-xs text-on-surface-variant">Real-time status of terminal infrastructure.</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-primary-container/20 rounded-full relative flex items-center px-1 cursor-pointer">
+<div class="w-4 h-4 bg-primary-container rounded-full shadow-[0_0_10px_rgba(0,255,204,0.5)] transform translate-x-6"></div>
+</div>
+</div>
+<!-- Toggle Item 2 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container/5 flex items-center justify-center group-hover:bg-primary-container/10 transition-colors">
+<span class="material-symbols-outlined text-primary-container text-xl" data-icon="warning">warning</span>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Compliance Violations</p>
+<p class="text-xs text-on-surface-variant">Immediate alerts on trader policy breaches.</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-primary-container/20 rounded-full relative flex items-center px-1 cursor-pointer">
+<div class="w-4 h-4 bg-primary-container rounded-full shadow-[0_0_10px_rgba(0,255,204,0.5)] transform translate-x-6"></div>
+</div>
+</div>
+<!-- Toggle Item 3 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container/5 flex items-center justify-center group-hover:bg-primary-container/10 transition-colors">
+<span class="material-symbols-outlined text-primary-container text-xl" data-icon="payments">payments</span>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Payout Approvals</p>
+<p class="text-xs text-on-surface-variant">Requests requiring your secondary signature.</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-surface-container-highest rounded-full relative flex items-center px-1 cursor-pointer">
+<div class="w-4 h-4 bg-outline rounded-full"></div>
+</div>
+</div>
+<!-- Toggle Item 4 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container/5 flex items-center justify-center group-hover:bg-primary-container/10 transition-colors">
+<span class="material-symbols-outlined text-primary-container text-xl" data-icon="campaign">campaign</span>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Marketing Updates</p>
+<p class="text-xs text-on-surface-variant">Weekly digest of platform growth metrics.</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-surface-container-highest rounded-full relative flex items-center px-1 cursor-pointer">
+<div class="w-4 h-4 bg-outline rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- HUD Stats Footer -->
+<div class="col-span-12 flex items-center justify-between p-6 glass-panel rounded-xl border border-primary-container/5 mt-4">
+<div class="flex gap-12">
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold mb-1">Last Login</p>
+<p class="text-xl font-headline font-bold text-primary-fixed">14:22:09 <span class="text-xs text-on-surface-variant font-normal">UTC</span></p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold mb-1">Session IP</p>
+<p class="text-xl font-headline font-bold text-primary-fixed">192.168.1.105</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant font-bold mb-1">Access Tier</p>
+<p class="text-xl font-headline font-bold text-primary-fixed">TITANIUM</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-4 py-2 text-xs font-bold text-error uppercase tracking-widest hover:bg-error/5 transition-colors rounded">Terminate All Sessions</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

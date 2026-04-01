@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noble Funded | Live Monitor</title>
+<script type='text/javascript' nonce='tKd2W5Ray03Gu/YkAyjK/g==' src='https://contribution.usercontent.google.com/Jc8jZ62ot3aWwXHsA_JmhI_tPZp1Ti1U2k_XZOCPlgolEXW-n6zMRIEXzYqlT9VpS-puDZS4v8SPrWpJbZyvONzdfOy2f3Wrbepf5R7L--4eTFqwFHfsRzRibJwl-Nj-QWEMsJfUUT9CXpuL4vrGZW3UG9xF4ttUjCFgPquL-XNruUI6vf0SF15UiSpQmtz15tGFKLvTBnkyqA7kj24S1CIgQHwd8r-I9a6-pGcuj-49T8kNmw4ELY1wWz6sGAi8YSkmpA-nxfHq3CqZTOmlXTVh0c1LvQ8gB-7zx7oJh_yMKjCGfbCSXiPMvmzvkC_XmcLwXWIOBCHL9l3sXAgjj99ol2sJiTphlJl65W1xKHxZ-ltk8FQpgimlf3f2Pei9IXywVCPoJDjcUhcOWiUjJurecHnOz1unEwE4FdxyS6ddCR-H0Ngwv4M5PJAflXXRHM6FV6KSLf4506XLyktqZk22SDtKR03X5RWxnme-db--fhQN0Si7-4--HP5fmS9KMWQdNPkU4G843Mz7jaovzUqNfjEsak5jOFwFL6SPIwo0C026x2j1QkSThMx9_jsTMgm1hLb30H44VtMELRmzulW4sS9hGJK9ccrbDPle32XRws8WasSCAgodt3nsDxr3vcdascs0RvzSDkFOW3mlv16wWozA9k1gnmWEIms1dlJbJDhTtl_vUbQWMzw65js7eP930nfsGJCchfZT65DIe9lLbTqSrfzz8HuzMPYCQc0lS1BgRoUQwGVwEZFri0ke1RxYc7RFrwC4mjMF4UsQz7RrJ3z6QWc0z9zA0mQi'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-container": "#00725a",
+            "on-primary": "#00382b",
+            "on-tertiary-container": "#496a67",
+            "tertiary": "#fcfffe",
+            "surface-variant": "#183a38",
+            "outline-variant": "#3a4a44",
+            "error": "#ffb4ab",
+            "inverse-surface": "#c6eae6",
+            "surface-container-highest": "#183a38",
+            "error-container": "#93000a",
+            "on-tertiary-fixed": "#00201e",
+            "on-error": "#690005",
+            "secondary-fixed-dim": "#ffb874",
+            "on-error-container": "#ffdad6",
+            "surface-container-high": "#0b2f2d",
+            "primary-container": "#00ffcc",
+            "surface-tint": "#00e0b3",
+            "on-secondary-fixed": "#2d1600",
+            "primary-fixed-dim": "#00e0b3",
+            "on-primary-fixed": "#002118",
+            "secondary": "#ffbc7c",
+            "surface-container-lowest": "#001110",
+            "on-secondary": "#4b2800",
+            "inverse-primary": "#006b54",
+            "surface": "#001716",
+            "secondary-container": "#fe9400",
+            "inverse-on-surface": "#133634",
+            "on-secondary-container": "#633700",
+            "secondary-fixed": "#ffdcbf",
+            "on-background": "#c6eae6",
+            "background": "#001716",
+            "on-surface": "#c6eae6",
+            "surface-dim": "#001716",
+            "on-primary-fixed-variant": "#00513f",
+            "primary-fixed": "#24ffcd",
+            "on-tertiary-fixed-variant": "#2b4c4a",
+            "tertiary-fixed-dim": "#aacdca",
+            "tertiary-container": "#c5e9e5",
+            "on-tertiary": "#133634",
+            "primary": "#fdfffc",
+            "on-surface-variant": "#b9cbc2",
+            "surface-container-low": "#00201e",
+            "on-secondary-fixed-variant": "#6a3b00",
+            "surface-bright": "#1d3f3c",
+            "outline": "#83958d",
+            "tertiary-fixed": "#c6eae6",
+            "surface-container": "#002423"
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(11, 47, 45, 0.4);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 255, 204, 0.1);
+    }
+    .glass-card-warning {
+      background: rgba(254, 148, 0, 0.05);
+      border: 1px solid rgba(254, 148, 0, 0.2);
+    }
+    .glass-card-danger {
+      background: rgba(147, 0, 10, 0.05);
+      border: 1px solid rgba(255, 180, 171, 0.2);
+    }
+    .neon-glow-cyan {
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+    }
+    .obsidian-radial {
+      background: radial-gradient(circle at 50% 50%, #1d3f3c 0%, #001716 100%);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface obsidian-radial min-h-screen flex">
+<!-- SideNavBar Navigation Shell -->
+<aside class="flex flex-col h-full py-6 bg-[#00201e]/80 backdrop-blur-xl h-screen w-64 border-r border-[#00ffcc]/10 shadow-[0_20px_40px_rgba(0,255,204,0.04)] fixed left-0 top-0 z-50">
+<div class="px-6 mb-10">
+<h1 class="text-xl font-bold tracking-tight text-[#00ffcc] font-headline">Noble Funded</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/60 font-medium">Institutional Compliance</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-6 py-3 space-x-3 text-[#b9cbc2] hover:text-[#00ffcc] transition-colors hover:bg-[#1d3f3c]/50" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+<span class="text-sm font-medium">Overview</span>
+</a>
+<!-- ACTIVE TAB: Monitor -->
+<a class="flex items-center px-6 py-3 space-x-3 bg-[#00ffcc]/10 text-[#00ffcc] border-r-2 border-[#00ffcc] rounded-r-none transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="monitoring">monitoring</span>
+<span class="text-sm font-medium">Monitor</span>
+</a>
+<a class="flex items-center px-6 py-3 space-x-3 text-[#b9cbc2] hover:text-[#00ffcc] transition-colors hover:bg-[#1d3f3c]/50" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="payments">payments</span>
+<span class="text-sm font-medium">Payouts</span>
+</a>
+<a class="flex items-center px-6 py-3 space-x-3 text-[#b9cbc2] hover:text-[#00ffcc] transition-colors hover:bg-[#1d3f3c]/50" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="flag">flag</span>
+<span class="text-sm font-medium">Flagged</span>
+</a>
+<a class="flex items-center px-6 py-3 space-x-3 text-[#b9cbc2] hover:text-[#00ffcc] transition-colors hover:bg-[#1d3f3c]/50" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="gavel">gavel</span>
+<span class="text-sm font-medium">Violations</span>
+</a>
+<a class="flex items-center px-6 py-3 space-x-3 text-[#b9cbc2] hover:text-[#00ffcc] transition-colors hover:bg-[#1d3f3c]/50" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="description">description</span>
+<span class="text-sm font-medium">Reports</span>
+</a>
+</nav>
+<div class="px-6 pt-6 border-t border-[#00ffcc]/5 flex items-center space-x-3">
+<img alt="Compliance Officer Avatar" class="w-10 h-10 rounded-xl object-cover ring-1 ring-[#00ffcc]/20" data-alt="Close-up portrait of a professional man in a sharp dark suit with subtle blue lighting in a high-tech office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9VCPypshxyclSYysayOIEOKkOoiiQ3oBnzVbdha5L3NW0klRpGYPdgvq7GBq0zbE1ipnAOEA11DSFuw_hLtHrvY8vuVE-xCXHqsl2HxrhyO3AxGAsxaSzFg_arxXpczav8wcK-D6hhH_tgm10wm2IBwqXaOA8C9RARHd7ae74PvPsIP4gyfmPxI-EbsMwSc_K-gpTVKIcL2AAonXXxTxSwdwIv4rMCjZDiQwLFvfBYEtjIOljPEKcNTefXNLKxfUHgOOW4KM6zlDN"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold text-primary truncate">Marcus Vane</p>
+<p class="text-[10px] text-on-surface-variant truncate">Chief Auditor</p>
+</div>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="flex-1 ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-8 w-full border-b border-[#00ffcc]/5 h-16 bg-[#001716]/60 backdrop-blur-md sticky top-0 z-40">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
+<input class="w-full bg-surface-container-highest/50 border-none rounded-lg pl-10 pr-4 py-2 text-xs text-on-surface focus:ring-1 focus:ring-primary-container/30 placeholder-on-surface-variant/40 transition-all" placeholder="Search account ID, trader name..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-6 ml-8">
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-[#00ffcc] cursor-pointer transition-opacity opacity-80-hover" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-[#00ffcc] cursor-pointer transition-opacity opacity-80-hover" data-icon="settings">settings</span>
+</div>
+<div class="h-6 w-px bg-[#00ffcc]/10"></div>
+<div class="flex items-center space-x-3 group cursor-pointer">
+<span class="text-sm font-semibold text-[#00ffcc] font-headline">Compliance Hub</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high border border-[#00ffcc]/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-[#00ffcc]" data-icon="security">security</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<section class="p-8 space-y-8">
+<!-- Page Header & Metrics HUD -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="text-4xl font-bold font-headline text-primary tracking-tight">Live Monitor</h2>
+<p class="text-on-surface-variant mt-1 max-w-md">Real-time oversight of active trading challenges across institutional tiers.</p>
+</div>
+<div class="flex space-x-8">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Active Accounts</p>
+<p class="text-3xl font-bold font-headline text-primary-fixed">1,248</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Avg Drawdown</p>
+<p class="text-3xl font-bold font-headline text-secondary">24.5%</p>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Critical Alerts</p>
+<p class="text-3xl font-bold font-headline text-error">12</p>
+</div>
+</div>
+</div>
+<!-- Live Monitoring Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Danger Card (Red) -->
+<div class="glass-card glass-card-danger p-6 rounded-xl relative overflow-hidden transition-all duration-300 hover:scale-[1.02] group">
+<div class="absolute top-0 right-0 p-4">
+<div class="bg-error/10 text-error px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">Danger</div>
+</div>
+<div class="flex items-start space-x-4 mb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center border border-error/30">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+</div>
+<div>
+<h3 class="text-lg font-bold font-headline text-primary">Alex Thorne</h3>
+<p class="text-xs text-on-surface-variant">ID: NF-99283-TR</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Drawdown %</span>
+<span class="text-2xl font-bold text-error">91.4%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 91.4%"></div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-error/10 flex justify-between items-center">
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="visibility">visibility</span> View Logs
+            </button>
+<button class="bg-error hover:bg-error/80 text-on-error px-4 py-2 rounded-lg text-xs font-bold transition-all active:scale-95 shadow-lg shadow-error/10">
+              Disable Account
+            </button>
+</div>
+</div>
+<!-- Warning Card (Yellow) -->
+<div class="glass-card glass-card-warning p-6 rounded-xl relative overflow-hidden transition-all duration-300 hover:scale-[1.02] group">
+<div class="absolute top-0 right-0 p-4">
+<div class="bg-secondary/10 text-secondary px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">Warning</div>
+</div>
+<div class="flex items-start space-x-4 mb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center border border-secondary/30">
+<span class="material-symbols-outlined text-secondary" data-icon="bolt">bolt</span>
+</div>
+<div>
+<h3 class="text-lg font-bold font-headline text-primary">Elena Rodriguez</h3>
+<p class="text-xs text-on-surface-variant">ID: NF-11204-DL</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Drawdown %</span>
+<span class="text-2xl font-bold text-secondary">64.2%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 64.2%"></div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-secondary/10 flex justify-between items-center">
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="visibility">visibility</span> View Logs
+            </button>
+<button class="bg-secondary hover:bg-secondary/80 text-on-secondary px-4 py-2 rounded-lg text-xs font-bold transition-all active:scale-95">
+              Disable Account
+            </button>
+</div>
+</div>
+<!-- Safe Card (Green) -->
+<div class="glass-card p-6 rounded-xl relative overflow-hidden transition-all duration-300 hover:scale-[1.02] group neon-glow-cyan border-[#00ffcc]/20">
+<div class="absolute top-0 right-0 p-4">
+<div class="bg-primary-container/10 text-primary-container px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">Safe</div>
+</div>
+<div class="flex items-start space-x-4 mb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center border border-primary-container/30">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<h3 class="text-lg font-bold font-headline text-primary">Jiro Tanaka</h3>
+<p class="text-xs text-on-surface-variant">ID: NF-77412-MK</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Drawdown %</span>
+<span class="text-2xl font-bold text-primary-container">12.8%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 12.8%"></div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-primary-container/10 flex justify-between items-center">
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="visibility">visibility</span> View Logs
+            </button>
+<button class="bg-surface-container-highest border border-primary-container/20 hover:border-primary-container/50 text-primary-container px-4 py-2 rounded-lg text-xs font-bold transition-all active:scale-95">
+              Disable Account
+            </button>
+</div>
+</div>
+<!-- Danger Card (Red) -->
+<div class="glass-card glass-card-danger p-6 rounded-xl relative overflow-hidden transition-all duration-300 hover:scale-[1.02] group">
+<div class="absolute top-0 right-0 p-4">
+<div class="bg-error/10 text-error px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">Danger</div>
+</div>
+<div class="flex items-start space-x-4 mb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center border border-error/30">
+<span class="material-symbols-outlined text-error" data-icon="alarm">alarm</span>
+</div>
+<div>
+<h3 class="text-lg font-bold font-headline text-primary">Sarah Jenkins</h3>
+<p class="text-xs text-on-surface-variant">ID: NF-00215-PP</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Drawdown %</span>
+<span class="text-2xl font-bold text-error">88.9%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 88.9%"></div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-error/10 flex justify-between items-center">
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="visibility">visibility</span> View Logs
+            </button>
+<button class="bg-error hover:bg-error/80 text-on-error px-4 py-2 rounded-lg text-xs font-bold transition-all active:scale-95">
+              Disable Account
+            </button>
+</div>
+</div>
+<!-- Warning Card (Yellow) -->
+<div class="glass-card glass-card-warning p-6 rounded-xl relative overflow-hidden transition-all duration-300 hover:scale-[1.02] group">
+<div class="absolute top-0 right-0 p-4">
+<div class="bg-secondary/10 text-secondary px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">Warning</div>
+</div>
+<div class="flex items-start space-x-4 mb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center border border-secondary/30">
+<span class="material-symbols-outlined text-secondary" data-icon="trending_down">trending_down</span>
+</div>
+<div>
+<h3 class="text-lg font-bold font-headline text-primary">Marcus Aurelius</h3>
+<p class="text-xs text-on-surface-variant">ID: NF-33451-XL</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Drawdown %</span>
+<span class="text-2xl font-bold text-secondary">52.1%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 52.1%"></div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-secondary/10 flex justify-between items-center">
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="visibility">visibility</span> View Logs
+            </button>
+<button class="bg-secondary hover:bg-secondary/80 text-on-secondary px-4 py-2 rounded-lg text-xs font-bold transition-all active:scale-95">
+              Disable Account
+            </button>
+</div>
+</div>
+<!-- Safe Card (Green) -->
+<div class="glass-card p-6 rounded-xl relative overflow-hidden transition-all duration-300 hover:scale-[1.02] group">
+<div class="absolute top-0 right-0 p-4">
+<div class="bg-primary-container/10 text-primary-container px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">Safe</div>
+</div>
+<div class="flex items-start space-x-4 mb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center border border-primary-container/30">
+<span class="material-symbols-outlined text-primary-container" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<h3 class="text-lg font-bold font-headline text-primary">Chloe Bennet</h3>
+<p class="text-xs text-on-surface-variant">ID: NF-88912-CB</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-xs text-on-surface-variant uppercase tracking-widest font-medium">Drawdown %</span>
+<span class="text-2xl font-bold text-primary-container">4.5%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 4.5%"></div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-primary-container/10 flex justify-between items-center">
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="visibility">visibility</span> View Logs
+            </button>
+<button class="bg-surface-container-highest border border-primary-container/20 hover:border-primary-container/50 text-primary-container px-4 py-2 rounded-lg text-xs font-bold transition-all active:scale-95">
+              Disable Account
+            </button>
+</div>
+</div>
+</div>
+<!-- Compliance Logs Table (Asymmetric Layout Entry) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-4">
+<div class="lg:col-span-2 glass-card rounded-xl p-8">
+<div class="flex justify-between items-center mb-8">
+<h3 class="text-xl font-bold font-headline text-primary">Real-time Stream</h3>
+<div class="flex items-center space-x-2">
+<div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
+<span class="text-[10px] font-bold text-primary-container uppercase tracking-widest">Live Sync</span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex items-center justify-between group">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-8 bg-error rounded-full"></div>
+<div>
+<p class="text-sm font-bold text-primary">Alex Thorne exceeded 90% drawdown threshold</p>
+<p class="text-[10px] text-on-surface-variant uppercase">Account NF-99283-TR • 2m ago</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" data-icon="open_in_new">open_in_new</span>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-8 bg-secondary rounded-full"></div>
+<div>
+<p class="text-sm font-bold text-primary">Elena Rodriguez entered Cautionary Phase (60%+)</p>
+<p class="text-[10px] text-on-surface-variant uppercase">Account NF-11204-DL • 14m ago</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" data-icon="open_in_new">open_in_new</span>
+</div>
+<div class="flex items-center justify-between group">
+<div class="flex items-center space-x-4">
+<div class="w-1.5 h-8 bg-primary-container rounded-full"></div>
+<div>
+<p class="text-sm font-bold text-primary">New Challenge Initiated by Chloe Bennet</p>
+<p class="text-[10px] text-on-surface-variant uppercase">Account NF-88912-CB • 45m ago</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" data-icon="open_in_new">open_in_new</span>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-8 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-bold font-headline text-primary mb-2">Audit Status</h3>
+<p class="text-sm text-on-surface-variant mb-8">Daily compliance check completed for 98% of active accounts.</p>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 rounded bg-surface-container-low border border-outline-variant/10">
+<span class="text-xs text-on-surface-variant">System Integrity</span>
+<span class="text-xs font-bold text-primary-container">OPTIMAL</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded bg-surface-container-low border border-outline-variant/10">
+<span class="text-xs text-on-surface-variant">API Latency</span>
+<span class="text-xs font-bold text-primary-container">12ms</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded bg-surface-container-low border border-outline-variant/10">
+<span class="text-xs text-on-surface-variant">Suspicious Activity</span>
+<span class="text-xs font-bold text-error">3 DETECTED</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 border border-[#00ffcc]/30 py-3 rounded-lg text-xs font-bold text-[#00ffcc] hover:bg-[#00ffcc]/5 transition-all">
+            Download Audit Report
+          </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Global Glass Overlay for Ambient Texture -->
+<div class="fixed inset-0 pointer-events-none z-[-1] opacity-30" style="background-image: url(&#39;https://lh3.googleusercontent.com/aida-public/AB6AXuBTwAi0yrkVIuto874e95NxTI_i_n0d7VJM-CEjTSZ9_ktCOHiXE-S2e1WPJUHMNq0dE3oX5iKbkPKCqeIloBvjFe2RFMlad2lyTJXdOppCuTsTm6Kex4fmvI1kRYGBk_IiE77h0mM5rVKhchJYg6nyQ8QfDQCNENBL3ZlD_ifgL9KCUkf2TyKxtGnEx5JzAcYNCUXXOrT_xRMpLVTU5mvXlIuuvb1wz0ykX2NslQg71sEi4y8gFFhObYW-KNgje-p_J8KKwF-R_1Qi&#39;); mix-blend-mode: overlay;"></div>
+</body></html>
